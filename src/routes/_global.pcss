@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* purge start ignore */
+
+.prose {
+  @apply antialiased text-gray-600;
+  @apply font-sans;
+  &[class~='lead'] {
+    @apply text-gray-600;
+  }
+  & blockquote {
+    @apply text-gray-600 border-gray-500 bg-gray-100;
+  }
+  & hr {
+    @apply border-gray-600;
+  }
+  & strong {
+    @apply text-gray-600;
+  }
+  & figure {
+    & img {
+      @apply mx-auto;
+    }
+    & figcaption {
+      @apply text-gray-600 text-center;
+    }
+  }
+  & a {
+    @apply text-green-600;
+    @apply no-underline hover:underline focus:underline font-normal;
+    & code {
+      @apply text-green-600;
+    }
+    & strong {
+      color: inherit;
+    }
+  }
+  & th {
+    @apply text-gray-600;
+  }
+  & h1,
+  & h2,
+  & h3,
+  & h4 {
+    @apply text-gray-600;
+    & > code {
+      font-weight: inherit;
+    }
+  }
+  & pre {
+    @apply text-gray-600 bg-gray-200 rounded;
+  }
+  & code {
+    @apply text-gray-600 px-1 bg-gray-200 rounded font-medium;
+    &:before {
+      content: '';
+    }
+    &:after {
+      content: '';
+    }
+  }
+  & ol > li:before {
+    @apply text-gray-600;
+  }
+  & ul > li:before {
+    @apply bg-gray-600;
+  }
+}
+
+.dark .prose {
+  @apply antialiased text-gray-300;
+  &[class~='lead'] {
+    @apply text-gray-400;
+  }
+  & blockquote {
+    @apply text-gray-300 border-gray-500 bg-gray-900;
+  }
+  & hr {
+    @apply border-gray-200;
+  }
+  & strong {
+    @apply text-gray-300;
+  }
+  & figure figcaption {
+    @apply text-gray-300;
+  }
+  & a {
+    @apply text-green-400;
+    @apply no-underline hover:underline;
+    & code {
+      @apply text-green-600;
+    }
+    & strong {
+      color: inherit;
+    }
+  }
+  & th {
+    @apply text-gray-300;
+  }
+  & h1,
+  & h2,
+  & h3,
+  & h4 {
+    @apply text-gray-300;
+  }
+  & pre {
+    @apply text-gray-300 bg-gray-800;
+  }
+  & code {
+    @apply text-gray-300 bg-gray-800;
+    &:before {
+      content: '';
+    }
+    &:after {
+      content: '';
+    }
+  }
+  & ol > li:before {
+    @apply text-gray-300;
+  }
+  & ul > li:before {
+    @apply bg-gray-300;
+  }
+}
+
+body {
+  @apply antialiased text-gray-600 dark:text-gray-300 bg-gray-100 dark:bg-gray-900 overflow-y-scroll;
+  @apply leading-normal tracking-normal text-base font-normal break-words;
+  @apply font-sans text-base lg:text-xl;
+  & > #svelte {
+    & > header {
+      @apply py-2 mt-0 fixed w-full z-10 top-0 bg-gray-100;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      transform: translate(0, calc(-100% - 1rem));
+      transition: transform 0.5s;
+      @nest .dark & {
+        @apply bg-gray-900;
+        box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1), 0 2px 4px -1px rgba(255, 255, 255, 0.06);
+      }
+      &.visible {
+        transform: none;
+      }
+      & nav {
+        @apply max-w-4xl px-4 mx-auto flex flex-wrap items-center;
+
+        & #brand {
+          @apply flex w-full md:w-1/2 justify-center md:justify-start;
+          @apply font-black;
+          & a {
+            @apply px-4 py-2;
+          }
+        }
+
+        & #menu {
+          @apply flex w-full px-2 content-center justify-between md:w-1/2 md:justify-end;
+
+          & ul {
+            @apply list-none flex justify-between flex-1 md:flex-none items-center;
+
+            & a {
+              @apply inline-block py-2 px-3;
+            }
+          }
+        }
+      }
+    }
+    & > main {
+      @apply px-8 pb-16 pt-32 md:pt-24 mx-auto max-w-4xl;
+    }
+  }
+}
+
+a {
+  @apply text-green-600 dark:text-green-400;
+  @apply no-underline hover:underline focus:outline-none focus:underline;
+}
+button {
+  @apply focus:outline-none;
+}
+
+/* purge end ignore */
