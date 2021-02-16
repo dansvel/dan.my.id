@@ -32,7 +32,7 @@
         <a href="/catatan?category={slugger(post.category)}" rel="prefetch">{post.category}</a>
         :
         {#each post.tags as tag}
-          <a href="/catatan?label={slugger(tag)}" class="first:ml-0 ml-3" rel="prefetch">#{tag}</a>
+          <a href="/catatan?label={slugger(tag)}" rel="prefetch">#{tag}</a> &zwj;
         {/each}
       </p>
       <p>{localDate(post.date)}</p>
