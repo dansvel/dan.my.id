@@ -1,6 +1,6 @@
 {
 	"name": "dan.my.id",
-    "description": "Catatan perjalanan setengah manusia",
+	"description": "Catatan perjalanan setengah manusia",
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "not-svelte-kit dev",
@@ -24,6 +24,7 @@
 		"not-svelte-kit": "0.0.6-next.34",
 		"postcss": "^8.2.6",
 		"postcss-cli": "^8.3.1",
+		"postcss-import": "^14.0.0",
 		"postcss-load-config": "^3.0.1",
 		"postcss-preset-env": "^6.7.0",
 		"prettier": "^2.2.1",
