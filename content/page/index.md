@@ -16,6 +16,6 @@ Beberapa hal menarik yang kualami dan kupelajari selama perjalanan akan ku catat
 - Manusia. Menceritakan hasil observasi maupun interaksi.
 
 Selain di blog ini, kamu dapat menemukanku dengan sebutan `@dansvel` di postingan berbahasa Inggris [dev.to](https://dev.to/dansvel) atau keisenganku di [Github](https://github.com/dansvel).
-Jika kamu ingin menghubungiku [Twitter](https://twitter.com/dansvel) adalah satu-satunya yang paling responsif.
+Jika kamu ingin menghubungiku, maka [Twitter](https://twitter.com/dansvel) adalah satu-satunya yang paling responsif.
 
 Dan jika kamu menemukan sesuatu yang menyenangkan di sini, jangan sungkan untuk membagikannya, ya...
