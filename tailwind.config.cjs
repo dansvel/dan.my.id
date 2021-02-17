@@ -1,4 +1,5 @@
 const { tailwindExtractor } = require('tailwindcss/lib/lib/purgeUnusedStyles');
+const defaultTheme = require('tailwindcss/defaultTheme')
 const tailwindCSSTypography = require('@tailwindcss/typography');
 
 module.exports = {
@@ -17,8 +18,11 @@ module.exports = {
     },
     darkMode: 'class',
 	theme: {
-		extend: {},
-	},
+        fontFamily: {
+            sans: ['"Source Sans Pro"', ...defaultTheme.fontFamily.sans],
+            mono: ['"Source Code Pro"', ...defaultTheme.fontFamily.mono]
+        }
+    },
 	variants: {
 		extend: {},
 	},
