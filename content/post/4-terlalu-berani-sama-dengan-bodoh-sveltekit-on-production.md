@@ -11,7 +11,9 @@ tags:
 - CSS
 ---
 
-Jika kamu telah cukup mengamati, kamu akan sadar bahwa catatan ini adalah yang pertama di blog ini. Karena tiga catatan sebelumnya adalah catatan lawas yang sebenarnya telah aku tulis di blog lawasku yang saat ini telah lenyap. Sebenarnya aku mulanya berpikir untuk mengawali catatan ke-4 ini dengan semacam "Halo Dunia", namun aku merasa tidak punya cukup kalimat untuk ditulis di sana. Mungkin aku akan menuliskannya di catatan lain ke depannya.
+Jika kamu telah cukup mengamati, kamu akan sadar bahwa catatan ini adalah yang pertama di blog ini. Karena tiga catatan sebelumnya adalah catatan lawas yang sebenarnya telah aku tulis di blog lawasku yang saat ini telah lenyap.
+
+Mulanya aku berpikir untuk mengawali catatan ke-4 ini dengan semacam "Halo Dunia", namun aku merasa tidak punya cukup kalimat untuk ditulis di sana. Mungkin aku akan menuliskannya di catatan lain ke depannya.
 
 Mari ke pokok bahasan.
 
