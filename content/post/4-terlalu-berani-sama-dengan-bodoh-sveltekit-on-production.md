@@ -1,8 +1,8 @@
 ---
 title: Terlalu berani = bodoh? SvelteKit on Production
 date: 2020-02-21T19:22:01+07:00
-description: 
-image: https://camo.githubusercontent.com/20e38db41f641f6797a43bc6fdba2169df8ceb0cf439170a94ff3fef66ee90b2/68747470733a2f2f6c61726176656c2e636f6d2f6173736574732f696d672f636f6d706f6e656e74732f6c6f676f2d76616c65742e737667
+description: Blog yang dibuat menggunakan teknologi yang belum kelar. Antara penasaran dan nekat sudah seperti tetangga. Pengalaman memang guru yang berharga, namun akan bijak jika kamu belajar dari pengalaman orang-orang nekat ini.
+image: https://pbs.twimg.com/media/El9fOLpVoAAF5u-.jpg
 category: Teknologi
 tags:
 - Svelte
@@ -39,7 +39,7 @@ Entah mereka ini calon ilmuan yang tidak kesampaian sehingga *demen* coba-coba. 
 
 Jika setiap bug yang ada ibarat rasa gatal di kulit, maka seharusnya aku tidak dapat tidur saat ini.
 
-Mulai dari preprocessor yang tidak terbaca, konfigurasi Snowpack yang terlewat. Ditambah API yang berubah dan belum ada dokumentasi, lengkaplah seperti orang menggunakan VR-headset mati sambil jalan-jalan.
+Mulai dari preprocessor yang tidak terbaca, konfigurasi Snowpack yang terlewat, dan bug di Windows. Ditambah API yang berubah dan belum ada dokumentasi, lengkaplah seperti orang menggunakan VR-headset mati sambil jalan-jalan.
 
 ## Contekan
 
@@ -79,5 +79,7 @@ Seperti yang telah diketahui, SvelteKit adalah pengembangan dari Sapper. Jadi AP
    import { goto, prefetch, prefetchRoutes } from '$app/navigation';
    import { page, session, navigating } from '$app/stores';
    ```
+   
+3. Gunakan [`not-svelte-kit`](https://github.com/GrygrFlzr/not-svelte-kit) jika kamu mengembangkan SvelteKit di lingkungan sistem operasi Windows, karena ketika catatan ini ditulis masih terdapat masalah dengan ESM atau semacamnya. Saat ini aku hanya menggunakannya untuk menjalankan perintah `pnpm run dev`, karena proses buildnya tidak ada masalah dan telah ditangani langsung di netlify.
    
 Mungkin hanya itu yang aku ketahui, atau mungkin ada yang terlewat. Silakan menambahkan jika berkenan.
