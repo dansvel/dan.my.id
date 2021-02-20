@@ -12,10 +12,7 @@ module.exports = {
             }
         ],
 	    '@snowpack/plugin-typescript',
-        // [
-        //     'snowpack-plugin-markdown',
-        //     markedOptions
-        // ]
+        '@snowpack/plugin-postcss'
     ],
 	mount: {
 		'src/components': '/_components',
