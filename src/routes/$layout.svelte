@@ -25,6 +25,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700;800;900" rel="stylesheet">
   <link rel="stylesheet" title="Dark" href="/dist/a11y-dark.css" disabled />
   <link rel="stylesheet" title="Light" href="/dist/a11y-light.css" disabled />
+  <link rel="webmention" href="https://webmention.io/dan.my.id/webmention" />
+  <link rel="pingback" href="https://webmention.io/dan.my.id/xmlrpc" />
 </svelte:head>
 
 <style lang="postcss" global>
