@@ -25,7 +25,5 @@
 </svelte:head>
 
 <style lang="postcss" global>
-  @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,200,300,400,500,600,700,800,900&display=swap');
-  @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:100,200,300,400,500,600,700,800,900&display=swap');
   @import "_global.pcss";
 </style>
