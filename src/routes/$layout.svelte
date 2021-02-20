@@ -20,6 +20,9 @@
 </main>
 
 <svelte:head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;500;600;700;800;900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700;800;900" rel="stylesheet">
   <link rel="stylesheet" title="Dark" href="/dist/a11y-dark.css" disabled />
   <link rel="stylesheet" title="Light" href="/dist/a11y-light.css" disabled />
 </svelte:head>
