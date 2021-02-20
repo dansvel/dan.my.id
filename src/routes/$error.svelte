@@ -1,11 +1,7 @@
 <script lang="ts">
-  import {onMount} from 'svelte';
-
-  let dev
   export let status;
   export let error;
 
-  onMount(() => dev = process.env.NODE_ENV === 'development')
   const online = typeof navigator !== 'undefined' ? navigator.onLine : true;
 </script>
 
@@ -23,14 +19,11 @@
       <h2>Encountered a {status} error</h2>
     {/if}
 
-    {#if dev && error.stack}
-      <pre>{error.stack}</pre>
+
+    {#if status >= 500}
+      <p>Tolong muat ulang halaman. Dan jika galat masih terjadi, kamu dapat <a href="https://twitter.com/dansvel" rel="noopener">mengabariku di Twitter</a> tentang ini. Terima kasih!</p>
     {:else}
-      {#if status >= 500}
-        <p>Tolong muat ulang halaman. Dan jika galat masih terjadi, kamu dapat <a href="https://twitter.com/dansvel" rel="noopener">mengabariku di Twitter</a> tentang ini. Terima kasih!</p>
-      {:else}
-        <p>Silakan gunakan menu di atas untuk menjelajah blog ini. Terima kasih.</p>
-      {/if}
+      <p>Silakan gunakan menu di atas untuk menjelajah blog ini. Terima kasih.</p>
     {/if}
   {:else}
     <h1>Sepertinya kamu sedang luring</h1>
