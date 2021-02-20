@@ -34,6 +34,7 @@
   $: {
     if (filter.label) posts = posts.filter((post) => post.tags.map((tag) => slugger(tag)).includes(filter.label));
     if (filter.kategori) posts = posts.filter((post) => slugger(post.category) === filter.kategori);
+    posts.sort((a, b) => a.slug < b.slug ? 1 : -1)
   }
 </script>
 
