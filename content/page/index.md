@@ -10,7 +10,7 @@ Hai, aku **Dan**. Setengah manusia yang tengah berpergian menuju entah ke mana d
 
 ![Perjalanan setengah manusia](/images/perjalanan-setengah-manusia.png)
 
-Beberapa hal menarik yang kualami dan kupelajari selama perjalanan akan ku catat di sini, yaitu tentang :
+Beberapa hal menarik yang kualami dan kupelajari selama perjalanan akan ku catat di sini, yaitu tentang:
 
 - Teknologi. Lebih sering membahas pemrograman, terutama web.
 - Manusia. Menceritakan hasil observasi maupun interaksi.

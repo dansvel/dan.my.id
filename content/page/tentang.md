@@ -18,24 +18,39 @@ Menulis sebenarnya sangat membantuku mengingat, hanya saja kadang aku terlalu ma
 
 Blog ini bukan yang pertama, aku telah mencoba membuat blog, menulis, berhenti, membuat lagi, menulis lagi. Mereka berakhir karena terabaikan olehku, aku tidak akan berharap untuk blog ini namun aku akan melakukannya dengan serius. Seperti terakir kali.
 
-## Pengetahuan teknis
+## Manusia
 
-Mengerti sedikit tentang Linux, tertarik menggunakannya. Namun belum dapat meninggalkan Windows. 
+Mempelajari manusia seperti menjadi misi utama dan tujuan mengapa aku ada. Manusia mengatakan, mereka itu berbeda-beda. Namun fakta bahwa,
 
-Aku suka pemrograman, namun ragu untuk menyebut diriku sebagai seorang programmer. Proyek yang kubuat tidak banyak, semuannya hanya sebagai bukti hasil belajar. 
-
-Berawal dari PHP aku mengenal pemrograman, lalu mencoba bahasa lain. Aku telah mencoba Visual Basic, Python, Ruby, Java lalu mulai beralih ke Javascript.
-
-Telah belajar CodeIgniter dan menggunakan Laravel. Sangat ingin menggunakan Ruby on Rails. Sangat ingin migrasi dari PHP ke Ruby, namun belum yakin akan prospeknya. Sangat menantikan Ruby 3 di Ruby on Rails.
-
-Mengenal Javascript karena Bootstrap, mencoba untuk membuat hal-hal merespon yang dilakukan pengguna. Lalu mencoba belajar framework javascriptnya, JQuery. Lalu sebutlah React dan Vue. Aku mencoba mempelajari mereka, namun terasa menggajal di hati. 
-
-Catatanku untuk mereka adalah
-
-- React dengan JSX-nya adalah sesuatu yang aneh, kamu menuliskan HTML dan CSS di dalam kode Javascript. Meskipun aku memahami mengapa dan cara kerjanya, itu masih terasa aneh untukku.
-- Vue dapat diterima, kecuali untuk attribut-attribut html dari frameworknya sendiri. Aku mempelajarinya dengan baik namun belum sampai menggunakannya untuk proyekku hinga...
+> Semua manusia tidak ada yang ingin disamakan.
  
-Aku mengenal Svelte dan Tailwind.
+Artinya, semua manusia sama saja, kan?
+
+## Teknologi
+
+Mengerti sedikit tentang Linux, tertarik menggunakannya. Namun belum dapat meninggalkan Windows. Aku suka pemrograman, namun ragu untuk menyebut diriku sebagai seorang programmer. Proyek yang kubuat tidak banyak, semuannya hanya sebagai bukti hasil belajar. 
+
+Sekedar mencoba:
+- Visual Basic
+- Codeigniter
+- React
+- Vue
+
+Telah dipelajari dan digunakan:
+- Python
+- Ruby
+
+Berhenti menggunakan:
+- Jquery
+
+Masih menggunakan:
+- PHP
+- Javascript
+- SQL: MySql, PostgreSQL
+- Laravel
+- Bootstrap
+- Tailwind
+- Svelte
 
 ## Kepribadian
 

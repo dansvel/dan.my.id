@@ -21,7 +21,7 @@ Aku juga sebelumnya menggunakan Laragon, tidak ada masalah dengan itu. Ini murni
 
 Valet adalah lingkungan pengembang dari Laravel. Itu menggunakan **Nginx** untuk servernya dan **AcrylicDNS** untuk mem-proxy permintaan http menjadi domain **.test**
 
-Namun tidak hanya untuk Laravel. Valet juga mendukung macam-macam proyek PHP seperti :
+Namun tidak hanya untuk Laravel. Valet juga mendukung macam-macam proyek PHP seperti:
 
 - Lumen
 - Drupal
@@ -37,7 +37,7 @@ Namun tidak hanya untuk Laravel. Valet juga mendukung macam-macam proyek PHP sep
 
 Sebelum kita mulai, kamu perlu memastikan [**PHP** terbaru](http://windows.php.net/download) dan [**Composer**](https://getcomposer.org/) telah terpasang di Windows milikmu. Jika belum, kamu dapat memasangnya dengan cara yang kamu tahu atau kamu anggap nyaman. 
 
-Atau kamu dapat mengikuti cara paling ~~malas~~ mudah yang aku berikan, pasang [menggunakan **Scoop**](https://ngodwin.netlify.app/posts/1-cinta-untuk-baris-perintah) dengan menjalankan satu baris perintah berikut pada PowerShell :
+Atau kamu dapat mengikuti cara paling ~~malas~~ mudah yang aku berikan, pasang [menggunakan **Scoop**](https://ngodwin.netlify.app/posts/1-cinta-untuk-baris-perintah) dengan menjalankan satu baris perintah berikut pada PowerShell:
 
 ```powershell
 scoop install php composer
@@ -55,7 +55,7 @@ OK, lalu restart. Masalah port 9001 kemungkinan akan diatasi pada versi berikutn
 
 Memang Valet awalnya diciptakan untuk MacOS, namun kita dapat menggunakan paket pihak ketiga yang bernama [valet-windows](https://github.com/cretueusebiu/valet-windows).
 
-1. Buka PowerShell, pasang Valet secara global dengan menjalankan :
+1. Buka PowerShell, pasang Valet secara global dengan menjalankan:
 
     ```powershell
     composer global require cretueusebiu/valet-windows 
@@ -75,7 +75,7 @@ Memang Valet awalnya diciptakan untuk MacOS, namun kita dapat menggunakan paket 
     - baris 271 `LocalIPv4BindingAddress=127.0.0.1`
     - baris 284 `LocalIPv6BindingAddress=::1`
     
-1. Untuk menjalankan konfigurasi dan memasang Valet sebagai *service*, jalankan :
+1. Untuk menjalankan konfigurasi dan memasang Valet sebagai *service*, jalankan:
     
     ```powershell
     sudo valet install
