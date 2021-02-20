@@ -1,7 +1,4 @@
 <script lang="ts">
-  // import "@fontsource/source-sans-pro";
-  // import "@fontsource/source-code-pro";
-  // import './_global.pcss';
   import Nav from '../components/Nav.svelte';
   import { onMount } from 'svelte';
   import { theme } from './store';
@@ -23,13 +20,12 @@
 </main>
 
 <svelte:head>
-  <!--{#if $theme === 'dark'}-->
   <link rel="stylesheet" title="Dark" href="/dist/a11y-dark.css" disabled />
-  <!--{:else}-->
   <link rel="stylesheet" title="Light" href="/dist/a11y-light.css" disabled />
-  <!--{/if}-->
 </svelte:head>
 
 <style lang="postcss" global>
+  @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,200,300,400,500,600,700,800,900&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:100,200,300,400,500,600,700,800,900&display=swap');
   @import "_global.pcss";
 </style>
