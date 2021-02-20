@@ -1,5 +1,7 @@
 <script lang="ts">
-  import './_global.pcss';
+  // import "@fontsource/source-sans-pro";
+  // import "@fontsource/source-code-pro";
+  // import './_global.pcss';
   import Nav from '../components/Nav.svelte';
   import { onMount } from 'svelte';
   import { theme } from './store';
@@ -27,3 +29,7 @@
   <link rel="stylesheet" title="Light" href="/dist/a11y-light.css" disabled />
   <!--{/if}-->
 </svelte:head>
+
+<style lang="postcss" global>
+  @import "_global.pcss";
+</style>
