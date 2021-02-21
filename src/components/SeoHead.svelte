@@ -8,11 +8,10 @@
   const author = 'Dan';
   url = 'http://dan.my.id' + url;
 </script>
-
+<svelte:options accessors/>
 <svelte:head>
   <!-- Primary Meta Tags -->
   <title>{title}</title>
-  <link rel="icon" href="/dan-logo.svg" />
   <meta name="title" content={title} />
   <meta name="description" content={description} />
   <meta name="keywords" content={tags.join(', ')} />
