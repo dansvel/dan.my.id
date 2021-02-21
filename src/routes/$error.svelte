@@ -1,8 +1,6 @@
 <script lang="ts">
   export let status;
   export let error;
-
-  const online = typeof navigator !== 'undefined' ? navigator.onLine : true;
 </script>
 
 <svelte:head>
@@ -10,24 +8,17 @@
 </svelte:head>
 
 <div class="prose lg:prose-xl max-w-none text-center">
-  {#if online}
-    <h1>Oops!</h1>
+  <h1>Oops!</h1>
 
-    {#if error.message}
-      <h2>Galat {status}! {error.message}</h2>
-    {:else}
-      <h2>Encountered a {status} error</h2>
-    {/if}
-
-
-    {#if status >= 500}
-      <p>Tolong muat ulang halaman. Dan jika galat masih terjadi, kamu dapat <a href="https://twitter.com/dansvel" rel="noopener">mengabariku di Twitter</a> tentang ini. Terima kasih!</p>
-    {:else}
-      <p>Silakan gunakan menu di atas untuk menjelajah blog ini. Terima kasih.</p>
-    {/if}
+  {#if error.message}
+    <h2>Galat {status}! {error.message}</h2>
   {:else}
-    <h1>Sepertinya kamu sedang luring</h1>
+    <h2>Encountered a {status} error</h2>
+  {/if}
 
-    <p>Muat ulang halaman ini ketika kamu kembali daring nanti.</p>
+  {#if status >= 500}
+    <p>Tolong muat ulang halaman. Dan jika galat masih terjadi, kamu dapat <a href="https://twitter.com/dansvel" rel="noopener">mengabariku di Twitter</a> tentang ini. Terima kasih!</p>
+  {:else}
+    <p>Silakan gunakan menu di atas untuk menjelajah blog ini. Terima kasih.</p>
   {/if}
 </div>
