@@ -10,6 +10,5 @@ export function get(req, res) {
   }
   return {
     status: 404,
-    body: 'Catatan serperti itu tidak ada.'
   };
 }

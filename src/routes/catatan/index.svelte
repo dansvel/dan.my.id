@@ -3,10 +3,10 @@
 
   export async function load({ fetch, session, page, context }) {
     const filter = (await page.query) ? getUrlParams(page.query.toString()) : {};
-    // const posts = await fetch('/catatan.json').then((r) => r.json());
+    const posts = await fetch('/catatan.json').then((r) => r.json());
     return {
       props: {
-        // posts: arrSortBy(posts, 'date', false),
+        posts: arrSortBy(posts, 'date', false),
         filter: filter,
       },
     };
@@ -15,10 +15,10 @@
 
 <script lang="ts">
   import { slugger, localDate, arrUnion } from '../../components/util';
-  import {afterUpdate, onMount} from 'svelte';
+  import { afterUpdate } from 'svelte';
   import SeoHead from '../../components/SeoHead.svelte';
 
-  let allPosts: {
+  export let posts: {
     slug: string;
     title: string;
     description: string;
@@ -28,30 +28,18 @@
     date: string;
   }[];
   export let filter: { label?: string[]; kategori?: string };
-  let allTags = [];
-  let posts = [];
 
-  onMount(async () => {
-    allPosts = await fetch('catatan.json').then(r => r.json())
-    allTags = await arrUnion(allPosts.map((post) => [...post.tags]));
-    posts = allPosts
-  })
-
-
+  let allTags = arrUnion(posts.map((post) => [...post.tags]));
 
   $: {
-    if (allPosts) {
-      if (filter.label) posts = allPosts.filter((post) => post.tags.map((tag) => slugger(tag)).includes(filter.label));
-      if (filter.kategori) posts = allPosts.filter((post) => slugger(post.category) === filter.kategori);
-    }
-
-    if (posts) posts.sort((a, b) => a.slug < b.slug ? 1 : -1)
+    if (filter.label) posts = posts.filter((post) => post.tags.map((tag) => slugger(tag)).includes(filter.label));
+    if (filter.kategori) posts = posts.filter((post) => slugger(post.category) === filter.kategori);
+    posts.sort((a, b) => a.slug < b.slug ? 1 : -1)
   }
 </script>
 
 <SeoHead title="Catatan - dan.my.id" description="Tentang Pemrograman yang aku pelajari dan manusia yang aku teliti." />
 
-{#if posts}
 <div class="prose lg:prose-xl max-w-none">
   <header>
     <h1>
@@ -69,7 +57,6 @@
       {/each}
     </p>
   </header>
-
   <section>
     {#each posts as post}
       <div class="">
@@ -91,7 +78,6 @@
     {/each}
   </section>
 </div>
-{/if}
 
 <style lang="postcss">
   header {

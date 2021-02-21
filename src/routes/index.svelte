@@ -1,14 +1,21 @@
+<script lang="ts" context="module">
+  export async function load({ fetch }) {
+    const content = await fetch('index.json').then((r) => r.json());
+    return {
+      props: {
+        content: content,
+      },
+    };
+  }
+</script>
+
 <script lang="ts">
   import { localDate } from '../components/util';
   import SeoHead from '../components/SeoHead.svelte';
-  import {onMount} from 'svelte';
 
-  let content;
-
-  onMount( async () => content = await fetch('index.json').then((r) => r.json()))
+  export let content;
 </script>
 
-{#if content}
 <SeoHead title="{content.title} - {content.subtitle}" description={content.description} />
 
 <div class="prose lg:prose-xl max-w-none">
@@ -23,7 +30,7 @@
     </footer>
   </article>
 </div>
-{/if}
+
 <style lang="postcss">
   header {
     @apply text-center;
