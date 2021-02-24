@@ -35,13 +35,13 @@
 <header class:visible>
   <nav>
     <div id="brand">
-      <a href="/" rel="prefetch" title="Blog milik Dan">dan.my.id</a>
+      <a href="/" sveltekit:prefetch title="Blog milik Dan">dan.my.id</a>
     </div>
     <div id="menu">
       <ul class="">
         {#each menuList as menu}
           <li>
-            <a href={menu.link} rel="prefetch">{menu.text}</a>
+            <a href={menu.link} sveltekit:prefetch>{menu.text}</a>
           </li>
         {/each}
       </ul>

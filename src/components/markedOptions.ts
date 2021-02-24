@@ -9,8 +9,8 @@ const highlight = (code, lang) => {
 };
 
 renderer.link = (href, title, text) => {
-  return `<a href="${href}" ${href.startsWith('http') ? '' : 'rel="prefetch"'} ${
-    href.startsWith('http') ? 'target="_blank" rel="noopener"' : ''
+  return `<a href="${href}" ${href.startsWith('http') ? '' : 'sveltekit:prefetch'} ${
+    href.startsWith('http') ? 'target="_blank" rel="noopener external"' : ''
   } ${title ? 'title="' + title + '"' : ''}>${text}</a>`;
 };
 
