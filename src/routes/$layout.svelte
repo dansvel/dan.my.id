@@ -28,8 +28,6 @@
   <link rel="stylesheet" title="Light" href="/dist/a11y-light.css" disabled />
   <link rel="webmention" href="https://webmention.io/dan.my.id/webmention" />
   <link rel="pingback" href="https://webmention.io/dan.my.id/xmlrpc" />
+  <link href="https://github.com/dansvel" rel="me">
+  <link href="https://twitter.com/dansvel" rel="me">
 </svelte:head>
-
-<!--<style lang="postcss" global>-->
-<!--  @import "_global.pcss";-->
-<!--</style>-->
