@@ -1,18 +1,40 @@
-<script context="module" lang="ts">
-  export async function load({ fetch, session, page, context }) {
-    const post = await fetch(`${page.params.slug}.json`);
-    return post.ok
-      ? { props: { post: await post.json() } }
-      : {
-          status: 404,
-          error: new Error('Tidak ada catatan seperti itu disini'),
-        };
+<script lang="ts" context="module">
+  import { dev } from '$app/env';
+  const slugRegex = /^(\d+-[a-z-]+)$/;
+
+  export async function load({ page, session }) {
+    const { slug } = page.params;
+    const pages = session.pages;
+    const slugs = Object.fromEntries(
+      pages.map((page) => [page.slug.match(slugRegex)[1], page])
+    );
+
+    if (slug in slugs) {
+      let filepath = '.';
+      if (dev) {
+        filepath = '../../../../_content/post';
+      }
+      // @ts-ignore
+      const { default: post } = await import(
+        `${filepath}/${page.params.slug}.js`
+      );
+      return {
+        props: { post },
+      };
+    } else {
+      return {
+        status: 404,
+        error: new Error('Catatan seperti itu tidak ada'),
+      };
+    }
   }
 </script>
 
 <script lang="ts">
   import { localDate, slugger } from '../../components/util';
   import SeoHead from '../../components/SeoHead.svelte';
+  // import Webmention from '../../components/Webmention.svelte';
+  import Transition from '../../components/Transition.svelte';
 
   export let post;
 </script>
@@ -24,22 +46,30 @@
   tags={post.tags}
   url="/catatan/{post.slug}" />
 
-<div class="prose lg:prose-xl max-w-none">
-  <article>
-    <header>
-      <h1>{post.title}</h1>
-      <p>
-        <a href="/catatan?category={slugger(post.category)}" rel="prefetch">{post.category}</a>
-        :
-        {#each post.tags as tag}
-          <a href="/catatan?label={slugger(tag)}" rel="prefetch">#{tag}</a> &zwj;
-        {/each}
-      </p>
-      <p>{localDate(post.date)}</p>
-    </header>
-    {@html post.body}
-  </article>
-</div>
+{#key post}
+  <Transition>
+    <div class="prose lg:prose-xl max-w-none">
+      <article>
+        <header>
+          <h1>{post.title}</h1>
+          <p>
+            <a href="/catatan?category={slugger(post.category)}" rel="prefetch"
+              >{post.category}</a>
+            :
+            {#each post.tags as tag}
+              <a href="/catatan?label={slugger(tag)}" rel="prefetch">#{tag}</a> &zwj;
+            {/each}
+          </p>
+          <p>{localDate(post.date)}</p>
+        </header>
+        {@html post.body}
+      </article>
+    </div>
+<!--    <footer>-->
+<!--      <Webmention />-->
+<!--    </footer>-->
+  </Transition>
+{/key}
 
 <style lang="postcss">
   header {
@@ -51,6 +81,5 @@
     }
   }
   footer {
-    @apply text-right;
   }
 </style>

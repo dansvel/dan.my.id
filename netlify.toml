@@ -1,3 +1,11 @@
 [build]
-publish = "build/"
-command = "npm run build"
+  publish = "build/"
+  command = "npm run build && npm run adapt"
+
+[build.environment]
+ NODE_ENV = "production"
+
+[[redirects]]
+  from = "/*"
+  to = "/404/index.html"
+  status = 404

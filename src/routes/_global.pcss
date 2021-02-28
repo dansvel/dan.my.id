@@ -5,10 +5,18 @@
 /* purge start ignore */
 
 .prose {
-  @apply antialiased text-gray-600;
-  @apply font-sans;
-  &[class~='lead'] {
-    @apply text-gray-600;
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    @apply align-middle;
+    scroll-margin-top: 8rem;
+    & a.anchor {
+      @apply inline-block transition-colors text-gray-500;
+      @apply h-6 w-6 self-center align-middle -ml-7 mr-1;
+      @apply hover:text-green-600;
+    }
   }
   & blockquote {
     @apply text-gray-600 border-gray-500 bg-gray-100;
@@ -71,8 +79,14 @@
 
 .dark .prose {
   @apply antialiased text-gray-300;
-  &[class~='lead'] {
-    @apply text-gray-400;
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    & a.anchor {
+      @apply hover:text-green-400;
+    }
   }
   & blockquote {
     @apply text-gray-300 border-gray-500 bg-gray-900;
@@ -132,12 +146,14 @@ body {
   & > #svelte {
     & > header {
       @apply py-2 mt-0 fixed w-full z-10 top-0 bg-gray-100;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
       transform: translate(0, calc(-100% - 1rem));
       transition: transform 0.5s;
       @nest .dark & {
         @apply bg-gray-900;
-        box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1), 0 2px 4px -1px rgba(255, 255, 255, 0.06);
+        box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1),
+          0 2px 4px -1px rgba(255, 255, 255, 0.06);
       }
       &.visible {
         transform: none;

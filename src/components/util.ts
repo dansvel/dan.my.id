@@ -11,7 +11,8 @@ export const localDate = (date: string, locales: string = 'id-ID') => {
   });
 };
 
-export const slugger = (str) => str.replace(/[^A-Za-z0-9.-]/g, '').toLowerCase();
+export const slugger = (str) =>
+  str.replace(/[^A-Za-z0-9.-]/g, '').toLowerCase();
 
 // function bellow i get from https://1loc.dev/
 export const arrFlat = (arr) =>

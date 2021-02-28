@@ -4,8 +4,8 @@
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "not-svelte-kit dev",
-		"build": "NODE_ENV=production svelte-kit build && svelte-kit adapt",
-		"start": "svelte-kit start",
+		"build": "svelte-kit build",
+        "adapt": "svelte-kit adapt",
 		"format": "prettier src/** -w"
 	},
 	"devDependencies": {

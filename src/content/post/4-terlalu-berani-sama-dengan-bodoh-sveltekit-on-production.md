@@ -33,9 +33,9 @@ Bayangkan saja om-om mau jualan nasi goreng dan sedang belajar membuat resepnya 
 
 Para pengembang web juga mengerumuni proyek dalam masa pengembangan ini dengan antusias. Dengan masih munculnya bug di sana-sini, ada saja yang nekat menggunakannya di *production*. 
 
-Ya aku ini contohnya.
+Ya blog ini contohnya.
 
-Entah mereka ini calon ilmuan yang tidak kesampaian sehingga *demen* coba-coba. Atau cuma orang nekat yang bodoh.
+Entah kami ini calon ilmuan yang tidak kesampaian sehingga *demen* coba-coba. Atau cuma orang nekat yang bodoh.
 
 ## Kendala
 
@@ -83,5 +83,7 @@ Seperti yang telah diketahui, SvelteKit adalah pengembangan dari Sapper. Jadi AP
    ```
    
 3. Gunakan [`not-svelte-kit`](https://github.com/GrygrFlzr/not-svelte-kit) jika kamu mengembangkan SvelteKit di lingkungan sistem operasi Windows, karena ketika catatan ini ditulis masih terdapat masalah dengan ESM atau semacamnya. Saat ini aku hanya menggunakannya untuk menjalankan perintah `pnpm run dev`, karena proses buildnya tidak ada masalah dan telah ditangani langsung di netlify.
+
+4. Lebih lengkapnya coba kunjungi [kit-docs](https://sk-incognito.vercel.app/), sebuah kumpulan dokumentasi SvelteKit tidak resmi yang dibuat oleh salah satu orang nekat. Dari situ juga aku memperbarui blog ini.
    
 Mungkin hanya itu yang aku ketahui, atau mungkin ada yang terlewat. Silakan menambahkan jika berkenan.

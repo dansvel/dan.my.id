@@ -19,8 +19,8 @@ module.exports = {
     darkMode: 'class',
 	theme: {
         fontFamily: {
-            sans: ['"Source Sans Pro"', ...defaultTheme.fontFamily.sans],
-            mono: ['"Source Code Pro"', ...defaultTheme.fontFamily.mono]
+            sans: ['"Fira Sans"', ...defaultTheme.fontFamily.sans],
+            mono: ['"Fira Code"', ...defaultTheme.fontFamily.mono]
         }
     },
 	variants: {

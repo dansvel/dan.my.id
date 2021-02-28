@@ -1,3 +1,5 @@
+<svelte:options accessors />
+
 <script lang="ts">
   export let url = '/';
   export let title = 'Blog milik Dan';
@@ -8,7 +10,7 @@
   const author = 'Dan';
   url = 'http://dan.my.id' + url;
 </script>
-<svelte:options accessors/>
+
 <svelte:head>
   <!-- Primary Meta Tags -->
   <title>{title}</title>
