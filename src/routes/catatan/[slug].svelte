@@ -11,13 +11,16 @@
 
     if (slug in slugs) {
       let filepath = '.';
+      let piece1 = '.';
+      let piece2 = '.';
+      let piece3 = '.';
       if (dev) {
-        filepath = '../../../../_content/post';
+        piece1 = '../..';
+        piece2 = '_content';
+        piece3 = 'post';
       }
       // @ts-ignore
-      const { default: post } = await import(
-        `${filepath}/${page.params.slug}.js`
-      );
+      const { default: post } = await import(`./${piece1}/${piece2}/${piece3}/${page.params.slug}.js`);
       return {
         props: { post },
       };
@@ -65,9 +68,9 @@
         {@html post.body}
       </article>
     </div>
-<!--    <footer>-->
-<!--      <Webmention />-->
-<!--    </footer>-->
+    <!--    <footer>-->
+    <!--      <Webmention />-->
+
   </Transition>
 {/key}
 
