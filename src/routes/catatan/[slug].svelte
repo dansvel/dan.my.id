@@ -10,17 +10,12 @@
     );
 
     if (slug in slugs) {
-      let filepath = '.';
-      let piece1 = '.';
-      let piece2 = '.';
-      let piece3 = '.';
+      let filePath = '../../../unoptimized/server'
       if (dev) {
-        piece1 = '../..';
-        piece2 = '_content';
-        piece3 = 'post';
+        filePath = '../../..';
       }
       // @ts-ignore
-      const { default: post } = await import(`./${piece1}/${piece2}/${piece3}/${page.params.slug}.js`);
+      const { default: post } = await import(`${filePath}/_content/post/${slug}.js`);
       return {
         props: { post },
       };

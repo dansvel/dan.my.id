@@ -3,13 +3,9 @@ import path from 'path';
 // @ts-ignore
 import { dev } from '$app/env';
 
-let piece1 = '.';
-let piece2 = '.';
-let piece3 = '.';
+let filePath = '../../../unoptimized/server'
 if (dev) {
-  piece1 = '../..';
-  piece2 = '_content';
-  piece3 = 'post';
+  filePath = '../..';
 }
 
 export async function getSession(): Promise<Record<string, any>> {
@@ -18,7 +14,7 @@ export async function getSession(): Promise<Record<string, any>> {
     filenames.map(async (filename) => {
       const slug = await path.basename(filename, '.md');
       // @ts-ignore
-      const { default: posts } = await import(`./${piece1}/${piece2}/${piece3}/${slug}.js`);
+      const { default: posts } = await import(`${filePath}/_content/post/${slug}.js`);
       const { body, markdown, ...meta } = await posts;
 
       return {
