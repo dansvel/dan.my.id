@@ -2,7 +2,7 @@
   import { dev } from '$app/env';
   const slugRegex = /^(\d+-[a-z-]+)$/;
 
-  export async function load({ page, session }) {
+  export async function load({ fetch, page, session }) {
     const { slug } = await page.params;
     const pages = await session.pages;
     const slugs = await Object.fromEntries(
@@ -19,7 +19,7 @@
       // return {
       //   props: { post },
       // };
-      const post = await fetch(`${slug}.json`);
+      const post = await fetch(`/catatan/${slug}.json`);
       return {
         props: { post: await post.json() },
       };
