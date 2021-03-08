@@ -2,11 +2,6 @@ const markedOptions = require('./marked.config.cjs')
 // Consult https://www.snowpack.dev to learn about these options
 module.exports = {
 	extends: '@sveltejs/snowpack-config',
-    packageOptions: {
-        rollup: {
-            plugins: [require('@rollup/plugin-dynamic-import-vars')],
-        },
-    },
 	plugins: [
         [
             '@snowpack/plugin-build-script',
