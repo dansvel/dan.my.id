@@ -5,7 +5,8 @@
 	"scripts": {
 		"dev": "not-svelte-kit dev",
 		"build": "svelte-kit build",
-        "adapt": "not-svelte-kit adapt",
+		"adapt": "svelte-kit adapt",
+		"start": "svelte-kit start",
 		"format": "prettier src/** -w"
 	},
 	"devDependencies": {
@@ -13,9 +14,9 @@
 		"@snowpack/plugin-build-script": "^2.1.0",
 		"@snowpack/plugin-postcss": "^1.1.0",
 		"@snowpack/plugin-typescript": "^1.2.1",
-		"@sveltejs/adapter-static": "next",
-		"@sveltejs/kit": "next",
-		"@sveltejs/snowpack-config": "next",
+		"@sveltejs/adapter-static": "0.0.17",
+		"@sveltejs/kit": "1.0.0-next.34",
+		"@sveltejs/snowpack-config": "1.0.0-next.3",
 		"@tailwindcss/typography": "^0.4.0",
 		"autoprefixer": "^10.2.4",
 		"cssnano": "^4.1.10",

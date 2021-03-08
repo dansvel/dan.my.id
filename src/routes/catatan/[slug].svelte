@@ -3,21 +3,25 @@
   const slugRegex = /^(\d+-[a-z-]+)$/;
 
   export async function load({ page, session }) {
-    const { slug } = page.params;
-    const pages = session.pages;
-    const slugs = Object.fromEntries(
+    const { slug } = await page.params;
+    const pages = await session.pages;
+    const slugs = await Object.fromEntries(
       pages.map((page) => [page.slug.match(slugRegex)[1], page])
     );
 
     if (slug in slugs) {
-      let filePath = '../../../unoptimized/server'
-      if (dev) {
-        filePath = '../../..';
-      }
+      // let filePath = '../../../unoptimized/client'
+      // if (dev) {
+      //   filePath = '../../..';
+      // }
       // @ts-ignore
-      const { default: post } = await import(`${filePath}/_content/post/${slug}.js`);
+      // const { default: post } = await import(`${filePath}/_content/post/${slug}.js`);
+      // return {
+      //   props: { post },
+      // };
+      const post = await fetch(`${slug}.json`);
       return {
-        props: { post },
+        props: { post: await post.json() },
       };
     } else {
       return {

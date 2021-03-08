@@ -7,8 +7,5 @@ module.exports = {
 	kit: {
 		adapter: '@sveltejs/adapter-static',
 		target: '#svelte',
-        prerender: {
-		    force: true
-        }
 	}
 };
