@@ -61,15 +61,15 @@
           {filter.label ? 'mengenai ' + filter.label : ''}
         </h1>
         <p>
-          Tentang: <a href="/catatan?kategori=manusia" rel="prefetch"
+          Tentang: <a href="/catatan?kategori=manusia"
             >manusia</a>
           atau
-          <a href="/catatan?kategori=teknologi" rel="prefetch">teknologi</a>
+          <a href="/catatan?kategori=teknologi">teknologi</a>
         </p>
         <p>
           Label:
           {#each allTags as tag}
-            <a href="/catatan?label={slugger(tag)}" rel="prefetch">#{tag}</a> &zwj;
+            <a href="/catatan?label={slugger(tag)}">#{tag}</a> &zwj;
           {/each}
         </p>
       </header>
@@ -77,15 +77,15 @@
         {#each posts as post}
           <div class="">
             <h3>
-              <a href="/catatan/{post.slug}" rel="prefetch">{post.title}</a>
+              <a href="/catatan/{post.slug}">{post.title}</a>
             </h3>
             <p>
               <a
                 href="/catatan?category={slugger(post.category)}"
-                rel="prefetch">{post.category}</a>
+               >{post.category}</a>
               :
               {#each post.tags as tag}
-                <a href="/catatan?label={slugger(tag)}" rel="prefetch"
+                <a href="/catatan?label={slugger(tag)}"
                   >#{tag}</a> &zwj;
               {/each}
             </p>

@@ -10,15 +10,6 @@
     );
 
     if (slug in slugs) {
-      // let filePath = '../../../unoptimized/client'
-      // if (dev) {
-      //   filePath = '../../..';
-      // }
-      // @ts-ignore
-      // const { default: post } = await import(`${filePath}/_content/post/${slug}.js`);
-      // return {
-      //   props: { post },
-      // };
       const post = await fetch(`/catatan/${slug}.json`);
       return {
         props: { post: await post.json() },
@@ -49,7 +40,7 @@
   url="/catatan/{post.slug}" />
 
 {#key post}
-  <Transition>
+  <Transition refresh="{post.slug}">
     <div class="prose lg:prose-xl max-w-none">
       <article>
         <header>
