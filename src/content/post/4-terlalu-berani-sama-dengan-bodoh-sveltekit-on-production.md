@@ -29,9 +29,9 @@ pnpm run dev
 
 *`pnpm` dapat diganti dengan `npm` atau `yarn` sesuai selera.
 
-Bayangkan saja om-om mau jualan nasi goreng dan sedang belajar membuat resepnya sendiri. Dia bahkan belum punya warung, namun tentu saja nasi goreng hasil latihannya sudah ada. Nah banyak juga ternyata yang doyan sama ini. Mungkin kurang asin, mungkin terlalu banyak sambal, dan lain sebaginya. Bagaimana pun, itu nasi goreng.
+Bayangkan saja om-om mau jualan nasi goreng dan sedang belajar membuat resepnya sendiri. Dia bahkan belum punya warung, namun tentu saja nasi goreng hasil latihannya sudah ada. Nah banyak juga ternyata yang doyan sama ini. Mungkin kurang asin, mungkin terlalu banyak sambal, dan lain sebagainya. Bagaimana pun, itu nasi goreng.
 
-Para pengembang web juga mengerumuni proyek dalam masa pengembangan ini dengan antusias. Dengan masih munculnya bug di sana-sini, ada saja yang nekat menggunakannya di *production*. 
+Para pengembang web juga mengerumuni proyek dalam masa pengembangan ini dengan antusias. Dengan masih munculnya bug di sana-sini, ada saja yang nekat menggunakannya di *production*.
 
 Ya blog ini contohnya.
 
@@ -45,7 +45,7 @@ Mulai dari preprocessor yang tidak terbaca, konfigurasi Snowpack yang terlewat, 
 
 ## Contekan
 
-Seperti yang telah diketahui, SvelteKit adalah pengembangan dari Sapper. Jadi API yang digunakan juga kebanyakan berasal dari sana, hanya sedikit diubah lalu dikembangakan. Barangkali saja ada yang sebodoh aku, inilah contekan sementara untuk SvelteKit saat ini
+Seperti yang telah diketahui, SvelteKit adalah pengembangan dari Sapper. Jadi API yang digunakan juga kebanyakan berasal dari sana, hanya sedikit diubah lalu dikembangkan. Barangkali saja ada yang sebodoh aku, inilah sontekan sementara untuk SvelteKit saat ini
 
 1. `preload()` telah diganti menjadi `load()`
     ```js
@@ -59,9 +59,9 @@ Seperti yang telah diketahui, SvelteKit adalah pengembangan dari Sapper. Jadi AP
             };
     }
     ```
-   
+
    Return lain
-   
+
    ```js
    return {
       redirect: {
@@ -75,15 +75,15 @@ Seperti yang telah diketahui, SvelteKit adalah pengembangan dari Sapper. Jadi AP
       error: new Error("Unauthorized."),
     };
    ```
-   
+
 2. API lain dari sapper
    ```js
    import { goto, prefetch, prefetchRoutes } from '$app/navigation';
    import { page, session, navigating } from '$app/stores';
    ```
-   
+
 3. Gunakan [`not-svelte-kit`](https://github.com/GrygrFlzr/not-svelte-kit) jika kamu mengembangkan SvelteKit di lingkungan sistem operasi Windows, karena ketika catatan ini ditulis masih terdapat masalah dengan ESM atau semacamnya. Saat ini aku hanya menggunakannya untuk menjalankan perintah `pnpm run dev`, karena proses buildnya tidak ada masalah dan telah ditangani langsung di netlify.
 
 4. Lebih lengkapnya coba kunjungi [kit-docs](https://sk-incognito.vercel.app/), sebuah kumpulan dokumentasi SvelteKit tidak resmi yang dibuat oleh salah satu orang nekat. Dari situ juga aku memperbarui blog ini.
-   
+
 Mungkin hanya itu yang aku ketahui, atau mungkin ada yang terlewat. Silakan menambahkan jika berkenan.

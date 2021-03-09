@@ -16,19 +16,19 @@ Aku menamakan diriku sendiri **Dan**. Hingga saat ini, aku masih berada dalam tu
 
 Menulis sebenarnya sangat membantuku mengingat, hanya saja kadang aku terlalu malas melakukannya dan berakhir melupakan hal-hal begitu saja. Aku mencoba menulis di mana-mana, buku catatan, daftar centang, catatan digital.
 
-Blog ini bukan yang pertama, aku telah mencoba membuat blog, menulis, berhenti, membuat lagi, menulis lagi. Mereka berakhir karena terabaikan olehku, aku tidak akan berharap untuk blog ini namun aku akan melakukannya dengan serius. Seperti terakir kali.
+Blog ini bukan yang pertama, aku telah mencoba membuat blog, menulis, berhenti, membuat lagi, menulis lagi. Mereka berakhir karena terabaikan olehku, aku tidak akan berharap untuk blog ini namun aku akan melakukannya dengan serius. Seperti terakhir kali.
 
 ## Manusia
 
 Mempelajari manusia seperti menjadi misi utama dan tujuan mengapa aku ada. Manusia mengatakan, mereka itu berbeda-beda. Namun fakta bahwa,
 
 > Semua manusia tidak ada yang ingin disamakan.
- 
+
 Artinya, semua manusia sama saja, kan?
 
 ## Teknologi
 
-Mengerti sedikit tentang Linux, tertarik menggunakannya. Namun belum dapat meninggalkan Windows. Aku suka pemrograman, namun ragu untuk menyebut diriku sebagai seorang programmer. Proyek yang kubuat tidak banyak, semuannya hanya sebagai bukti hasil belajar. 
+Mengerti sedikit tentang Linux, tertarik menggunakannya. Namun belum dapat meninggalkan Windows. Aku suka pemrograman, namun ragu untuk menyebut diriku sebagai seorang programmer. Proyek yang kubuat tidak banyak, semuanya hanya sebagai bukti hasil belajar.
 
 Sekedar mencoba:
 - Visual Basic
@@ -74,6 +74,6 @@ Genrenya bebas, namun yang utama dari dua hobi pertama adalah **cerita yang tida
 
 ## Kontak
 
-Aku ada di Twitter sebagai [@dansvel](https://twitter.com/dansvel). 
+Aku ada di Twitter sebagai [@dansvel](https://twitter.com/dansvel).
 
 Sementara itu saja.
