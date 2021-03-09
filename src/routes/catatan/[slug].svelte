@@ -40,7 +40,7 @@
   url="/catatan/{post.slug}" />
 
 {#key post}
-  <Transition refresh="{post.slug}">
+  <Transition>
     <div class="prose lg:prose-xl max-w-none">
       <article>
         <header>

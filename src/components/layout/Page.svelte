@@ -11,7 +11,7 @@
   description={content.description} />
 
 {#key content}
-  <Transition refresh={content.title}>
+  <Transition>
     <div class="prose lg:prose-xl max-w-none">
       <article>
         <header>
