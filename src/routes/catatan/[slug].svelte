@@ -24,10 +24,10 @@
 </script>
 
 <script lang="ts">
-  import { localDate, slugger } from '../../components/util';
-  import SeoHead from '../../components/SeoHead.svelte';
-  // import Webmention from '../../components/Webmention.svelte';
-  import Transition from '../../components/Transition.svelte';
+  import { localDate, slugger } from '$components/util';
+  import SeoHead from '$components/SeoHead.svelte';
+  // import Webmention from '$components/Webmention.svelte';
+  import Transition from '$components/Transition.svelte';
 
   export let post;
 </script>

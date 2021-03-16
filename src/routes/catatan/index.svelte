@@ -1,5 +1,5 @@
 <script context="module" lang="ts">
-  import { getUrlParams, arrSortBy } from '../../components/util';
+  import { getUrlParams, arrSortBy } from '$components/util';
 
   export async function load({ fetch, session, page, context }) {
     const posts = session.pages;
@@ -18,9 +18,9 @@
 </script>
 
 <script lang="ts">
-  import { slugger, localDate, arrUnion } from '../../components/util';
-  import SeoHead from '../../components/SeoHead.svelte';
-  import Transition from '../../components/Transition.svelte';
+  import { slugger, localDate, arrUnion } from '$components/util';
+  import SeoHead from '$components/SeoHead.svelte';
+  import Transition from '$components/Transition.svelte';
 
   export let posts: {
     slug: string;

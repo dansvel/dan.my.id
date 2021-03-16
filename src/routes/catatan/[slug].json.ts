@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import marked from 'marked';
 import frontMatter from 'front-matter';
-import markedOptions from '../../components/marked.config';
+import markedOptions from '$components/marked.config';
 
 function getPost(slug: string) {
   const markdown = fs.readFileSync(path.resolve('src/content/post', `${slug}.md`), 'utf-8');

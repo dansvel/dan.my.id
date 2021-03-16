@@ -1,6 +1,6 @@
 <script lang="ts">
   import './_global.pcss';
-  import Nav from '../components/Nav.svelte';
+  import Nav from '$components/Nav.svelte';
   import { onMount } from 'svelte';
   import { theme } from './store';
 

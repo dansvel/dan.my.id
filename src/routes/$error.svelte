@@ -1,7 +1,7 @@
 <script lang="ts">
   import { dev } from '$app/env';
-  import Transition from '../components/Transition.svelte';
-  import SeoHead from '../components/SeoHead.svelte';
+  import Transition from '$components/Transition.svelte';
+  import SeoHead from '$components/SeoHead.svelte';
 
   export let status;
   export let error;
