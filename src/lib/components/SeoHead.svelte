@@ -6,7 +6,6 @@
   export let description = 'Catatan perjalanan setengah manusia';
   export let tags = ['Setengah manusia', 'Svelte'];
   export let image = '/images/perjalanan-setengah-manusia.png';
-
   const author = 'Dan';
   url = 'http://dan.my.id' + url;
 </script>

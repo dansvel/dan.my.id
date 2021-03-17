@@ -1,8 +1,8 @@
 <script lang="ts">
-  import './_global.pcss';
-  import Nav from '$components/Nav.svelte';
-  import { onMount } from 'svelte';
-  import { theme } from './store';
+  import './_global.postcss';
+  import Nav from '$lib/components/Nav.svelte';
+  import {onMount} from 'svelte';
+  import {theme} from './store';
 
   onMount(() => {
     if ($theme === 'dark') {
@@ -15,10 +15,7 @@
 </script>
 
 <Nav />
-
-<!--<main>-->
 <slot />
-<!--</main>-->
 
 <svelte:head>
   <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -31,3 +28,4 @@
   <link href="https://github.com/dansvel" rel="me" />
   <link href="https://twitter.com/dansvel" rel="me" />
 </svelte:head>
+

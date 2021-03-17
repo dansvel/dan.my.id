@@ -1,5 +1,5 @@
 <script>
-  import { theme } from '../routes/store';
+  import { theme } from '../../routes/store';
 
   const toggleTheme = (e) => {
     e.currentTarget.blur();
@@ -12,7 +12,7 @@
 </script>
 
 <button
-  on:click={toggleTheme}
-  class="py-2 px-2 focus:outline-none hover:bg-gray-500 rounded-full">
+        on:click={toggleTheme}
+        class="py-2 px-2 focus:outline-none hover:bg-gray-500 rounded-full">
   {#if $theme === 'dark'}🌙{:else}☀{/if}
 </button>

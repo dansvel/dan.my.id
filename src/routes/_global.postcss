@@ -53,7 +53,7 @@
   & h3,
   & h4 {
     @apply text-gray-600;
-    & > code {
+    &> code {
       font-weight: inherit;
     }
   }
@@ -143,8 +143,8 @@ body {
   @apply antialiased text-gray-600 dark:text-gray-300 bg-gray-100 dark:bg-gray-900 overflow-y-scroll;
   @apply leading-normal tracking-normal text-base font-normal break-words;
   @apply font-sans text-base lg:text-xl;
-  & > #svelte {
-    & > header {
+  &> #svelte {
+    &> header {
       @apply py-2 mt-0 fixed w-full z-10 top-0 bg-gray-100;
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
         0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -170,10 +170,10 @@ body {
         }
 
         & #menu {
-          @apply flex w-full px-2 content-center justify-between md:w-1/2 md:justify-end;
+          @apply flex w-full md:w-1/2 px-2 content-center justify-between md:justify-end;
 
           & ul {
-            @apply list-none flex justify-between flex-1 md:flex-none items-center;
+            @apply list-none flex justify-between md:justify-end flex-1 md:flex-none items-center;
             & li:last-child {
               @apply hidden;
             }
@@ -181,12 +181,11 @@ body {
               @apply inline-block py-2 px-3;
 
             }
-
           }
         }
       }
     }
-    & > main {
+    &> main {
       @apply px-8 pb-16 pt-32 md:pt-24 mx-auto max-w-4xl;
     }
   }

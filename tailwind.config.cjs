@@ -17,16 +17,16 @@ module.exports = {
         },
     },
     darkMode: 'class',
-	theme: {
+    theme: {
         fontFamily: {
             sans: ['"Fira Sans"', ...defaultTheme.fontFamily.sans],
             mono: ['"Fira Code"', ...defaultTheme.fontFamily.mono]
         }
     },
-	variants: {
-		extend: {},
-	},
-	plugins: [
+    variants: {
+        extend: {},
+    },
+    plugins: [
         tailwindCSSTypography,
     ],
 };

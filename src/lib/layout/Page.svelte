@@ -1,16 +1,16 @@
 <script lang="ts">
-  import { localDate } from '../util';
-  import SeoHead from '../SeoHead.svelte';
-  import Transition from '../Transition.svelte';
+  import { localDate } from '$lib/util';
+  import SeoHead from '$lib/components/SeoHead.svelte';
+  import Transition from '$lib/components/Transition.svelte';
 
   export let content;
 </script>
 
 <SeoHead
-  title="{content.title} - {content.subtitle}"
-  description={content.description} />
+        title="{content.title} - {content.subtitle}"
+        description={content.description} />
 
-{#key content}
+{#key content.title}
   <Transition>
     <div class="prose lg:prose-xl max-w-none">
       <article>
@@ -31,7 +31,10 @@
   header {
     @apply text-center;
     & h1 {
-      @apply mb-4;
+      @apply mb-2;
+    }
+    & h2 {
+      @apply my-2;
     }
   }
   footer {

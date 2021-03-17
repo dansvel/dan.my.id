@@ -1,33 +1,33 @@
 <script lang="ts">
+  import './_global.postcss';
   import { dev } from '$app/env';
-  import Transition from '$components/Transition.svelte';
-  import SeoHead from '$components/SeoHead.svelte';
+  import Transition from '$lib/components/Transition.svelte';
+  import SeoHead from '$lib/components/SeoHead.svelte';
 
   export let status;
   export let error;
+  console.log(status, error);
+  const message = status === 404 ? 'Di depan ada jurang' : 'Sepertinya ada yang tidak benar';
 </script>
 
-<SeoHead title="Oops, {error.message} - Blog milik Dan" />
+<SeoHead title="Oops, {message.toLowerCase()} - Blog milik Dan" />
 
-{#key error}
-<Transition>
+<Transition key="{message}">
   <div class="prose lg:prose-xl max-w-none">
     <h1>Oops!</h1>
-
-    {#if error.message}
-      <h2>Oops, {error.message}.</h2>
-    {:else}
-      <h2>Hmm... Galat {status}?</h2>
-    {/if}
+    <h2>{message}</h2>
 
     {#if dev && error.stack}
       <pre><code>{error.stack}</code></pre>
     {/if}
 
-      <p>Silakan gunakan menu di atas untuk menjelajah blog ini.</p>
+    {#if status === 404 }
+    <p>Silakan gunakan menu di atas untuk menjelajah blog ini.</p>
+    {:else}
+    <p>Jika halaman ini terus muncul, tolong beri tahu aku via <a href="https://twitter.com/dansvel" target="_blank" rel="noopener">Twitter</a></p>
+    {/if}
   </div>
 </Transition>
-{/key}
 
 <style lang="postcss">
   div {

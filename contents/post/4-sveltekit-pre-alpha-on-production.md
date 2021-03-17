@@ -1,5 +1,5 @@
 ---
-title: Terlalu berani = bodoh? SvelteKit on Production
+title: SvelteKit pre-alpha on Production
 date: 2020-02-21T19:22:01+07:00
 description: Blog yang dibuat menggunakan teknologi yang belum kelar. Antara penasaran dan nekat sudah seperti tetangga. Pengalaman memang guru yang berharga, namun akan bijak jika kamu belajar dari pengalaman orang-orang nekat ini.
 image: https://pbs.twimg.com/media/El9fOLpVoAAF5u-.jpg
@@ -43,47 +43,10 @@ Jika setiap bug yang ada ibarat rasa gatal di kulit, maka seharusnya aku tidak d
 
 Mulai dari preprocessor yang tidak terbaca, konfigurasi Snowpack yang terlewat, dan bug di Windows. Ditambah API yang berubah dan belum ada dokumentasi, lengkaplah seperti orang menggunakan VR-headset mati sambil jalan-jalan.
 
+Namun sekarang, masalah itu sudah selesai. Blog yang kamu kunjungi ini adalah buktinya.
+
 ## Contekan
 
-Seperti yang telah diketahui, SvelteKit adalah pengembangan dari Sapper. Jadi API yang digunakan juga kebanyakan berasal dari sana, hanya sedikit diubah lalu dikembangkan. Barangkali saja ada yang sebodoh aku, inilah sontekan sementara untuk SvelteKit saat ini
-
-1. `preload()` telah diganti menjadi `load()`
-    ```js
-    export async function load({ fetch, session, page, context }) {
-        const post = await fetch(`${page.params.slug}.json`);
-        return post.ok
-            ? { props: { post: await post.json() } }
-            : {
-                status: 404,
-                error: new Error('Tidak ada catatan seperti itu disini'),
-            };
-    }
-    ```
-
-   Return lain
-
-   ```js
-   return {
-      redirect: {
-        status: 302,
-        to: "/",
-      },
-    };
-   
-   return {
-      status: 402,
-      error: new Error("Unauthorized."),
-    };
-   ```
-
-2. API lain dari sapper
-   ```js
-   import { goto, prefetch, prefetchRoutes } from '$app/navigation';
-   import { page, session, navigating } from '$app/stores';
-   ```
-
-3. Gunakan [`not-svelte-kit`](https://github.com/GrygrFlzr/not-svelte-kit) jika kamu mengembangkan SvelteKit di lingkungan sistem operasi Windows, karena ketika catatan ini ditulis masih terdapat masalah dengan ESM atau semacamnya. Saat ini aku hanya menggunakannya untuk menjalankan perintah `pnpm run dev`, karena proses buildnya tidak ada masalah dan telah ditangani langsung di netlify.
-
-4. Lebih lengkapnya coba kunjungi [kit-docs](https://sk-incognito.vercel.app/), sebuah kumpulan dokumentasi SvelteKit tidak resmi yang dibuat oleh salah satu orang nekat. Dari situ juga aku memperbarui blog ini.
+https://github.com/sveltejs/kit/blob/master/documentation
 
 Mungkin hanya itu yang aku ketahui, atau mungkin ada yang terlewat. Silakan menambahkan jika berkenan.
