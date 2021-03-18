@@ -44,6 +44,12 @@
             <a href={menu.link}>{menu.text}</a>
           </li>
         {/each}
+        <li class="hidden">
+          <a href="/404">404</a>
+        </li>
+        <li class="hidden">
+          <a href="/500">500</a>
+        </li>
       </ul>
       <ToggleTheme />
     </div>
