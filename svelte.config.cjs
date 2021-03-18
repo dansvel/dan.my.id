@@ -13,10 +13,6 @@ module.exports = {
 		adapter: '@sveltejs/adapter-static',
 
 		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte',
-
-        prerender: {
-		    force: true
-        }
+		target: '#svelte'
 	}
 };
