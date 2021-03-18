@@ -5,12 +5,12 @@
 [[redirects]]
  status = 404
  from = "/catatan/*"
- to = "/catatan/index.html"
+ to = "/catatan/404/index.html"
 
 [[redirects]]
   status = 404
   from = "/*"
-  to = "/index.html"
+  to = "/404/index.html"
 
 
 [[redirects]]
