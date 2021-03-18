@@ -3,14 +3,15 @@
   publish = "build/"
 
 [[redirects]]
+ status = 404
+ from = "/catatan/*"
+ to = "/catatan/index.html"
+
+[[redirects]]
   status = 404
   from = "/*"
   to = "/index.html"
 
-[[redirects]]
-  status = 404
-  from = "/catatan/*"
-  to = "/catatan/index.html"
 
 [[redirects]]
   status = 500
