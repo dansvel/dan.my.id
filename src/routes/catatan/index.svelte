@@ -46,7 +46,7 @@
         title="Catatan Perjalanan - Blog milik Dan"
         description="Tentang Pemrograman yang aku pelajari dan manusia yang aku teliti." />
 
-<Transition key="Catatan Perjalanan - Blog milik Dan">
+<Transition key="Catatan Perjalanan {filter.label ? 'mengenai ' + filter.label : ''} - Blog milik Dan">
   <div class="prose lg:prose-xl max-w-none">
     <header>
       <h1>

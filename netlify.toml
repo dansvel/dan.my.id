@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build"
+  publish = "build/"
+
+[[redirects]]
+  status = 404
+  from = "/*"
+  to = "/404/index.html"
+
+[[redirects]]
+  status = 500
+  from = "/*"
+  to = "/500/index.html"
