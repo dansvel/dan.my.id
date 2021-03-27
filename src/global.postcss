@@ -76,11 +76,11 @@ a {
     .dark & {
       @apply text-green-300;
     }
-    code {
-      color: inherit;
-    }
-    strong {
-      color: inherit;
+    code, strong {
+      @apply text-green-700;
+      .dark & {
+        @apply text-green-300;
+      }
     }
   }
   th {
