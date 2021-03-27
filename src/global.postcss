@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* purge start ignore */
+body {
+  @apply antialiased text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-900 overflow-y-scroll;
+  @apply leading-normal tracking-normal font-normal break-words;
+  @apply font-sans text-base lg:text-lg xl:text-xl;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+a {
+  @apply text-green-700 dark:text-green-300 px-1;
+  box-shadow: 0 2px 0 -1px ;
+  transition: box-shadow 0.5s, color 0.5s;
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 0 1px;
+  }
+  &:focus {
+    @apply outline-none;
+  }
+}
+
+.prose {
+  @apply antialiased text-gray-700;
+  transition: color 0.5s;
+  .dark & {
+    @apply text-gray-300
+  }
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply align-middle;
+    scroll-margin-top: 8rem;
+    a.anchor {
+      @apply inline-block transition-colors text-gray-500;
+      @apply h-6 w-6 self-center align-middle -ml-7 mr-1;
+      @apply hover:text-green-700 no-underline shadow-none;
+      .dark & {
+        @apply hover:text-green-300
+      }
+    }
+  }
+  blockquote {
+    @apply border-gray-500 text-gray-700;
+    .dark & {
+      @apply text-gray-300;
+    }
+  }
+  hr {
+    @apply border-gray-500;
+  }
+  strong {
+    @apply text-gray-700;
+    .dark & {
+      @apply text-gray-300;
+    }
+  }
+  figure {
+    img {
+      @apply mx-auto;
+    }
+    figcaption {
+      @apply text-gray-700 text-center;
+      .dark & {
+        @apply text-gray-300;
+      }
+    }
+  }
+  a {
+    @apply no-underline font-normal text-green-700;
+    .dark & {
+      @apply text-green-300;
+    }
+    code {
+      color: inherit;
+    }
+    strong {
+      color: inherit;
+    }
+  }
+  th {
+    @apply text-gray-700;
+    .dark & {
+      @apply text-gray-300
+    }
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-gray-700;
+    .dark & {
+      @apply text-gray-300;
+    }
+    > code {
+      color: inherit;
+      font-weight: inherit;
+    }
+  }
+  pre {
+    @apply bg-gray-200;
+    color: inherit;
+    transition: background-color 0.5s, color 0.5s;
+    span, code[class^="language-"] {
+      @apply bg-gray-200;
+      transition: background-color 0.5s, color 0.5s;
+    }
+    .dark & {
+      @apply bg-gray-800;
+      span, code[class^="language-"] {
+        @apply bg-gray-800;
+      }
+    }
+  }
+  code {
+    @apply px-1 rounded bg-gray-200 font-medium;
+    color: inherit;
+    transition: background-color 0.5s, color 0.5s;
+    .dark & {
+      @apply bg-gray-800;
+    }
+    &:before {
+      content: '';
+      @apply absolute;
+    }
+    &:after {
+      content: '';
+      @apply absolute;
+    }
+  }
+  ol > li:before {
+    @apply text-gray-700;
+    .dark & {
+      @apply text-gray-300
+    }
+  }
+  ul > li:before {
+    @apply bg-gray-700;
+    .dark & {
+      @apply bg-gray-300
+    }
+  }
+}
+/* purge end ignore */

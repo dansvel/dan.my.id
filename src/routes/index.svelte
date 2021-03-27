@@ -1,6 +1,6 @@
-<script lang="ts">
-  import content from '../../contents/page/index.md';
-  import Page from '$lib/layout/Page.svelte';
+<script>
+  import content from '../../contents/page/index.md'
+  import Page from '$lib/Page.svelte'
 </script>
 
 <Page {content} />

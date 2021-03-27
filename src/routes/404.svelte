@@ -1,10 +1,10 @@
-<script lang="ts">
-  import './_global.postcss';
-  import Transition from '$lib/components/Transition.svelte';
-  import SeoHead from '$lib/components/SeoHead.svelte';
+<script>
+  import '../global.postcss'
+  import Transition from '$lib/components/Transition.svelte'
+  import SeoHead from '$lib/components/SeoHead.svelte'
 </script>
 
-<SeoHead title="Oops, di depan ada jurang - Blog milik Dan" />
+<SeoHead title="Oops, di depan ada jurang - Blog milik Dan" url="/404" />
 
 <Transition key="Oops, di depan ada jurang - Blog milik Dan">
   <div class="prose lg:prose-xl max-w-none">
@@ -18,8 +18,5 @@
 <style lang="postcss">
   div {
     @apply text-center;
-    & pre {
-      @apply text-left;
-    }
   }
 </style>

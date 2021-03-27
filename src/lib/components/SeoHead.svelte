@@ -1,13 +1,15 @@
-<svelte:options accessors />
+<script>
+  export let url = ''
+  export let title = 'Blog milik Dan'
+  export let description = 'Catatan perjalanan setengah manusia'
+  export let tags = ['Setengah manusia', 'Svelte']
+  export let image = '/images/perjalanan-setengah-manusia.png'
 
-<script lang="ts">
-  export let url = '/';
-  export let title = 'Blog milik Dan';
-  export let description = 'Catatan perjalanan setengah manusia';
-  export let tags = ['Setengah manusia', 'Svelte'];
-  export let image = '/images/perjalanan-setengah-manusia.png';
-  const author = 'Dan';
-  url = 'http://dan.my.id' + url;
+  const author = 'Dan'
+  const host = 'https://dan.my.id'
+
+  url = host + url
+  image = image.startsWith('http') ? image : host + image
 </script>
 
 <svelte:head>

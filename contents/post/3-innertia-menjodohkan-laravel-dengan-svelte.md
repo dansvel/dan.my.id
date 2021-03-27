@@ -1,6 +1,6 @@
 ---
 title: Inertia, menjodohkan Laravel dengan Svelte
-date: 2020-11-19T07:05:25.217Z
+date: 2020-11-19
 image: https://res.cloudinary.com/practicaldev/image/fetch/s--iIhn2F8I--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/zsdcazoycs6qfh4lye0n.png
 description: Mempertemukan back-end dan front-end favoritmu menggunakan Inertia.
   Membuat SPA tanpa mengkhawatirkan kerumitan router pada front-end.

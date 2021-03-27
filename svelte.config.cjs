@@ -1,18 +1,26 @@
-const sveltePreprocess = require('svelte-preprocess');
+const staticSite = require('@sveltejs/adapter-static')
+const pkg = require('./package.json')
+
+const sveltePreprocess = require('svelte-preprocess')
+const vitePluginMarkdown = require('@dansvel/vite-plugin-markdown')
+const markedOptions = require('./marked.config.cjs')
+
 /** @type {import('@sveltejs/kit').Config} */
 module.exports = {
-	// Consult https://github.com/sveltejs/svelte-preprocess
-	// for more information about preprocessors
-	preprocess: sveltePreprocess({
-        postcss: true
-    }),
-	kit: {
-		// By default, `npm run build` will create a standard Node app.
-		// You can create optimized builds for different platforms by
-		// specifying a different adapter
-		adapter: '@sveltejs/adapter-static',
+  preprocess: [
+    sveltePreprocess({
+      postcss: true
+    })
+  ],
+  kit: {
+    adapter: staticSite(),
+    target: '#svelte',
 
-		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte'
-	}
-};
+    vite: {
+      plugins: [vitePluginMarkdown(markedOptions)],
+      ssr: {
+        noExternal: Object.keys(pkg.dependencies || {})
+      }
+    }
+  }
+}

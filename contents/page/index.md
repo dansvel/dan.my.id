@@ -3,7 +3,7 @@ title: Blog milik Dan
 subtitle: Catatan perjalanan setengah manusia
 description: Hai, aku Dan. Setengah manusia yang tengah bepergian menuju entah ke mana dan belajar ini-itu sembari menikmati perjalanannya.
 image: images/perjalanan-setengah-manusia.png
-date: 2021-01-08T17:48:41.471Z
+date: 2021-01-08
 ---
 
 Hai, aku **Dan**. Setengah manusia yang tengah bepergian menuju entah ke mana dan belajar ini-itu sembari menikmati perjalanannya.

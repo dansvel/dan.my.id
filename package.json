@@ -1,34 +1,35 @@
 {
-	"name": "sveltekit-typescript-postcss-tailwind2",
-	"version": "0.0.2",
-	"scripts": {
-		"dev": "svelte-kit dev",
-		"build": "svelte-kit build",
-		"start": "svelte-kit start"
-	},
-	"devDependencies": {
-		"@dansvel/vite-plugin-markdown": "^1.0.4",
-		"@sveltejs/adapter-static": "next",
-		"@sveltejs/kit": "next",
-		"@tailwindcss/jit": "^0.1.1",
-		"@tailwindcss/typography": "^0.4.0",
-		"autoprefixer": "^10.2.5",
-		"cssnano": "^4.1.10",
-		"highlight.js": "^10.6.0",
-		"marked": "^2.0.1",
-		"postcss": "^8.2.8",
-		"postcss-load-config": "^3.0.1",
-		"postcss-preset-env": "^6.7.0",
-		"sass": "^1.32.8",
-		"svelte": "^3.29.0",
-		"svelte-preprocess": "^4.0.0",
-		"tailwindcss": "^2.0.3",
-		"tslib": "^2.0.0",
-		"typescript": "^4.0.0",
-		"vite": "^2.1.0"
-	},
-	"type": "module",
-	"engines": {
-		"node": ">= 12.17.0"
-	}
+  "name": "dan.my.id",
+  "version": "0.0.2",
+  "description": "Catatan Perjalanan Setengah Manusia",
+  "scripts": {
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "start": "svelte-kit start",
+    "format": "prettier --write ./src/**/*.{js,svelte,html} ./*.{js,cjs}"
+  },
+  "devDependencies": {
+    "@dansvel/vite-plugin-markdown": "^1.0.6",
+    "@sveltejs/adapter-static": "next",
+    "@sveltejs/kit": "next",
+    "@tailwindcss/jit": "^0.1.7",
+    "@tailwindcss/typography": "^0.4.0",
+    "autoprefixer": "^10.2.5",
+    "cssnano": "^4.1.10",
+    "highlight.js": "^10.7.1",
+    "marked": "^2.0.1",
+    "postcss": "^8.2.7",
+    "postcss-load-config": "^3.0.1",
+    "postcss-nested": "^5.0.5",
+    "prettier": "^2.2.1",
+    "prettier-plugin-svelte": "^2.2.0",
+    "svelte": "^3.29.0",
+    "svelte-preprocess": "^4.6.9",
+    "tailwindcss": "^2.0.3",
+    "vite": "^2.1.0"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">= 12.17.0"
+  }
 }

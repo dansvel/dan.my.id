@@ -1,14 +1,14 @@
 ---
 title: SvelteKit pre-alpha on Production
-date: 2020-02-21T19:22:01+07:00
+date: 2021-02-21
 description: Blog yang dibuat menggunakan teknologi yang belum kelar. Antara penasaran dan nekat sudah seperti tetangga. Pengalaman memang guru yang berharga, namun akan bijak jika kamu belajar dari pengalaman orang-orang nekat ini.
 image: https://pbs.twimg.com/media/El9fOLpVoAAF5u-.jpg
 category: Teknologi
 tags:
-- Svelte
-- highlight.js
-- Javascript
-- CSS
+  - Svelte
+  - highlight.js
+  - Javascript
+  - CSS
 ---
 
 Jika kamu telah cukup mengamati, kamu akan sadar bahwa catatan ini adalah yang pertama di blog ini. Karena tiga catatan sebelumnya adalah catatan lawas yang sebenarnya telah aku tulis di blog lawasku yang saat ini telah lenyap.

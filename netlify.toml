@@ -12,7 +12,6 @@
   from = "/*"
   to = "/404/index.html"
 
-
 [[redirects]]
   status = 500
   from = "/*"
