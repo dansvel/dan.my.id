@@ -51,12 +51,12 @@
       <header>
         <h1>{post.title}</h1>
         <p>
-          <a href="/catatan?category={slugger(post.category)}" rel="prefetch">
+          <a href="/catatan?category={slugger(post.category)}">
             {post.category}
           </a>
           :
           {#each post.tags as tag}
-            <a href="/catatan?label={slugger(tag)}" rel="prefetch">#{tag}</a> &zwj;&nbsp;
+            <a href="/catatan?label={slugger(tag)}">#{tag}</a> &zwj;&nbsp;
           {/each}
         </p>
         <p>{localDate(post.date)}</p>
