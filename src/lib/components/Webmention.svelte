@@ -168,9 +168,12 @@
     @apply flex flex-wrap list-none;
     li {
       @apply m-1;
-    }
-    img {
-      @apply rounded-full;
+      a {
+        box-shadow: none;
+        img {
+          @apply rounded-full;
+        }
+      }
     }
   }
   ul.replies {
@@ -182,8 +185,11 @@
       }
       .avatar {
         @apply flex-shrink-0 self-start mr-4;
-        img {
-          @apply rounded-full;
+        a {
+          box-shadow: none;
+          img {
+            @apply rounded-full;
+          }
         }
       }
       .message {
