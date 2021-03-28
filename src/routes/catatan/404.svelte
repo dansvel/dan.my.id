@@ -10,7 +10,7 @@
 />
 
 <Transition key="Oops, catatan seperti itu tidak ada - Blog milik Dan">
-  <div class="prose lg:prose-xl max-w-none">
+  <div class="prose lg:prose-lg xl:prose-xl max-w-none">
     <h1>Oops!</h1>
     <h2>Catatan seperti itu tidak ada</h2>
 

@@ -7,9 +7,5 @@ const mode = process.env.NODE_ENV
 const dev = mode === 'development'
 
 module.exports = {
-  plugins: [
-    postcssNested,
-    tailwindcss(),
-    autoprefixer,
-  ]
+  plugins: [postcssNested, tailwindcss(), autoprefixer]
 }

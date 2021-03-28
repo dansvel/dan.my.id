@@ -46,7 +46,7 @@
 />
 
 <Transition key={post.slug}>
-  <div class="prose lg:prose-xl max-w-none">
+  <div class="prose lg:prose-lg xl:prose-xl max-w-none">
     <article>
       <header>
         <h1>{post.title}</h1>
@@ -65,7 +65,7 @@
     </article>
   </div>
   <footer>
-    <Webmention slug={post.slug} />
+    <Webmention path="catatan/{post.slug}" />
   </footer>
 </Transition>
 

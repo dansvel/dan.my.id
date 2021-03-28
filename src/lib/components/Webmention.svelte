@@ -1,16 +1,18 @@
 <script>
   import { onMount } from 'svelte'
   import { localDate } from '../util'
+  import marked from 'marked'
 
-  export let slug
+  export let path
 
-  slug = 'https://dan.my.id/catatan/' + slug
+  path = 'https://dan.my.id/' + path
   let mentions
-  const tweet = `Catatan menarik dari @dansvel ${slug}`
+  const tweet = `Catatan menarik dari @dansvel ${path}`
 
   onMount(async () => {
+    const marked = import('marked')
     mentions = await fetch(
-      `https://webmention.io/api/mentions.jf2?sort-by=published&target=${slug}/`
+      `https://webmention.io/api/mentions.jf2?sort-by=published&target=${path}/`
     )
       .then(res => res.json())
       .then(x => {
@@ -24,7 +26,7 @@
   })
 </script>
 
-<div class="prose lg:prose-xl max-w-none">
+<div class="prose lg:prose-lg xl:prose-xl max-w-none">
   <section>
     <hr />
     <h2>Webmention</h2>
@@ -42,7 +44,7 @@
   {#if data !== undefined}
     {#if !data.likes.length && !data.retweets.length && !data.retweets.length}
       <section>
-        <div class="prose lg:prose-xl max-w-none">
+        <div class="prose lg:prose-lg xl:prose-xl max-w-none">
           <blockquote>Jadilah yang pertamax memberi tanggapan.</blockquote>
         </div>
       </section>
@@ -142,12 +144,19 @@
                   />
                 </a>
               </div>
-              <div class="message prose lg:prose-xl max-w-none">
-                <strong>{message.author.name}</strong> - {localDate(
-                  message.published,
-                  true
-                )}<br />
-                {@html message.content.html}
+              <div class="message max-w-none">
+                <p>
+                  <strong>{message.author.name}</strong> -
+                  {localDate(message.published, true)}
+                </p>
+                {@html marked(
+                  message.content.html
+                    .replace(/u-mention/gm, `u-mention hidden`)
+                    .replace(
+                      /<a href=\\"https:\/\/(?!dan\.my\.id)/gm,
+                      `<a target="_blank" rel="noopener external" href=\\\\"https://`
+                    )
+                )}
               </div>
             </li>
           {/each}
@@ -161,6 +170,10 @@
   section {
     @apply mb-10;
   }
+  h2,
+  h3 {
+    transition: color 0.5s;
+  }
   h3 {
     @apply text-2xl lg:text-3xl font-bold my-5;
   }
@@ -170,6 +183,7 @@
       @apply m-1;
       a {
         box-shadow: none;
+        @apply p-0;
         img {
           @apply rounded-full;
         }
@@ -184,8 +198,9 @@
         @apply border-none;
       }
       .avatar {
-        @apply flex-shrink-0 self-start mr-4;
+        @apply flex-shrink-0 mr-4;
         a {
+          @apply p-0;
           box-shadow: none;
           img {
             @apply rounded-full;
@@ -193,7 +208,10 @@
         }
       }
       .message {
-        @apply whitespace-pre-wrap;
+        @apply text-base lg:text-lg xl:text-xl;
+        .u-mention {
+          @apply hidden;
+        }
       }
     }
   }

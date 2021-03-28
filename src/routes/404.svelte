@@ -7,7 +7,7 @@
 <SeoHead title="Oops, di depan ada jurang - Blog milik Dan" url="/404" />
 
 <Transition key="Oops, di depan ada jurang - Blog milik Dan">
-  <div class="prose lg:prose-xl max-w-none">
+  <div class="prose lg:prose-lg xl:prose-xl max-w-none">
     <h1>Oops!</h1>
     <h2>Di depan ada jurang</h2>
 

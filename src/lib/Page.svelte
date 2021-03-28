@@ -2,6 +2,7 @@
   import { localDate } from '$lib/util'
   import SeoHead from '$lib/components/SeoHead.svelte'
   import Transition from '$lib/components/Transition.svelte'
+  import Webmention from './components/Webmention.svelte'
 
   export let content
   export let url
@@ -26,6 +27,7 @@
       </footer>
     </article>
   </div>
+  <Webmention path={url} />
 </Transition>
 
 <style lang="postcss">

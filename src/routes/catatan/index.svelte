@@ -45,7 +45,7 @@
     ? 'mengenai ' + filter.label
     : ''} - Blog milik Dan"
 >
-  <div class="prose lg:prose-xl max-w-none">
+  <div class="prose lg:prose-lg xl:prose-xl max-w-none">
     <header>
       <h1>
         Catatan {filter.kategori ? 'mengenai ' + filter.kategori : ''}

@@ -7,7 +7,7 @@
 <SeoHead title="Oops, sepertinya ada yang tidak benar - Blog milik Dan" url="/500" />
 
 <Transition key="Oops, sepertinya ada yang tidak benar - Blog milik Dan">
-  <div class="prose lg:prose-xl max-w-none">
+  <div class="prose lg:prose-lg xl:prose-xl max-w-none">
     <h1>Oops!</h1>
     <h2>Sepertinya ada yang tidak benar</h2>
 
