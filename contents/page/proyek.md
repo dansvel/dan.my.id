@@ -3,12 +3,18 @@ title: Eksistensi dari iseng
 subtitle: Ide + waktu luang + rasa penasaran
 description: Proyek? Lebih tepat ke produk dari belajar. Memancing ilmu dengan mengumpankan proyek belajar.
 image: https://cdn.pixabay.com/photo/2015/05/15/15/00/building-768815_960_720.jpg
-date: 2021-03-28
+date: 2021-03-29
 ---
 
 Seperti halnya aku yang terinspirasi dari pekerjaan orang lain, barangkali beberapa keisenganku dapat menjadi ide maupun refrensi belajar. Dan tentah bagaimana kembali lagi menjadi masukan untukku.
 
 > Diurutkan dari terbaru hingga terlawas
+
+## [Hana](https://hana.pages.dev/)
+Aplikasi transliterasi aksara Jawa yang mengubah teks huruf abjad menjadi teks aksara Jawa.
+
+## [dan.my.id](https://dan.my.id/)
+Blog yang sedang kamu kungjungi ini.
 
 ## [Plugin JS : vite-plugin-markdown](https://www.npmjs.com/package/@dansvel/vite-plugin-markdown)
 Plugin yang tujuan dibuatnya hanya untuk bikin blog ini jadi lebih mudah.
