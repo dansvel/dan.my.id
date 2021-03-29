@@ -1,7 +1,6 @@
 <script>
   import content from '../../contents/page/tentang.md'
   import Page from '$lib/Page.svelte'
-  const slug = 'tentang'
 </script>
 
-<Page {content} {slug} />
+<Page {content} slug="tentang" />

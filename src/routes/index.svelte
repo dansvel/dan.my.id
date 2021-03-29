@@ -3,4 +3,4 @@
   import Page from '$lib/Page.svelte'
 </script>
 
-<Page {content} />
+<Page {content} slug="" />

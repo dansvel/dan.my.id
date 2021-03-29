@@ -3,16 +3,16 @@
   import { localDate } from '../util'
   import marked from 'marked'
 
-  export let path
+  export let slug
 
-  path = 'https://dan.my.id/' + path
+  slug = 'https://dan.my.id/' + slug
   let mentions
-  const tweet = `Catatan menarik dari @dansvel ${path}`
+  const tweet = `Catatan menarik dari @dansvel ${slug}`
 
   onMount(async () => {
     const marked = import('marked')
     mentions = await fetch(
-      `https://webmention.io/api/mentions.jf2?sort-by=published&target=${path}/`
+      `https://webmention.io/api/mentions.jf2?sort-by=published&target=${slug}/`
     )
       .then(res => res.json())
       .then(x => {
