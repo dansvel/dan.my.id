@@ -5,13 +5,13 @@
   import Webmention from './components/Webmention.svelte'
 
   export let content
-  export let url
+  export let slug
 </script>
 
 <SeoHead
   title="{content.title} - {content.subtitle}"
   description={content.description}
-  url="/{url}"
+  url="/{slug}"
 />
 
 <Transition key={content.title}>
@@ -27,7 +27,7 @@
       </footer>
     </article>
   </div>
-  <Webmention path={url} />
+  <Webmention {slug} />
 </Transition>
 
 <style lang="postcss">
