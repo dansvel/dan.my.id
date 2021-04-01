@@ -10,7 +10,6 @@
   const tweet = `Catatan menarik dari @dansvel ${slug}`
 
   onMount(async () => {
-    const marked = import('marked')
     mentions = await fetch(
       `https://webmention.io/api/mentions.jf2?sort-by=published&target=${slug}/`
     )
