@@ -65,7 +65,7 @@
     </article>
   </div>
   <footer>
-    <Webmention path="catatan/{post.slug}" />
+    <Webmention slug="catatan/{post.slug}" />
   </footer>
 </Transition>
 
