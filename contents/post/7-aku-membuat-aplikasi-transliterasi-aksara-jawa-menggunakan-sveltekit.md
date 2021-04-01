@@ -18,7 +18,7 @@ Memang sih aku telah menemukan aplikasi semacam ini di internet, namun hasilnya 
 
 Aku hanya menggunakan *regex* sederhana yang awalnya aku ujicoba di situs https://regex101.com/. Regex ini untuk membagi menjadi suku kata. Jika kamu membuka situsnya, kamu dapat mencoba bagaiman regex ini membagi suku kata
 
-```regexp
+```text
 /([hncrkdtswlpðjyɲmgbθŋxɠʣʃfvzq]{1,3})?[aeéiuo]([hncrkdtswlpðjyɲmgbθŋxɠʣʃfvzq](?![aeéiuo]|([rylw])))?|[0-9]+|\n|\s\s|\(|\)|:|"|,|\.|á|(?:\[.*])/gim
 ```
 
