@@ -30,7 +30,7 @@ Karena tujuannya hanya itu, jadi aku terlalu malas mendesain aplikasinya, lalu h
 
 ## Aplikasinya bernama **Hana**
 
-Langsung saja coba aplikasinya di https://hana.pages.dev/ 
+Langsung saja coba aplikasinya di dengan mengunjungi situs [hana.pages.dev](https://hana.pages.dev/) 
 
 Dan jangan lupa untuk memberi masukkan jika ada kesalahan hasil atau ide bagaimana harusnya aplikasi supaya nyaman digunakan.
 
