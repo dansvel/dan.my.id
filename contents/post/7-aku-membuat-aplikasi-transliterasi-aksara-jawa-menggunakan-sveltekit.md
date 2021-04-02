@@ -7,7 +7,8 @@ category: Teknologi
 tags:
 - Aplikasi
 - Svelte
-- Akasara Jawa
+- Akasara
+- Jawa
 ---
 
 Awalnya aku menulis aksara Jawa di laptop menggunakan papan ketik bawaan dari *Windows 10*, aku hanya memasangnya lalu menggunakannya dengan menekan `Win` + `.`. Itu sudah berlangsung satu tahun lebih.
@@ -24,7 +25,7 @@ Aku hanya menggunakan *regex* sederhana yang awalnya aku ujicoba di situs https:
 
 Masih banyak kekurangan dari regex ini, karena sementara ini hanya berpatokan pada "suku kata pasti memiliki sebuah huruf vokal".
 
-Lalu dari hasil regex berbentuk array tadi, aku konversi setiap hurufnya dengan algoritma sederhana yang dapat kamu cek sendiri di github. Misalnya, kapan harus menggunakan aksara, kapan harus menggunakan tanda, bagaimana menangaki huruf mati, dan sebagainya.
+Lalu dari hasil regex berbentuk array tadi, aku konversi setiap hurufnya dengan algoritma sederhana yang dapat kamu cek sendiri di github. Misalnya, kapan harus menggunakan aksara, kapan harus menggunakan tanda, bagaimana menangani huruf mati, dan sebagainya.
 
 Karena tujuannya hanya itu, jadi aku terlalu malas mendesain aplikasinya, lalu hanya kutambahkan halaman petunjuk dan halaman tentang.
 
