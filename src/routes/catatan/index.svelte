@@ -41,9 +41,7 @@
 
 <Transition
   key="Catatan {filter.kategori ? 'mengenai ' + filter.kategori : ''}
-        {filter.label
-    ? 'mengenai ' + filter.label
-    : ''} - Blog milik Dan"
+        {filter.label ? 'mengenai ' + filter.label : ''} - Blog milik Dan"
 >
   <div class="prose lg:prose-lg xl:prose-xl max-w-none">
     <header>
@@ -70,7 +68,7 @@
             <a href="/catatan/{post.slug}">{post.title}</a>
           </h3>
           <p>
-            <a href="/catatan?category={slugger(post.category)}">{post.category}</a>
+            <a href="/catatan?kategori={slugger(post.category)}">{post.category}</a>
             :
             {#each post.tags as tag}
               <a href="/catatan?label={slugger(tag)}">#{tag}</a> &zwj;&nbsp;
