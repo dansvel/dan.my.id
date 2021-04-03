@@ -51,7 +51,7 @@
       <header>
         <h1>{post.title}</h1>
         <p>
-          <a href="/catatan?category={slugger(post.category)}">
+          <a href="/catatan?kategori={slugger(post.category)}">
             {post.category}
           </a>
           :
