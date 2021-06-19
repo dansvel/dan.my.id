@@ -1,0 +1,112 @@
+<script>
+  import { page } from '$app/stores'
+  import ToggleTheme from './ToggleTheme.svelte'
+
+  const menuList = [
+    {
+      text: 'Catatan',
+      link: '/catatan'
+    },
+    {
+      text: 'Proyek',
+      link: '/proyek'
+    },
+    {
+      text: 'Tentang',
+      link: '/tentang'
+    }
+  ]
+
+  let show = true
+  let last_scroll = 0
+  let hash_changed = false
+  function handle_hashchange() {
+    hash_changed = true
+  }
+
+  function handle_scroll() {
+    const scroll = window.pageYOffset
+    if (!hash_changed) {
+      show = scroll < 150 || scroll < last_scroll
+    }
+
+    last_scroll = scroll
+    hash_changed = false
+  }
+
+  let currentPage
+  $: currentPage = $page.path
+</script>
+
+<svelte:window on:hashchange={handle_hashchange} on:scroll={handle_scroll} />
+
+<header class:show>
+  <nav>
+    <div id="brand">
+      <div>
+        <a href="/" title="Blog milik Dan" class:active={currentPage === '/'}>dan.my.id</a
+        >
+      </div>
+    </div>
+    <div id="menu">
+      <ul>
+        {#each menuList as menu}
+          <li>
+            <a href={menu.link} class:active={currentPage === menu.link}>{menu.text}</a>
+          </li>
+        {/each}
+      </ul>
+      <ToggleTheme />
+    </div>
+  </nav>
+</header>
+
+<!-- just for static adapter -->
+<div class="hidden">
+  <a href="/404">404</a>
+  <a href="/500">500</a>
+  <a href="/catatan/404">catatan/404</a>
+</div>
+
+<style lang="postcss">
+  header {
+    @apply mt-0 fixed w-full z-10 top-0 py-2
+    bg-gray-100 border-b-2 border-gray-200
+    transform -translate-y-16
+    transition-all duration-500;
+    :global(.dark) & {
+      @apply bg-gray-900 border-gray-800;
+    }
+    &.show {
+      @apply transform-none;
+    }
+    nav {
+      @apply px-12 max-w-4xl mx-auto flex;
+      #brand {
+        @apply flex w-1/2 justify-start;
+      }
+      #menu {
+        @apply flex w-1/2 justify-end;
+        ul {
+          @apply list-none flex justify-end space-x-2;
+        }
+      }
+    }
+  }
+  a {
+    @apply py-2 shadow-none underline;
+    #brand & {
+      @apply font-black;
+    }
+    #menu & {
+      @apply font-semibold;
+    }
+    &.active {
+      box-shadow: 0 1px 0 0;
+    }
+    &:hover {
+      @apply no-underline;
+      box-shadow: 0 1px 0 0;
+    }
+  }
+</style>
