@@ -40,7 +40,7 @@
 
   const allTags = $session.slugs
 
-  let hal
+  let hal, navurl
   $: {
     hal = parseInt(filter?.hal || 1)
     delete filter.hal
@@ -89,3 +89,12 @@
     <a href={navurl + (hal + 1)} class="ml-auto" class:hidden={more}>Lebih lawas</a>
   </div>
 </Transition>
+
+<style lang="postcss">
+  header {
+    @apply py-4;
+    h1 {
+      @apply my-2 text-center;
+    }
+  }
+</style>

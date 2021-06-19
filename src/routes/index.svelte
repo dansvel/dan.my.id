@@ -9,12 +9,22 @@
 </script>
 
 <Transition key="index">
-  <div class="prose max-w-none">
-    <h1 class="text-center my-4">{content.title}</h1>
-    <h2 class="text-center my-4">{content.subtitle}</h2>
+  <header class="prose max-w-none">
+    <h1>{content.title}</h1>
+    <h2>{content.subtitle}</h2>
     {@html content.body}
-  </div>
+  </header>
 
   <CatatanList {posts} title="Beberapa catatan menarik" />
   <a href="/catatan" class="float-right">Lebih banyak catatan</a>
 </Transition>
+
+<style lang="postcss">
+  header {
+    @apply py-4;
+    h1,
+    h2 {
+      @apply my-2 text-center;
+    }
+  }
+</style>
