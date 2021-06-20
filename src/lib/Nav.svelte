@@ -81,8 +81,8 @@
       @apply transform-none;
     }
     nav {
-      @apply px-12 max-w-4xl mx-auto flex flex-wrap items
-      space-y-4;
+      @apply px-12 max-w-4xl mx-auto flex flex-wrap
+      space-y-4 sm:space-y-0;
       #brand {
         @apply flex w-full justify-center
         sm:(w-1/2 justify-start);
