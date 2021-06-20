@@ -100,11 +100,12 @@ Namun tentu saja akan menjadi kurang aman.
 Nah, kenapa perlu menambahkan alias? kenapa tidak langsung menggunakan svelte pada kode di markdown seperti ini?
 
 ```sveltehtml
-‍```svelte<script>
-  let name = 'world';
+‍```svelte
+<script>
+  let name = 'dunia';
 </script>
 
-<h1>Hello {name}!</h1>
+<h1>Halo {name}!</h1>
 ‍```
 ```
 
