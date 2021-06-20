@@ -11,7 +11,7 @@ export const getSession = async () => {
   )
 
   return {
-    posts: arrSortBy(posts, 'slug', {asc: false, natural: true}),
+    posts: arrSortBy(posts, 'slug', { asc: false, natural: true }),
     slugs: arrUnion(posts.map(post => [...post.tags])).sort()
   }
 }

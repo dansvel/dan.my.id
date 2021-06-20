@@ -87,7 +87,7 @@ export default { highlight }
 ```
  Perhatikan bagaimana aku membutuhkan modul `hljs` untuk membuat option untuk pluginku. Jika kamu memerlukan option `renderer` milik **marked** kamu juga dapat menambahkannya di sini.
 
-Setelah inisialisasi, sebenarnya kamu sudah dapat menggunakannya langsung menggunakannya seperti ini
+Setelah inisialisasi, sebenarnya kamu sudah dapat menggunakannya langsung seperti ini
 
 ```js
 const highlight = (code, lang) => hljs.highlight(code, { language: lang }).value
