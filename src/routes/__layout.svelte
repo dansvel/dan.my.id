@@ -41,6 +41,10 @@
   />
   <link rel="stylesheet" title="Dark" href="/dist/stackoverflow-dark.css" disabled />
   <link rel="stylesheet" title="Light" href="/dist/stackoverflow-light.css" disabled />
+  <link rel="webmention" href="https://webmention.io/dan.my.id/webmention" />
+  <link rel="pingback" href="https://webmention.io/dan.my.id/xmlrpc" />
+  <link href="https://github.com/dansvel" rel="me" />
+  <link href="https://twitter.com/dansvel" rel="me" />
 </svelte:head>
 
 <Nav />
