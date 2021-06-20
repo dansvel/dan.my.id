@@ -55,13 +55,11 @@ Satu lagi, alih-alih menggunakan `fs` milik Node untuk membaca berkas Markdown ~
 ### Mari bahas kodenya.
 
 1. `export async function getSession() {}` mewajibkan untuk mengembalikan sebuah objek murni tanpa *function* yang akan diberikan kepada Browser menggunakan `session` setiap kali SvelteKit me-render sebuah halaman. [Cek dokumentasi resminya](https://kit.svelte.dev/docs#hooks).
-
 2. `Object.entries(import.meta.glob('/contents/post/*.md')).map()` akan membuat sebuah array berisi objek dari hasil dynamic import menggunakan **Glob Import**, ini adalah fitur dari Vite. 
-  
+   
     Penjelasan di [dokumentasi remsinya](https://vitejs.dev/guide/features.html#glob-import) sangat sederhana dan mudah dipahami. `import.meta.glob()` akan mengembalikan sebuah array berbentuk objek.   
 
 3. Karena menggunakan plugin tadi, maka hasil import akan mengembalikan array objek dari `marked.js`. Di contoh kode di atas, aku mengambil `slug` dari alamat file, dan `attribut` dari hasil import.
-
 4. Terakhir, aku mengembalikan objek berisi daftar post yang aku aku namai `posts`. Kamu dapat melakukan pengurutan data jika perlu, misalnya berdasarkan tanggal.
 
 ## `src/post/index.svelte`
