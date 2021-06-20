@@ -100,12 +100,12 @@ Namun tentu saja akan menjadi kurang aman.
 Nah, kenapa perlu menambahkan alias? kenapa tidak langsung menggunakan svelte pada kode di markdown seperti ini?
 
 ```sveltehtml
-&zwj;```svelte<script>
+‍```svelte<script>
   let name = 'world';
 </script>
 
 <h1>Hello {name}!</h1>
-&zwj;```
+‍```
 ```
 
 Tentu saja kamu dapat melakukannya. Namun, untuk yang menggunakan IDE Webstorm sepertiku, beginilah hasilnya.
