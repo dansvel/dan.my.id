@@ -72,7 +72,7 @@
   header {
     @apply mt-0 fixed w-full z-10 top-0 py-2
     bg-gray-100 border-b-2 border-gray-200
-    transform -translate-y-16
+    transform -translate-y-24 sm:-translate-y-16
     transition-all duration-500;
     :global(.dark) & {
       @apply bg-gray-900 border-gray-800;
@@ -81,8 +81,8 @@
       @apply transform-none;
     }
     nav {
-      @apply px-12 max-w-4xl mx-auto flex flex-wrap
-      space-y-4 sm:space-y-0;
+      @apply px-8 max-w-4xl mx-auto flex flex-wrap
+      space-y-4 sm:(space-y-0 px-12);
       #brand {
         @apply flex w-full justify-center
         sm:(w-1/2 justify-start);

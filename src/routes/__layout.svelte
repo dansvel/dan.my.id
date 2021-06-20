@@ -54,6 +54,8 @@
   }
 
   body > #svelte > main {
-    @apply p-12 pt-20 sm:pt-12 mt-0 max-w-4xl mx-auto;
+    @apply
+    p-8 pt-20 mt-0 max-w-4xl mx-auto
+    sm:(p-12 pt-12);
   }
 </style>
