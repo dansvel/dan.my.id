@@ -31,6 +31,7 @@
     <hr />
     <h2>Webmention</h2>
     <p>
+      Ingin bertanya atau menanggapi?
       <a
         href="https://twitter.com/intent/tweet/?text={tweet}"
         target="_blank"
