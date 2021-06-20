@@ -4,10 +4,11 @@
   import marked from 'marked'
   import { page } from '$app/stores'
 
-  let slug
-  $: slug = `https://dan.my.id${$page.path}`
-  let mentions
-  const tweet = `Catatan menarik dari @dansvel : ${slug}`
+  let slug, mentions, tweet
+  $: {
+    slug = `https://dan.my.id${$page.path}`
+    tweet = `Catatan menarik dari @dansvel : ${slug}`
+  }
 
   onMount(async () => {
     mentions = await fetch(
