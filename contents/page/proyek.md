@@ -4,6 +4,11 @@ subtitle: Ide + waktu luang + rasa penasaran
 description: Proyek? Lebih tepat ke produk dari belajar. Memancing ilmu dengan mengumpankan proyek belajar.
 image: https://cdn.pixabay.com/photo/2015/05/15/15/00/building-768815_960_720.jpg
 date: 2021-03-29
+tags:
+- Belajar pemrograman
+- Latihan
+- Javascript
+- Proyek belajar membuat aplikasi
 ---
 
 Seperti halnya aku yang terinspirasi dari pekerjaan orang lain, barangkali beberapa keisenganku dapat menjadi ide maupun refrensi belajar. Dan tentah bagaimana kembali lagi menjadi masukan untukku.
