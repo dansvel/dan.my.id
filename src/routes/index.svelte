@@ -4,10 +4,12 @@
   import CatatanList from '$lib/CatatanList.svelte'
   import { randomItems } from '$lib/util'
   import Transition from '$lib/Transition.svelte'
+  import SeoHead from '$lib/SeoHead.svelte'
 
   const posts = randomItems($session.posts, 3)
 </script>
 
+<SeoHead />
 <Transition key="index">
   <header class="prose max-w-none">
     <h1>{content.title}</h1>

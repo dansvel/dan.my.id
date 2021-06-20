@@ -11,8 +11,6 @@
   },
   "devDependencies": {
     "@dansvel/vite-plugin-markdown": "^1.0.12",
-    "@fontsource/fira-code": "^4.4.5",
-    "@fontsource/fira-sans": "^4.4.5",
     "@sveltejs/adapter-static": "next",
     "@sveltejs/kit": "next",
     "highlight.js": "^11.0.1",
@@ -21,6 +19,7 @@
     "prettier": "^2.3.1",
     "prettier-plugin-svelte": "^2.3.1",
     "svelte": "^3.34.0",
+    "svelte-image": "^0.2.9",
     "svelte-preprocess": "^4.7.3",
     "svelte-windicss-preprocess": "^4.0.8",
     "vite": "^2.3.7",

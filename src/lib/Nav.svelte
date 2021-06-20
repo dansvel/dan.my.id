@@ -81,14 +81,18 @@
       @apply transform-none;
     }
     nav {
-      @apply px-12 max-w-4xl mx-auto flex;
+      @apply px-12 max-w-4xl mx-auto flex flex-wrap items
+      space-y-4;
       #brand {
-        @apply flex w-1/2 justify-start;
+        @apply flex w-full justify-center
+        sm:(w-1/2 justify-start);
       }
       #menu {
-        @apply flex w-1/2 justify-end;
+        @apply flex w-full justify-between
+        sm:(w-1/2 justify-end);
         ul {
-          @apply list-none flex justify-end space-x-2;
+          @apply list-none flex flex-1 justify-between space-x-2
+          sm:(justify-end flex-none);
         }
       }
     }

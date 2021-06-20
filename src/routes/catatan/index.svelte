@@ -35,6 +35,7 @@
   import CatatanList from '$lib/CatatanList.svelte'
   import { fade } from 'svelte/transition'
   import Transition from '$lib/Transition.svelte'
+  import SeoHead from '../../lib/SeoHead.svelte'
 
   export let posts, filter, more
 
@@ -50,6 +51,10 @@
     '?' + urlParamsToQuery(filter) + (Object.keys(filter).length ? '&' : '') + 'hal='
 </script>
 
+<SeoHead
+  title="Catatan perjalanan setengah manusia"
+  description="Tentang teknologi yang kupelajari dan manusia yang kuteliti"
+/>
 <Transition key="catatan">
   <header class="prose max-w-none">
     <h1>

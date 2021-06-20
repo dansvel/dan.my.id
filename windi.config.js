@@ -5,8 +5,8 @@ export default {
   plugins: [typhography],
   theme: {
     fontFamily: {
-      sans: ['Fira Sans'],
-      mono: ['Fira Code']
+      sans: ['Fira Sans', 'Calibri'],
+      mono: ['Fira Code', 'Consolas']
     }
   }
 }
