@@ -28,11 +28,33 @@ export const arrFlat = arr =>
 
 export const arrUnion = (...arr) => [...new Set(arrFlat(arr))]
 
-export const arrSortBy = (array, key, asc = true) =>
-  array.concat().sort((a, b) => {
-    if (asc) return a[key] > b[key] ? 1 : a[key] < b[key] ? -1 : 0
-    return a[key] < b[key] ? 1 : a[key] > b[key] ? -1 : 0
+export const arrSortBy = (array, key, option = {asc: true, natural: true}) => {
+  let sorted
+  if (option.natural) {
+    if (option.asc) {
+      sorted = array.concat().sort((a, b) => a[key].localeCompare(b[key], undefined, {
+        numeric: true,
+        sensitivity: 'base'
+      }))
+    } else {
+      sorted = array.concat().sort((a, b) => b[key].localeCompare(a[key], undefined, {
+        numeric: true,
+        sensitivity: 'base'
+      }))
+    }
+    return sorted
+  }
+
+  return array.concat().sort((a, b) => {
+    if (option.asc) {
+      sorted = a[key] > b[key] ? 1 : a[key] < b[key] ? -1 : 0
+    } else {
+      sorted = a[key] < b[key] ? 1 : a[key] > b[key] ? -1 : 0
+    }
   })
+}
+
+
 
 export const randomItems = (arr, count) =>
   arr
