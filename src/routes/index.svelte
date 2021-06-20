@@ -17,7 +17,7 @@
     {@html content.body}
   </header>
 
-  <CatatanList {posts} title="Beberapa catatan menarik" />
+  <CatatanList {posts} title="Beberapa catatan menarik (acak)" />
   <a href="/catatan" class="float-right">Lebih banyak catatan</a>
 </Transition>
 
