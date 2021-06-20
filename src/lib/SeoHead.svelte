@@ -3,13 +3,14 @@
   export let url
   export let title = 'Blog milik Dan'
   export let description = 'Catatan perjalanan setengah manusia'
-  export let tags = ['dan', 'setengah manusia']
+  export let tags = []
   export let image = '/images/perjalanan-setengah-manusia.png'
 
   const author = 'Dan'
   const host = 'https://dan.my.id'
 
   url = host + (url ?? $page.path)
+  tags = ['dan', 'setengah manusia'].concat(tags)
   image = image.startsWith('http') ? image : host + image
 </script>
 

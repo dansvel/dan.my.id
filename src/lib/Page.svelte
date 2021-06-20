@@ -2,18 +2,24 @@
   import { localDate, slugger } from '$lib/util'
   import SeoHead from '$lib/SeoHead.svelte'
   import Webmention from './Webmention.svelte'
+  import { page } from '$app/stores'
 
   export let content
-  // export let slug
 </script>
 
-<SeoHead title={content.title} description={content.description} />
+<SeoHead
+  title={content.title}
+  description={content.description}
+  tags={content?.tags}
+  image={content.image}
+/>
 
 <div class="prose max-w-none">
   <article>
     <header>
       <h1>{content.title}</h1>
       {#if content.subtitle}<h2>{content.subtitle}</h2>{/if}
+      <!--googleoff: index-->
       <div class="text-sm text-gray-500">Diperbarui : {localDate(content.date)}</div>
       {#if content.category}
         <div>
@@ -22,7 +28,7 @@
           >
         </div>
       {/if}
-      {#if content.tags}
+      {#if $page.path.match(/catatan/) && content.tags}
         <div>
           Label :
           {#each content.tags as tag}
@@ -30,6 +36,7 @@
           {/each}
         </div>
       {/if}
+      <!--googleon: index-->
     </header>
     {@html content.body}
   </article>
