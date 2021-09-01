@@ -1,0 +1,64 @@
+<script>
+  export let posts
+  import { localDate, slugger } from '$lib/util'
+
+  export let title
+</script>
+
+<section>
+  {#if title}
+    <h2>{title}</h2>
+  {/if}
+  {#each posts as post}
+    <article>
+      <div class="thumbnail">
+        <img src={post.image} alt="Thumbnail for {post.title}" />
+      </div>
+      <div class="post">
+        <h4><a href="catatan/{post.slug}">{post.title}</a></h4>
+        <div class="meta-date">{localDate(post.date)}</div>
+        <div>
+          {#each post.tags as tag}
+            <a href="/catatan?label={slugger(tag)}">#{tag}</a>
+            <span class="last:hidden">&nbsp;</span>
+          {/each}
+        </div>
+        <p>{post.description}</p>
+      </div>
+    </article>
+  {:else}
+    <blockquote>Oops, belum ada catatan tentang itu</blockquote>
+  {/each}
+</section>
+
+<style lang="postcss">
+  section {
+    @apply mt-2 divide-y-2 divide-gray-500;
+    h2 {
+      @apply text-center my-2;
+    }
+    article {
+      @apply py-4 flex flex-col md:flex-row;
+      .thumbnail {
+        @apply w-full md:w-32 md:h-auto
+          flex flex-grow-0 flex-shrink-0 justify-center;
+        img {
+          @apply max-h-46 object-cover w-max
+            md:object-contain md:object-top;
+        }
+      }
+      .post {
+        @apply h-full p-0 md:px-4;
+        h4 {
+          @apply mt-2 md:mt-0 mb-2;
+        }
+        .meta-date {
+          @apply text-gray-500 text-sm;
+        }
+        p {
+          @apply mt-2 mb-0;
+        }
+      }
+    }
+  }
+</style>
