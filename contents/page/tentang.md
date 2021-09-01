@@ -31,19 +31,23 @@ Artinya, semua manusia sama saja, kan?
 Mengerti sedikit tentang Linux, tertarik menggunakannya. Namun belum dapat meninggalkan Windows. Aku suka pemrograman, namun ragu untuk menyebut diriku sebagai seorang programmer. Proyek yang kubuat tidak banyak, semuanya hanya sebagai bukti hasil belajar.
 
 Sekadar mencoba:
+
 - Visual Basic
 - Codeigniter
 - React
 - Vue
 
 Berencana untuk terus menggunakan:
+
 - Python
 - Ruby
 
 Berhenti menggunakan:
+
 - Jquery
 
 Masih menggunakan:
+
 - PHP
 - Javascript
 - SQL: MySql, PostgreSQL

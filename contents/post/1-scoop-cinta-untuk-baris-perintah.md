@@ -1,14 +1,14 @@
 ---
 title: Scoop, cinta untuk baris perintah
 date: 2020-04-09
-description:  Sebuah baris-perintah manajemen paket aplikasi untuk Windows. Dengan segala kesederhanaan, keindahan dan kekuatan yang dimiliki. Para pengembang yang menggunakan Windows setidaknya harus mencoba mengenalnya. 
+description: Sebuah baris-perintah manajemen paket aplikasi untuk Windows. Dengan segala kesederhanaan, keindahan dan kekuatan yang dimiliki. Para pengembang yang menggunakan Windows setidaknya harus mencoba mengenalnya.
 image: https://i.imgur.com/ZsNjkYx.png
 category: Teknologi
 tags:
-- Terminal
-- Package Manager
-- Windows
-- Scoop
+  - Terminal
+  - Package Manager
+  - Windows
+  - Scoop
 ---
 
 Berapa banyak langkah yang kamu butuhkan untuk memasang perangkat lunak. Kamu berpikir sekedar klik tidaklah sesulit itu.
@@ -34,34 +34,34 @@ Untuk memasang PowerShell 7 kamu dapat mengunduh berkas pemasangnya di situs res
 
 1. Jika tidak ingin memasang PowerShell 7, langsung ke langkah ke-3.
 1. Jalankan Windows PowerShell dengan akses Administrator. Lalu jalankan perintah berikut
-    
-    ```powershell
-    iex "& { $(irm https://aka.ms/install-powershell.ps1) } -UseMSI -Quiet"
-    ```
-   
+
+   ```powershell
+   iex "& { $(irm https://aka.ms/install-powershell.ps1) } -UseMSI -Quiet"
+   ```
+
    Pemasangan ini akan memakan waktu, tergantung bagaimana koneksi internet kamu. Mungkin kamu dapat memperlebar jendela perintah untuk mengetahui prosesnya. Ketika selesai, kamu dapat melanjutkan ke langkah selanjutnya dengan membuka PowerShell 7.
-   
+
 ## Memasang Scoop
 
 Silakan buka Powershell dengan akses Administrator (untuk saay ini saja). Untuk tulisan ini aku akan menggunakan Powershell 7
-   
+
 1. Untuk menyiapkan pemasangan Scoop, ubah lebih dahulu kebijakan eksekusi menggunakan perintah
 
-    ```powershell
-    Set-ExecutionPolicy RemoteSigned -scope CurrentUser
-    ```
+   ```powershell
+   Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+   ```
 
 1. Untuk memasang Scoop jalankan perintah
 
-    ```powershell
-    iwr -useb get.scoop.sh | iex
-    ```
-   
+   ```powershell
+   iwr -useb get.scoop.sh | iex
+   ```
+
 1. Tunggu sebentar dan Scoop siap dijalankan dengan perintah
-    
-    ```powershell
-    scoop
-    ```
+
+   ```powershell
+   scoop
+   ```
 
 ## Memasang paket aplikasi
 
@@ -133,9 +133,10 @@ Akan keluar peringatan perijinan, dan pemasangan akan dilanjutkan setelah kamu m
 Terkadang ketika kita melakukan pemasangan aplikasi, internet tidak stabil atau sesuatu membuat proses berhenti di tengah jalan. Hal ini akan menyebabkan scoop menganggap paket telah terpasang, namun ditandai sebagai paket gagal.
 
 Kamu dapat mengeceknya menggunakan
+
 ```powershell
 scoop list
-``` 
+```
 
 Jika ini terjadi, cukup lepas dulu paketnya, lalu pasang kembali.
 

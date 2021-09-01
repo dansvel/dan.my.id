@@ -6,10 +6,10 @@ description: Mempertemukan back-end dan front-end favoritmu menggunakan Inertia.
   Membuat SPA tanpa mengkhawatirkan kerumitan router pada front-end.
 category: Teknologi
 tags:
-- Framework
-- Laravel
-- Inertia
-- Svelte
+  - Framework
+  - Laravel
+  - Inertia
+  - Svelte
 ---
 
 Aku mengenal pemrograman web dari PHP dan MysQL. Mencoba ke framework, aku mengenal Laravel. Catatan ini bermula ketika mengenal [Svelte](https://svelte.dev/) dan kecantikannya, lalu jatuh cinta pada pandangan pertama. Ehem. Namun aku belum cukup memahami Javascript jika harus menggunakan [Sapper](https://sapper.svelte.dev/) untuk proyekku.
@@ -26,7 +26,7 @@ Inertia memperbolehkanmu membuat Single-page Apps (SPA) tanpa perlu membangun se
 
 Sepemahamanku, seluruh API dan routing akan tetap menggunakan sisi-server, yang akan diarahkan ke adapter inertia. Lalu Inertia mengubahnya menjadi permintaan XHR dan melemparnya ke sisi-client.
 
-Dengan Laravel yang aku baru pelajari beberapa minggu, aku akan cukup mampu menggunakannya. Sederhananya, yang aku butuhkan hanyalah Laravel *controller* untuk mengolah data dari basis data dan Svelte *component* untuk reaktifitas data dan merespon masukkan pengguna dengan sedikit Javascript.
+Dengan Laravel yang aku baru pelajari beberapa minggu, aku akan cukup mampu menggunakannya. Sederhananya, yang aku butuhkan hanyalah Laravel _controller_ untuk mengolah data dari basis data dan Svelte _component_ untuk reaktifitas data dan merespon masukkan pengguna dengan sedikit Javascript.
 
 ## Resepsi
 
@@ -56,18 +56,15 @@ Namun kali ini aku hanya akan mengawinkan Laravel dan Svelte disini.
    ```html
    <!DOCTYPE html>
    <html>
-     <head>
-       <meta charset="utf-8" />
-       <meta
-         name="viewport"
-         content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
-       />
-       <link href="{{ mix('/css/app.css') }}" rel="stylesheet" />
-       <script src="{{ mix('/js/app.js') }}" defer></script>
-     </head>
-     <body>
-       @inertia
-     </body>
+   	<head>
+   		<meta charset="utf-8" />
+   		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+   		<link href="{{ mix('/css/app.css') }}" rel="stylesheet" />
+   		<script src="{{ mix('/js/app.js') }}" defer></script>
+   	</head>
+   	<body>
+   		@inertia
+   	</body>
    </html>
    ```
 
@@ -116,7 +113,7 @@ Namun kali ini aku hanya akan mengawinkan Laravel dan Svelte disini.
 
    ```json
    {
-     "plugins": ["@babel/plugin-syntax-dynamic-import"]
+   	"plugins": ["@babel/plugin-syntax-dynamic-import"]
    }
    ```
 
@@ -130,12 +127,11 @@ Namun kali ini aku hanya akan mengawinkan Laravel dan Svelte disini.
    const app = document.getElementById('app');
 
    new InertiaApp({
-     target: app,
-     props: {
-       initialPage: JSON.parse(app.dataset.page),
-       resolveComponent: (name) =>
-         import(`./Pages/${name}.svelte`).then((module) => module.default),
-     },
+   	target: app,
+   	props: {
+   		initialPage: JSON.parse(app.dataset.page),
+   		resolveComponent: (name) => import(`./Pages/${name}.svelte`).then((module) => module.default)
+   	}
    });
    ```
 
@@ -150,15 +146,15 @@ Namun kali ini aku hanya akan mengawinkan Laravel dan Svelte disini.
    require('laravel-mix-svelte');
 
    mix
-     .js('resources/js/app.js', 'public/js')
-     .sass('resources/sass/app.scss', 'public/dist')
-     .svelte({
-       dev: !mix.inProduction(),
-     })
-     .webpackConfig({
-       output: { chunkFilename: 'js/[name].js?id=[chunkhash]' },
-     })
-     .version();
+   	.js('resources/js/app.js', 'public/js')
+   	.sass('resources/sass/app.scss', 'public/dist')
+   	.svelte({
+   		dev: !mix.inProduction()
+   	})
+   	.webpackConfig({
+   		output: { chunkFilename: 'js/[name].js?id=[chunkhash]' }
+   	})
+   	.version();
    ```
 
 ## Menggunakan Laravel dan Svelte

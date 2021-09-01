@@ -5,7 +5,7 @@ description: Blog yang dibuat menggunakan teknologi yang belum kelar. Antara pen
 image: https://pbs.twimg.com/media/El9fOLpVoAAF5u-.jpg
 category: Teknologi
 tags:
-- Svelte
+  - Svelte
 ---
 
 Jika kamu telah cukup mengamati, kamu akan sadar bahwa catatan ini adalah yang pertama di blog ini. Karena tiga catatan sebelumnya adalah catatan lawas yang sebenarnya telah aku tulis di blog lawasku yang saat ini telah lenyap.
@@ -21,18 +21,18 @@ Pada saat catatn ini ditulis, SvelteKit masih belum secara resmi dirilis, bahkan
 ```powershell
 pnpm init svelte@next sveltest // sveltest adalah nama direktori untuk mencicipi sveltekit ini
 cd sveltest
-pnpm run dev 
+pnpm run dev
 ```
 
-*`pnpm` dapat diganti dengan `npm` atau `yarn` sesuai selera.
+\*`pnpm` dapat diganti dengan `npm` atau `yarn` sesuai selera.
 
 Bayangkan saja om-om mau jualan nasi goreng dan sedang belajar membuat resepnya sendiri. Dia bahkan belum punya warung, namun tentu saja nasi goreng hasil latihannya sudah ada. Nah banyak juga ternyata yang doyan sama ini. Mungkin kurang asin, mungkin terlalu banyak sambal, dan lain sebagainya. Bagaimana pun, itu nasi goreng.
 
-Para pengembang web juga mengerumuni proyek dalam masa pengembangan ini dengan antusias. Dengan masih munculnya bug di sana-sini, ada saja yang nekat menggunakannya di *production*.
+Para pengembang web juga mengerumuni proyek dalam masa pengembangan ini dengan antusias. Dengan masih munculnya bug di sana-sini, ada saja yang nekat menggunakannya di _production_.
 
 Ya blog ini contohnya.
 
-Entah kami ini calon ilmuan yang tidak kesampaian sehingga *demen* coba-coba. Atau cuma orang nekat yang bodoh.
+Entah kami ini calon ilmuan yang tidak kesampaian sehingga _demen_ coba-coba. Atau cuma orang nekat yang bodoh.
 
 ## Kendala
 

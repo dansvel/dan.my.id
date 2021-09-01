@@ -1,20 +1,19 @@
 <script>
-  import 'virtual:windi.css'
-  import './app.postcss'
+	import 'virtual:windi.css';
+	import './app.postcss';
 	import Nav from '$lib/Nav.svelte';
 	import { onMount } from 'svelte';
 
-  onMount(() => {
+	onMount(() => {
 		if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.querySelector('link[title=Dark]').toggleAttribute('disabled')
-    } else {
-      document.querySelector('link[title=Light]').toggleAttribute('disabled')
+			document.querySelector('link[title=Dark]').toggleAttribute('disabled');
+		} else {
+			document.querySelector('link[title=Light]').toggleAttribute('disabled');
 		}
-	})
-
+	});
 </script>
 
-<Nav/>
+<Nav />
 <main>
-	<slot></slot>
+	<slot />
 </main>

@@ -5,13 +5,13 @@ description: Blog statis menggunakan SSG pastilah kamu telah hafal bagaimana mem
 image: https://cdn.pixabay.com/photo/2015/07/02/10/40/writing-828911_960_720.jpg
 category: Teknologi
 tags:
-- Svelte
-- Markdown
-- Javascript
-- Vite
+  - Svelte
+  - Markdown
+  - Javascript
+  - Vite
 ---
 
-Oke. Mempertimbangkan isi catatan yang lebih singkat namun berbobot, dan tentu saja cacat verbal yang ku miliki. Mungkin mulai dari catatan ini hingga ke depannya, aku akan menjadi lebih *to the point*. Jadi, mari mulai.
+Oke. Mempertimbangkan isi catatan yang lebih singkat namun berbobot, dan tentu saja cacat verbal yang ku miliki. Mungkin mulai dari catatan ini hingga ke depannya, aku akan menjadi lebih _to the point_. Jadi, mari mulai.
 
 ## Instal SvelteKit dulu lah
 
@@ -21,43 +21,43 @@ cd blog
 pnpm i
 ```
 
-Oh iya. Ketika catatan ini dibuat versi SvelteKit ada di `1.0.0.next-61`. Pada versi ini, ketika kita melakukan *fresh init*, tidak hanya Typescript support dan pilihan penulisan style saja yang ditawarkan. Namun ada juga penawaran untuk menggunakan ESlint dan Prettier. Mantap, aku mengambil yang Prettier saja
+Oh iya. Ketika catatan ini dibuat versi SvelteKit ada di `1.0.0.next-61`. Pada versi ini, ketika kita melakukan _fresh init_, tidak hanya Typescript support dan pilihan penulisan style saja yang ditawarkan. Namun ada juga penawaran untuk menggunakan ESlint dan Prettier. Mantap, aku mengambil yang Prettier saja
 
 ## Hooks data postingan
 
 Kamu ingin menyiapkan data berisi daftar post yang ada di direktori `contens/post` dan meta datanya, seperti judul dan deskripsi. Untuk itu kamu dapat menggunakan Hooks.
 
-Hooks awalnya bernama Setup. Kamu membuat berkas opsional dengan nama  `src/hooks.js` (atau `src/hooks.ts`, atau `src/hooks/index.js`). Jika kamu telah membuat berkas `setup` sebelumnya cukup ubah namanya menjadi `hooks`.
+Hooks awalnya bernama Setup. Kamu membuat berkas opsional dengan nama `src/hooks.js` (atau `src/hooks.ts`, atau `src/hooks/index.js`). Jika kamu telah membuat berkas `setup` sebelumnya cukup ubah namanya menjadi `hooks`.
 
 Jadi, mari buat berkas `src/hooks.js` supaya lebih sederhana.
 
 ```js
 export async function getSession() {
-  const posts = await Promise.all(
-    Object.entries(import.meta.glob('/contents/post/*.md')).map(async ([path, page]) => {
-      const { default: post } = await page()
-      const { body, image, ...attributes } = post
-      const slug = path.split('/').pop().split('.').shift()
-      return { slug, ...attributes }
-    })
-  )
+	const posts = await Promise.all(
+		Object.entries(import.meta.glob('/contents/post/*.md')).map(async ([path, page]) => {
+			const { default: post } = await page();
+			const { body, image, ...attributes } = post;
+			const slug = path.split('/').pop().split('.').shift();
+			return { slug, ...attributes };
+		})
+	);
 
-  return {
-    posts
-  }
+	return {
+		posts
+	};
 }
 ```
 
 Oops, aku lupa memberitahu bahwa pada catatan ini blog yang dibuat akan menggunakan berkas Markdown alih-alih fetch API, tentu saja kamu dapat mengubah isi `getSession()` ini sesuai kebutuhan.
 
-Satu lagi, alih-alih menggunakan `fs` milik Node untuk membaca berkas Markdown ~yang entah bisa atau tidak~, aku membuat sebuah [**vite-plugin-markdown**](https://www.npmjs.com/package/@dansvel/vite-plugin-markdown) untuk ini. 
+Satu lagi, alih-alih menggunakan `fs` milik Node untuk membaca berkas Markdown ~yang entah bisa atau tidak~, aku membuat sebuah [**vite-plugin-markdown**](https://www.npmjs.com/package/@dansvel/vite-plugin-markdown) untuk ini.
 
 ### Mari bahas kodenya.
 
-1. `export async function getSession() {}` mewajibkan untuk mengembalikan sebuah objek murni tanpa *function* yang akan diberikan kepada Browser menggunakan `session` setiap kali SvelteKit me-render sebuah halaman. [Cek dokumentasi resminya](https://kit.svelte.dev/docs#hooks).
-2. `Object.entries(import.meta.glob('/contents/post/*.md')).map()` akan membuat sebuah array berisi objek dari hasil dynamic import menggunakan **Glob Import**, ini adalah fitur dari Vite. 
-   
-    Penjelasan di [dokumentasi remsinya](https://vitejs.dev/guide/features.html#glob-import) sangat sederhana dan mudah dipahami. `import.meta.glob()` akan mengembalikan sebuah array berbentuk objek.   
+1. `export async function getSession() {}` mewajibkan untuk mengembalikan sebuah objek murni tanpa _function_ yang akan diberikan kepada Browser menggunakan `session` setiap kali SvelteKit me-render sebuah halaman. [Cek dokumentasi resminya](https://kit.svelte.dev/docs#hooks).
+2. `Object.entries(import.meta.glob('/contents/post/*.md')).map()` akan membuat sebuah array berisi objek dari hasil dynamic import menggunakan **Glob Import**, ini adalah fitur dari Vite.
+
+   Penjelasan di [dokumentasi remsinya](https://vitejs.dev/guide/features.html#glob-import) sangat sederhana dan mudah dipahami. `import.meta.glob()` akan mengembalikan sebuah array berbentuk objek.
 
 3. Karena menggunakan plugin tadi, maka hasil import akan mengembalikan array objek dari `marked.js`. Di contoh kode di atas, aku mengambil `slug` dari alamat file, dan `attribut` dari hasil import.
 4. Terakhir, aku mengembalikan objek berisi daftar post yang aku aku namai `posts`. Kamu dapat melakukan pengurutan data jika perlu, misalnya berdasarkan tanggal.
@@ -67,7 +67,7 @@ Satu lagi, alih-alih menggunakan `fs` milik Node untuk membaca berkas Markdown ~
 ```sveltehtml
 <script >
   import { session } from '$app/stores'
-  
+
   const posts = $session.posts
 </script>
 
@@ -85,7 +85,7 @@ Kamu tentu sudah paham berkas ini digunakan untuk menangani `alamat.web/post/jud
   export async function load({ page, session }) {
     const slug = page.params.slug
     const slugs = session.posts
-  
+
     if (!slugs.includes(slug)) {
       return {
         status: 404,
@@ -102,7 +102,7 @@ Kamu tentu sudah paham berkas ini digunakan untuk menangani `alamat.web/post/jud
         post = { slug, ...post.default }
       }
     }
-  
+
     return {
       props: { post }
     }

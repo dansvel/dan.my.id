@@ -5,15 +5,15 @@ description: Menanggapi dan berkomentar sekaligus promosi di media sosial, kenap
 image: https://cdn.pixabay.com/photo/2018/02/12/10/45/heart-3147976_960_720.jpg
 category: Teknologi
 tags:
-- Webmention
-- Sistem komentar
+  - Webmention
+  - Sistem komentar
 ---
 
 Aku menemukan Webmention ini belum lama, jadi aku belum begitu memahami dan belum begitu mampu menjelaskan. Jadi biar ku beri saran lebih dahulu, cek situs resminya di https://webmention.io/
 
 ## Apa itu Webmention?
 
-Sejauh yang aku pahami sampai saat ini, Webmention mengumpulkan semua konten di media sosial yang "menandai" akun media sosialmu dan sebuah artikel. Data itu akan dianggap sebagai tanggapan terkait sebuah artikel tersebut. 
+Sejauh yang aku pahami sampai saat ini, Webmention mengumpulkan semua konten di media sosial yang "menandai" akun media sosialmu dan sebuah artikel. Data itu akan dianggap sebagai tanggapan terkait sebuah artikel tersebut.
 
 Kita dapat menggunakan data tadi sebagai sistem untuk memberi tanggapan atau komentar. Mungkin kamu lebih sering melihat contoh penggunaannya untuk Twitter, namun Webmention juga dapat menjaring konten di Facebook, Instagram dan lain-lain yang akan ku jelaskan kemudian.
 
@@ -42,11 +42,11 @@ Mendaftar di Bridgy sama mudahnya dengan sebelumnya. Hubungkan akun media sosial
 
 ## Menerapkan Webmention
 
-Untuk mendapatkan semua *mention* yang terkait catatan ini, kamu cukup melakukan `fetch` di alamat ini `https://webmention.io/api/mentions.jf2?target=https://dan.my.id/catatan/6-komentar-blog-statis-dengan-webmention/`
+Untuk mendapatkan semua _mention_ yang terkait catatan ini, kamu cukup melakukan `fetch` di alamat ini `https://webmention.io/api/mentions.jf2?target=https://dan.my.id/catatan/6-komentar-blog-statis-dengan-webmention/`
 
 Nah, mari olah datanya untuk ditampilkan di Svelte.
 
-Untuk blogku ini, aku hanya perlu sebuah Svelte *component*. `src/lib/components/Webmention.svelte`
+Untuk blogku ini, aku hanya perlu sebuah Svelte _component_. `src/lib/components/Webmention.svelte`
 
 ```sveltehtml
 <script>
@@ -208,10 +208,10 @@ Untuk blogku ini, aku hanya perlu sebuah Svelte *component*. `src/lib/components
 {/await}
 ```
 
-Inti dari kode di atas adalah, mengambil data *mention* menggunakan `fetch`, menyaringnya untuk diambil *like*, *retweet*, dan *reply*.
+Inti dari kode di atas adalah, mengambil data _mention_ menggunakan `fetch`, menyaringnya untuk diambil _like_, _retweet_, dan _reply_.
 
-Karena keluaran `onMount` adalah `promise`, maka aku menggunakan `await` di untuk menangkap hasilnya. lalu menggunakan pengecekan `if` untuk setiap jenis tanggapan. Kamu boleh saja hanya mengambil beberaa jenis, atau malah menggabungkannya menjadi satu. Itu hanya bagaimana kamu ingin menampilkan datanya. 
+Karena keluaran `onMount` adalah `promise`, maka aku menggunakan `await` di untuk menangkap hasilnya. lalu menggunakan pengecekan `if` untuk setiap jenis tanggapan. Kamu boleh saja hanya mengambil beberaa jenis, atau malah menggabungkannya menjadi satu. Itu hanya bagaimana kamu ingin menampilkan datanya.
 
-Jika kamu mengikutiku, maka kamu hanya perlu memberi sedikit css untuk *component* ini dan paling tidak akan mirip seperti di blog ini.
+Jika kamu mengikutiku, maka kamu hanya perlu memberi sedikit css untuk _component_ ini dan paling tidak akan mirip seperti di blog ini.
 
 Terima kasih.

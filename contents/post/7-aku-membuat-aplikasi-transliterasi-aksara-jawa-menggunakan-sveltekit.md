@@ -5,19 +5,19 @@ description: Mengubah teks huruf alfabet menjadi aksara Jawa jadi mudah.
 image: https://play-lh.googleusercontent.com/iLJ3OV4oCRIHmpd-tdf6U68oaWM4mclrTN7pIbt_kFybJZfzn48W_Hw64Wed8_M1JqA=s180-rw
 category: Teknologi
 tags:
-- Aplikasi
-- Svelte
-- Akasara
-- Jawa
+  - Aplikasi
+  - Svelte
+  - Akasara
+  - Jawa
 ---
 
-Awalnya aku menulis aksara Jawa di laptop menggunakan papan ketik bawaan dari *Windows 10*, aku hanya memasangnya lalu menggunakannya dengan menekan `Win` + `.`. Itu sudah berlangsung satu tahun lebih.
+Awalnya aku menulis aksara Jawa di laptop menggunakan papan ketik bawaan dari _Windows 10_, aku hanya memasangnya lalu menggunakannya dengan menekan `Win` + `.`. Itu sudah berlangsung satu tahun lebih.
 
 Memang sih aku telah menemukan aplikasi semacam ini di internet, namun hasilnya kurang memuaskanku. Hingga aku bertemu Svelte.
 
 ## Bagaimana aku membuat aplikasi ini
 
-Aku hanya menggunakan *regex* sederhana yang awalnya aku ujicoba di situs https://regex101.com/. Regex ini untuk membagi menjadi suku kata. Jika kamu membuka situsnya, kamu dapat mencoba bagaiman regex ini membagi suku kata
+Aku hanya menggunakan _regex_ sederhana yang awalnya aku ujicoba di situs https://regex101.com/. Regex ini untuk membagi menjadi suku kata. Jika kamu membuka situsnya, kamu dapat mencoba bagaiman regex ini membagi suku kata
 
 ```text
 /([hncrkdtswlpðjyɲmgbθŋxɠʣʃfvzq]{1,3})?[aeéiuo]([hncrkdtswlpðjyɲmgbθŋxɠʣʃfvzq](?![aeéiuo]|([rylw])))?|[0-9]+|\n|\s\s|\(|\)|:|"|,|\.|á|(?:\[.*])/gim
@@ -31,7 +31,7 @@ Karena tujuannya hanya itu, jadi aku terlalu malas mendesain aplikasinya, lalu h
 
 ## Aplikasinya bernama **Hana**
 
-Langsung saja coba aplikasinya di dengan mengunjungi situs [hana.pages.dev](https://hana.js.org/) 
+Langsung saja coba aplikasinya di dengan mengunjungi situs [hana.pages.dev](https://hana.js.org/)
 
 Dan jangan lupa untuk memberi masukkan jika ada kesalahan hasil atau ide bagaimana harusnya aplikasi supaya nyaman digunakan.
 
