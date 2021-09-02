@@ -1,6 +1,6 @@
 ---
 title: Eksistensi dari iseng
-subtitle: Ide + waktu luang + rasa penasaran
+subtitle: Ide + waktu + penasaran
 description: Proyek? Lebih tepat ke produk dari belajar. Memancing ilmu dengan mengumpankan proyek belajar.
 image: https://cdn.pixabay.com/photo/2015/05/15/15/00/building-768815_960_720.jpg
 date: 2021-03-29
