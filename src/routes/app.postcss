@@ -2,6 +2,7 @@ html {
 	@apply font-sans;
 	::-webkit-scrollbar {
 		width: 10px;
+		height: 10px;
 	}
 	::-webkit-scrollbar-track {
 		@apply bg-gray-200 dark:bg-gray-800;
@@ -21,13 +22,13 @@ body {
 }
 
 h1 {
-	@apply text-[3em] font-bold;
-}
-h2 {
 	@apply text-[2.25em] font-bold;
 }
+h2 {
+	@apply text-[2.0em] font-bold;
+}
 h3 {
-	@apply text-[1.875em] font-bold;
+	@apply text-[1.75em] font-bold;
 }
 h4 {
 	@apply text-[1.5em] font-medium;
@@ -53,11 +54,10 @@ h3,
 h4,
 h5,
 h6 {
-	@apply group;
-	a.anchor {
-		@apply border-0 text-gray-300 dark:text-gray-800
-    no-underline shadow-none
-    hover:(text-indigo-700 dark:text-indigo-300);
+	a {
+		@apply text-gray-700 border-gray-700
+    border-b dark:(text-gray-300 border-gray-300)
+    hover:(text-indigo-700 border-indigo-700 dark:(text-indigo-300 border-indigo-300));
 	}
 }
 
