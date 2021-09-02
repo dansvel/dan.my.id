@@ -28,7 +28,6 @@
 
 <div>
 	<section>
-		<hr />
 		<h2>Webmention</h2>
 		<p>
 			Ingin bertanya atau menanggapi?
@@ -142,7 +141,7 @@
 
 <style lang="postcss">
 	section {
-		@apply mb-10;
+		@apply mb-10 border-t-2 border-gray-500;
 	}
 	h2,
 	h3 {

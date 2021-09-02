@@ -76,8 +76,8 @@
 			@apply transform-none;
 		}
 		nav {
-			@apply px-16 max-w-5xl mx-auto flex flex-wrap
-      space-y-4 sm:(space-y-0 px-16);
+			@apply px-10 max-w-5xl mx-auto flex flex-wrap
+      space-y-4 sm:(px-16 space-y-0 px-16);
 			#brand {
 				@apply flex w-full justify-center
         sm:(w-1/2 justify-start);
