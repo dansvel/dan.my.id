@@ -4,32 +4,30 @@
 	import CatatanList from '$lib/CatatanList.svelte';
 	import SeoHead from '$lib/SeoHead.svelte';
 
-	let posts = $session.posts;
+	let allPosts = $session.posts;
 	const allTags = $session.slugs;
 
-	let filter, navurl;
-
+	let posts, filter, navurl, more, hal;
 	const per = 9;
-	let hal = parseInt(filter?.hal || 1);
-	let more = posts.length - hal * per <= 0;
+
 	$: {
 		filter = $page.query ? getUrlParams($page.query.toString()) : {};
+		console.log(filter);
 		if (filter.label) {
-			posts = $session.posts.filter((post) =>
+			allPosts = $session.posts.filter((post) =>
 				post.tags.map((tag) => slugger(tag)).includes(filter.label)
 			);
-			console.log('posts', posts);
-			filter.label = $session.slugs.filter((slug) => slugger(slug) === filter.label);
 		}
 		if (filter.kategori) {
-			posts = $session.posts.filter((post) => slugger(post.category) === filter.kategori);
-			filter.kategori = capitalize(filter.kategori);
+			allPosts = $session.posts.filter((post) => slugger(post.category) === filter.kategori);
 		}
-
-		posts = posts.slice(hal * per - per, hal * per);
 
 		hal = parseInt(filter?.hal || 1);
 		delete filter.hal;
+
+		more = allPosts.length - hal * per <= 0;
+		console.log(more)
+		posts = allPosts.slice(hal * per - per, hal * per);
 
 		navurl = '?' + urlParamsToQuery(filter) + (Object.keys(filter).length ? '&' : '') + 'hal=';
 	}
@@ -44,7 +42,9 @@
 	<h1>
 		Catatan
 		{#if JSON.stringify(filter) !== '{}'}
-			tentang {filter?.label || filter?.kategori}
+			tentang
+			{filter.label ? $session.slugs.filter((slug) => slugger(slug) === filter.label) : ''}
+			{filter.kategori ? capitalize(filter?.kategori) : ''}
 		{/if}
 	</h1>
 	<div class="text-center">
