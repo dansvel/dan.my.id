@@ -1,43 +1,38 @@
-<script context="module">
-	import { capitalize, getUrlParams, slugger } from '$lib/util';
-	export async function load({ session, page }) {
-		let posts = session.posts;
-		const filter = (await page.query) ? getUrlParams(page.query.toString()) : {};
-		if (filter.label) {
-			posts = posts.filter((post) => post.tags.map((tag) => slugger(tag)).includes(filter.label));
-			filter.label = session.slugs.filter((slug) => slugger(slug) === filter.label);
-		}
-		if (filter.kategori) {
-			posts = posts.filter((post) => slugger(post.category) === filter.kategori);
-			filter.kategori = capitalize(filter.kategori);
-		}
-		let hal = parseInt(filter?.hal || 1);
-		const per = 9;
-		let more = posts.length - hal * per <= 0;
-		posts = posts.slice(hal * per - per, hal * per);
-		return {
-			props: {
-				posts,
-				filter,
-				more
-			}
-		};
-	}
-</script>
-
 <script>
-	import { session } from '$app/stores';
-	import { urlParamsToQuery } from '$lib/util';
+	import { session, page } from '$app/stores';
+	import { capitalize, slugger, urlParamsToQuery, getUrlParams } from '$lib/util';
 	import CatatanList from '$lib/CatatanList.svelte';
 	import SeoHead from '$lib/SeoHead.svelte';
-	export let posts, filter, more;
+
+	let posts = $session.posts;
 	const allTags = $session.slugs;
-	let hal, navurl;
+
+	let filter, navurl;
+
+	const per = 9;
+	let hal = parseInt(filter?.hal || 1);
+	let more = posts.length - hal * per <= 0;
 	$: {
+		filter = $page.query ? getUrlParams($page.query.toString()) : {};
+		if (filter.label) {
+			posts = $session.posts.filter((post) =>
+				post.tags.map((tag) => slugger(tag)).includes(filter.label)
+			);
+			console.log('posts', posts);
+			filter.label = $session.slugs.filter((slug) => slugger(slug) === filter.label);
+		}
+		if (filter.kategori) {
+			posts = $session.posts.filter((post) => slugger(post.category) === filter.kategori);
+			filter.kategori = capitalize(filter.kategori);
+		}
+
+		posts = posts.slice(hal * per - per, hal * per);
+
 		hal = parseInt(filter?.hal || 1);
 		delete filter.hal;
+
+		navurl = '?' + urlParamsToQuery(filter) + (Object.keys(filter).length ? '&' : '') + 'hal=';
 	}
-	$: navurl = '?' + urlParamsToQuery(filter) + (Object.keys(filter).length ? '&' : '') + 'hal=';
 </script>
 
 <SeoHead
@@ -49,7 +44,7 @@
 	<h1>
 		Catatan
 		{#if JSON.stringify(filter) !== '{}'}
-			<br /><small>tentang {filter?.label || filter?.kategori}</small>
+			tentang {filter?.label || filter?.kategori}
 		{/if}
 	</h1>
 	<div class="text-center">

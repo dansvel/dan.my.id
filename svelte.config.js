@@ -12,9 +12,6 @@ const config = {
 		// hydrate the <div id="svelte"> element in src/app.html
 		adapter: staticSite(),
 		target: '#svelte',
-		prerender: {
-			onError: 'continue'
-		},
 		vite: () => ({
 			plugins: [WindiCSS.default(), vitePluginMarkdown(markedOption)],
 			resolve: {

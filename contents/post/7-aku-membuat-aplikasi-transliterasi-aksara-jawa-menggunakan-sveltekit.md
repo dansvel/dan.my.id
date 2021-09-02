@@ -31,7 +31,7 @@ Karena tujuannya hanya itu, jadi aku terlalu malas mendesain aplikasinya, lalu h
 
 ## Aplikasinya bernama **Hana**
 
-Langsung saja coba aplikasinya di dengan mengunjungi situs [hana.pages.dev](https://hana.js.org/)
+Langsung saja coba aplikasinya di dengan mengunjungi situs https://hana.rip/
 
 Dan jangan lupa untuk memberi masukkan jika ada kesalahan hasil atau ide bagaimana harusnya aplikasi supaya nyaman digunakan.
 

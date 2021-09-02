@@ -19,7 +19,7 @@ Seperti halnya aku yang terinspirasi dari pekerjaan orang lain, barangkali beber
 
 Integrasi indah Sveltekit dengan Windi CSS. Bahan yang digunakan untuk membuat blog ini.
 
-## [Hana](https://hana.js.org/)
+## [Hana](https://hana.rip/)
 
 Aplikasi transliterasi aksara Jawa yang mengubah teks huruf abjad menjadi teks aksara Jawa.
 
