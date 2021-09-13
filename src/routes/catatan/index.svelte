@@ -20,8 +20,8 @@
 		} else if (filter.kategori) {
 			allPosts = $session.posts.filter((post) => slugger(post.category) === filter.kategori);
 		} else {
-      allPosts = $session.posts
-    }
+			allPosts = $session.posts;
+		}
 
 		hal = parseInt(filter?.hal || 1);
 		delete filter.hal;
