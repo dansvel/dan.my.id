@@ -4,7 +4,7 @@
 	import CatatanList from '$lib/CatatanList.svelte';
 	import SeoHead from '$lib/SeoHead.svelte';
 
-	let allPosts = $session.posts;
+	let allPosts;
 	const allTags = $session.slugs;
 
 	let posts, filter, navurl, more, hal;
@@ -17,16 +17,16 @@
 			allPosts = $session.posts.filter((post) =>
 				post.tags.map((tag) => slugger(tag)).includes(filter.label)
 			);
-		}
-		if (filter.kategori) {
+		} else if (filter.kategori) {
 			allPosts = $session.posts.filter((post) => slugger(post.category) === filter.kategori);
-		}
+		} else {
+      allPosts = $session.posts
+    }
 
 		hal = parseInt(filter?.hal || 1);
 		delete filter.hal;
 
 		more = allPosts.length - hal * per <= 0;
-		console.log(more)
 		posts = allPosts.slice(hal * per - per, hal * per);
 
 		navurl = '?' + urlParamsToQuery(filter) + (Object.keys(filter).length ? '&' : '') + 'hal=';
