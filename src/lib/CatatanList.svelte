@@ -50,7 +50,10 @@
 			.post {
 				@apply h-full p-0 md:px-4;
 				h4 {
-					@apply mt-2 md:mt-0 mb-2;
+					@apply mt-2 md:mt-0 mb-2 border-0;
+					a {
+						@apply border-b hover:(border-b-3);
+					}
 				}
 				.meta-date {
 					@apply text-gray-500 text-sm;

@@ -43,7 +43,7 @@
 
 <style lang="postcss">
 	article {
-		@apply mb-4;
+		@apply mb-5;
 		header {
 			@apply py-4 border-b-2 border-gray-500 mb-4;
 			h1,

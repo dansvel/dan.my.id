@@ -6,9 +6,9 @@
 
 	onMount(() => {
 		if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-			document.querySelector('link[title=Dark]').toggleAttribute('disabled');
+			document.querySelector('link[title=Dark]').removeAttribute('disabled');
 		} else {
-			document.querySelector('link[title=Light]').toggleAttribute('disabled');
+			document.querySelector('link[title=Light]').removeAttribute('disabled');
 		}
 	});
 </script>
