@@ -12,7 +12,6 @@
 
 	$: {
 		filter = $page.query ? getUrlParams($page.query.toString()) : {};
-		console.log(filter);
 		if (filter.label) {
 			allPosts = $session.posts.filter((post) =>
 				post.tags.map((tag) => slugger(tag)).includes(filter.label)
