@@ -35,7 +35,7 @@
 	section {
 		@apply mt-2 divide-y-2 divide-gray-500;
 		h2 {
-			@apply text-center my-2;
+			@apply text-center my-2 border-0;
 		}
 		article {
 			@apply py-4 flex flex-col md:flex-row;
