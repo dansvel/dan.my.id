@@ -26,26 +26,20 @@
 	});
 </script>
 
-<div>
-	<section>
-		<h2>Webmention</h2>
-		<p>
-			Ingin bertanya atau menanggapi?
-			<a href="https://twitter.com/intent/tweet/?text={tweet}" target="_blank" rel="noopener"
-				>Cuitkan di Twitter</a
-			>, itu akan muncul disini.
-		</p>
-	</section>
-</div>
+<section>
+	<h2>Webmention</h2>
+	<p>
+		Ingin bertanya atau menanggapi?
+		<a href="https://twitter.com/intent/tweet/?text={tweet}" target="_blank" rel="noopener"
+			>Cuitkan di Twitter</a
+		>, itu akan muncul disini.
+	</p>
+</section>
 
 {#await mentions then data}
 	{#if data !== undefined}
-		{#if !data.likes.length && !data.retweets.length && !data.retweets.length}
-			<section>
-				<div>
-					<blockquote>Jadilah yang pertamax memberi tanggapan.</blockquote>
-				</div>
-			</section>
+		{#if !data.likes.length && !data.retweets.length && !data.replies.length}
+			<blockquote>Jadilah yang pertamax memberi tanggapan.</blockquote>
 		{/if}
 
 		{#if data.likes.length}
@@ -141,20 +135,20 @@
 
 <style lang="postcss">
 	section {
-		@apply mb-10 border-t-2 border-gray-500;
+		@apply mb-5 pt-5 border-t-2 border-gray-500;
 	}
 	h2,
 	h3 {
-		@apply my-4;
+		@apply my-4 border-0;
 	}
 	ul:not(.replies) {
-		@apply flex flex-wrap list-none;
+		@apply flex flex-wrap list-none p-0;
 		li {
 			@apply m-1;
 			a {
 				@apply text-gray-500 no-underline border-0;
 				img {
-					@apply border-2 border-gray-500 m-0
+					@apply border-b border-gray-500 m-0
           rounded-full;
 					&:hover {
 						box-shadow: 0 0 5px 2px;
@@ -164,7 +158,7 @@
 		}
 	}
 	ul.replies {
-		@apply mt-2 divide-y-2 divide-gray-500;
+		@apply mt-2 divide-y-1 divide-gray-500 p-0;
 		li {
 			@apply py-4 flex flex-row
       duration-500;
