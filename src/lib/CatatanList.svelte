@@ -44,7 +44,7 @@
           flex flex-grow-0 flex-shrink-0 justify-center;
 				img {
 					@apply max-h-46 object-cover w-max
-            md:object-contain md:object-top;
+            md:object-contain md:object-top m-0;
 				}
 			}
 			.post {
