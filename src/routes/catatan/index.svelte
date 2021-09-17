@@ -7,7 +7,7 @@
 	let allPosts;
 	const allTags = $session.slugs;
 
-	let posts, filter, navurl, more, hal;
+	let posts, filter, navurl, more, pageNum;
 	const per = 9;
 
 	$: {
@@ -22,13 +22,13 @@
 			allPosts = $session.posts;
 		}
 
-		hal = parseInt(filter?.hal || 1);
-		delete filter.hal;
+		pageNum = parseInt(filter?.pageNum || 1);
+		delete filter.pageNum;
 
-		more = allPosts.length - hal * per <= 0;
-		posts = allPosts.slice(hal * per - per, hal * per);
+		more = allPosts.length - pageNum * per <= 0;
+		posts = allPosts.slice(pageNum * per - per, pageNum * per);
 
-		navurl = '?' + urlParamsToQuery(filter) + (Object.keys(filter).length ? '&' : '') + 'hal=';
+		navurl = '?' + urlParamsToQuery(filter) + (Object.keys(filter).length ? '&' : '') + 'pageNum=';
 	}
 </script>
 
@@ -65,8 +65,8 @@
 <CatatanList {posts} />
 
 <div class="flex">
-	<a href={navurl + (hal - 1)} class:hidden={hal <= 1}>Lebih baru</a>
-	<a href={navurl + (hal + 1)} class="ml-auto" class:hidden={more}>Lebih lawas</a>
+	<a href={navurl + (pageNum - 1)} class:hidden={pageNum <= 1}>Lebih baru</a>
+	<a href={navurl + (pageNum + 1)} class="ml-auto" class:hidden={more}>Lebih lawas</a>
 </div>
 
 <style lang="postcss">
