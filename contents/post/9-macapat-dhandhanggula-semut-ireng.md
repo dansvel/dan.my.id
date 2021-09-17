@@ -30,13 +30,13 @@ Apa yang dulunya dianggap sebagai hal yang mustahil menjadi kenyataan. Itu tidak
 
 ### Kebo bung kang nyabrang bengawan (9a)
 
-Jarwanipun Kebo ingkang sungunipun kados bung, punika kasebat bantheng utawi ing Basa Kawi kasebat Andaka, kang nyabrang bengawan. Ateges nglampahi pakaryan ingkang awrat sanget, mboten sabaéné.
+Jarwanipun Kebo ingkang sungunipun kados bung, punika kasebat banthéng utawi ing Basa Kawi kasebat Andaka, kang nyabrang bengawan. Ateges nglampahi pakaryan ingkang awrat sanget, mboten sabaéné.
 
 Diterjemahkan Kebo yang tanduknya seperti bung (anak pohon bambu), yang disebut banteng atau dalam bahasa Kawi disebut Andaka, yang menyeberangi sungai. Yang artinya bekerja sangat keras, tidak sepadan.
 
-### Keyong kang jarak sunguté (8e)
+### Kéyong kang jarak sunguté (8e)
 
-Jarwanipun kathah laré alit utawi para nom-noman ingkang kagungan kawruh mumpuni samangke.
+Jarwanipun kathah laré alit utawi para nom-noman ingkang kagungan kawruh mumpuni samangké.
 
 (Keong yang sungutnya panjang.) Maknanya banyak anak-anak atau remaja yang memiliki pengetahuan yang mumpuni saat ini.
 
@@ -48,23 +48,23 @@ Arti dari buah ketimun adalah timun itu untuk lalapan, delapan _ron_ atau delapa
 
 ### Sura baya gégér kepati (9i)
 
-Jarwanipun surabaya punika sayekti sanes kutha Surabaya, ananging sanepa ingkang ateges wani ing pakewuh utawi wani ing bebaya. Sanajan ana gégér dikaya ngapa para satriyaning praja mboten mingkuh ing pakewuh utawi wani ing pakewuh, wani ngadhapi bebaya punapa kemawon. Pramila wani mrantasi bebaya.
+Jarwanipun surabaya punika sayekti sanés kutha Surabaya, ananging sanepa ingkang ateges wani ing pakewuh utawi wani ing bebaya. Sanajan ana gégér dikaya ngapa para satriyaning praja mboten mingkuh ing pakewuh utawi wani ing pakewuh, wani ngadhapi bebaya punapa kemawon. Pramila wani mrantasi bebaya.
 
 Terjemahan Surabaya sebenarnya bukanlah kota Surabaya, melainkan perumpamaan yang artinya keberanian di dalam norma atau keberanian di dalam bahaya. Meski ada kontroversi seperti apa pun para kesatria negeri tidak keluar dari norma atau tetap berani mengikuti norma, mereka berani menghadapi bahaya apa pun. Sehingga berani memberantas bahaya.
 
 ### Ana wong ngoyak macan (7a)
 
-### Den wadhahi bumbung (6u)
+### Dén wadhahi bumbung (6u)
 
-Macan pralambang galak, sipat angkara, galak, kejem, menange dhewé, lsp. Bumbung pralambang papan kang primpen. Sipat-sipat kang angkara, galak, kejem, wengis, menangé dhewé kadya kéwan galak kang kasalira dening manungsa pakedah dipun simpen kanthi primpen. Dipun kendhaléni, supados mboten mekdak, saengga saged nuwuhaken karisakanan.
+Macan pralambang galak, sipat angkara, galak, kejem, menangé dhéwé, lsp. Bumbung pralambang papan kang primpen. Sipat-sipat kang angkara, galak, kejem, wengis, menangé dhewé kadya kéwan galak kang kasalira déning manungsa pakédah dipun simpen kanthi primpen. Dipun kendhaléni, supados mboten mekdak, saéngga saged nuwuhaken karisakanan.
 
 Harimau melambangkan keganasan, sifat kejahatan, keganasan, kekejaman, memenangkan diri, dll. _Bumbung_ adalah tempat penyimpanan dari bambu, melambangkan tempat yang penyimpanan yang baik.
 
 Ciri-ciri kejahatan, kebiadaban, kekejaman, kekejaman, memenangkan diri seperti binatang buas yang dirasuki manusia harus disimpan dengan baik. Itu dikendalikan, agar tidak membengkak, sehingga bisa menimbulkan keresahan.
 
-### Alun-alun Kartasura, gajah meta (12a)
+### Alun-alun Kartasura, gajah méta (12a)
 
-Jarwanipun bilih rikala rumiyin belih Alun-Alun Kraton Kartasura punika wiyar sanget menawi kabandhingaken kaliyan alun-alun ing wonten samangké (umpaminipun Alun-Alun Kraton Ngayogyakarta, utawi Alun-Alun Surakarta). Ing alun-alun mriku wonten Gajah Meta utawi gajah ngamuk, pralambang sipat angkara murka, asring ngamukan, ngrisak punapa mawon.
+Jarwanipun bilih rikala rumiyin belih Alun-Alun Kraton Kartasura punika wiyar sanget menawi kabandhingaken kaliyan alun-alun ing wonten samangké (umpaminipun Alun-Alun Kraton Ngayogyakarta, utawi Alun-Alun Surakarta). Ing alun-alun mriku wonten Gajah Méta utawi gajah ngamuk, pralambang sipat angkara murka, asring ngamukan, ngrisak punapa mawon.
 
 Dikatakannya, jaman dahulu Alun-Alun Keraton Kartasura sangat besar dibandingkan dengan alun-alun kota yang ada saat ini (misalnya Alun-Alun Keraton Jogja, atau Alun-Alun Solo). Di alun-alun terdapat gajah yang mengamuk, simbol sifat angkara murka yang mengamuk menghancurkan apapun.
 
@@ -74,11 +74,11 @@ Artosipun cinancang suket.
 
 Artinya (gajah yang mengamuk tadi) diikat pada rumput.
 
-### Patine tinothol ayam (8a)
+### Patiné tinothol ayam (8a)
 
-Jarwanipun bilih ayam punika pralambang kewén alit lan ringkih. Bilih saestunipun tiyang-tiyang ingkang asipat angkara murka, ngamukan utawi emosional ingkang damel kerisakan sinaosa kagungan daya pangaribawa ingkang ageng lan wiyar tebanipun. Wonten punapa-napanipun, tartamtu ing satunggaling wekdal bakal saged rinangket lan saged dipun pidana pati dening ingkang kawogan.
+Jarwanipun bilih ayam punika pralambang kéwan alit lan ringkih. Bilih saéstunipun tiyang-tiyang ingkang asipat angkara murka, ngamukan utawi émosional ingkang damel kerisakan sinaosa kagungan daya pangaribawa ingkang ageng lan wiyar tebanipun. Wonten punapa-napanipun, tartamtu ing satunggaling wekdal bakal saged rinangket lan saged dipun pidana pati dening ingkang kawogan.
 
-Sura dira jayaningrat, lebur dening pangastuti. Sipat angkara murka lan damel karisakan badhe saged dumugine sirna dening tumindak ingkang becik.
+Sura dira jayaningrat, lebur déning pangastuti. Sipat angkara murka lan damel karisakan badhé saged dumugine sirna déning tumindak ingkang becik.
 
 Artinya ayam adalah lambang hewan yang kecil dan lemah. Faktanya, orang yang sedang marah, geram, atau destruktif secara emosional mungkin memiliki pengaruh yang besar dan luas. Bagaimanapun, dipastikan pada suatu saat dia akan ditangkap dan dijatuhi hukuman mati oleh aparat pemerintah.
 
