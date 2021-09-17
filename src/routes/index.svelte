@@ -2,10 +2,9 @@
 	import { session } from '$app/stores';
 	import content from '$contents/page/index.md';
 	import CatatanList from '$lib/CatatanList.svelte';
-	import { randomItems } from '$lib/util';
 	import SeoHead from '$lib/SeoHead.svelte';
 
-	const posts = randomItems($session.posts, 3);
+	const posts = $session.posts.slice(0, 9);
 </script>
 
 <SeoHead />
@@ -16,8 +15,8 @@
 	{@html content.body}
 </header>
 
-<CatatanList {posts} title="Beberapa catatan menarik (acak)" />
-<a href="/catatan">Lebih banyak catatan</a>
+<CatatanList {posts} title="Catatan terbaru" />
+<a href="/catatan?pageNum=2">Lebih banyak catatan</a>
 
 <style lang="postcss">
 	header {
