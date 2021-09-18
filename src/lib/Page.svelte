@@ -48,7 +48,7 @@
 			@apply py-4 border-b-2 border-gray-500 mb-4;
 			h1,
 			h2 {
-				@apply my-2;
+				@apply my-2 border-0;
 			}
 		}
 	}

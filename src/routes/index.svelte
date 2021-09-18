@@ -24,7 +24,7 @@
 
 		h1,
 		h2 {
-			@apply my-2 text-center leading-normal;
+			@apply my-2 text-center leading-normal border-0;
 		}
 	}
 	a {
