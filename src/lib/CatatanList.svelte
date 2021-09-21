@@ -16,11 +16,11 @@
         <img src={note.image} alt="Thumbnail for {note.title}" />
       </div>
       <div class="note">
-        <h3><a sveltekit:prefetch href="catatan/{note.slug}">{note.title}</a></h3>
+        <h3><a sveltekit:prefetch href="/catatan/{note.slug}">{note.title}</a></h3>
         <small>{localDate(note.date)}</small>
         <div>
           {#each note.tags as tag}
-            <a sveltekit:prefetch href="catatan?label={slugger(tag)}">#{tag}</a>
+            <a sveltekit:prefetch href="/catatan/?label={slugger(tag)}">#{tag}</a>
             <span class="last:hidden">&nbsp;</span>
           {/each}
         </div>
