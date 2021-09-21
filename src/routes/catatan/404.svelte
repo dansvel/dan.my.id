@@ -1,5 +1,5 @@
 <script>
-	import SeoHead from '$lib/SeoHead.svelte';
+  import SeoHead from '$lib/SeoHead.svelte';
 </script>
 
 <SeoHead title="dan.my.id - 404: Catatan tidak ditemukan" />

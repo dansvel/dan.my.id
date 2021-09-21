@@ -31,28 +31,30 @@
 </script>
 
 {#if note}
-<SeoHead title={note.title} description={note.description} tags={note.tags} image={note.image} />
+  <SeoHead title={note.title} description={note.description} tags={note.tags} image={note.image} />
 
-<article>
-  <header>
-    <h1>{note.title}</h1>
-    <small>Diperbarui {localDate(note.date)}</small>
-    <div>
-      Tentang <a href="/catatan?kategori={slugger(note.category)}">{note.category.toLowerCase()}</a>
-    </div>
-    <div>
-      Label :
-      {#each note.tags as tag}
-        <a href="/catatan?label={slugger(tag)}">#{tag}</a> &zwj;&nbsp;
-      {/each}
-    </div>
-  </header>
-  <slot />
-</article>
+  <article>
+    <header>
+      <h1>{note.title}</h1>
+      <small>Diperbarui {localDate(note.date)}</small>
+      <div>
+        Tentang <a sveltekit:prefetch href="/catatan?kategori={slugger(note.category)}"
+          >{note.category.toLowerCase()}</a
+        >
+      </div>
+      <div>
+        Label :
+        {#each note.tags as tag}
+          <a sveltekit:prefetch href="/catatan?label={slugger(tag)}">#{tag}</a> &zwj;&nbsp;
+        {/each}
+      </div>
+    </header>
+    <slot />
+  </article>
 
-<Webmention />
+  <Webmention />
 {:else}
-  <slot/>
+  <slot />
 {/if}
 
 <style lang="postcss">

@@ -46,7 +46,6 @@
   export let metadata;
 </script>
 
-
 <Nav />
 <main>
   {#if !metadata}

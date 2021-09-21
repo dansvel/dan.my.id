@@ -15,6 +15,7 @@
     "@sveltejs/adapter-static": "next",
     "@sveltejs/kit": "next",
     "highlight.js": "^11.2.0",
+    "highlightjs-svelte": "^1.0.6",
     "mdsvex": "^0.9.8",
     "prettier": "2.4.1",
     "prettier-plugin-svelte": "^2.4.0",

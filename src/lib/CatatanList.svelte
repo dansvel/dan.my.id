@@ -15,11 +15,11 @@
         <img src={post.image} alt="Thumbnail for {post.title}" />
       </div>
       <div class="post">
-        <h3><a href="catatan/{post.slug}">{post.title}</a></h3>
+        <h3><a sveltekit:prefetch href="catatan/{post.slug}">{post.title}</a></h3>
         <small>{localDate(post.date)}</small>
         <div>
           {#each post.tags as tag}
-            <a href="/catatan?label={slugger(tag)}">#{tag}</a>
+            <a sveltekit:prefetch href="/catatan?label={slugger(tag)}">#{tag}</a>
             <span class="last:hidden">&nbsp;</span>
           {/each}
         </div>

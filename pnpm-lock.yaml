@@ -5,6 +5,7 @@ specifiers:
   '@sveltejs/adapter-static': next
   '@sveltejs/kit': next
   highlight.js: ^11.2.0
+  highlightjs-svelte: ^1.0.6
   mdsvex: ^0.9.8
   prettier: 2.4.1
   prettier-plugin-svelte: ^2.4.0
@@ -26,6 +27,7 @@ devDependencies:
   '@sveltejs/adapter-static': 1.0.0-next.19
   '@sveltejs/kit': 1.0.0-next.170_svelte@3.42.6
   highlight.js: 11.2.0
+  highlightjs-svelte: 1.0.6
   mdsvex: 0.9.8_svelte@3.42.6
   prettier: 2.4.1
   prettier-plugin-svelte: 2.4.0_prettier@2.4.1+svelte@3.42.6
@@ -819,6 +821,13 @@ packages:
         integrity: sha512-JOySjtOEcyG8s4MLR2MNbLUyaXqUunmSnL2kdV/KuGJOmHZuAR5xC54Ko7goAXBWNhf09Vy3B+U7vR62UZ/0iw==
       }
     engines: { node: '>=12.0.0' }
+    dev: true
+
+  /highlightjs-svelte/1.0.6:
+    resolution:
+      {
+        integrity: sha512-aXuBPz8df3sOXg90q8rRcBLyxIR8ozPU39a6tJ2rpJUjjd9brRIr55aC0IccW4gsPhQxZ+B3rFugdXsg9/ckDw==
+      }
     dev: true
 
   /html-void-elements/2.0.0:

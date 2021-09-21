@@ -32,8 +32,8 @@
 </script>
 
 <SeoHead
-	title="Catatan perjalanan setengah manusia"
-	description="Tentang manusia yang ku amati dan teknologi yang ku pelajari"
+  title="Catatan perjalanan setengah manusia"
+  description="Tentang manusia yang ku amati dan teknologi yang ku pelajari"
 />
 
 <header>

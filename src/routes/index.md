@@ -26,7 +26,7 @@ Beberapa hal menarik yang kualami dan kupelajari selama perjalanan akan ku catat
 </header>
 
 <CatatanList {posts} title="Catatan terbaru" />
-<a href="/catatan?hal=2">Lebih banyak catatan</a>
+<a sveltekit:prefetch href="/catatan?hal=2">Lebih banyak catatan</a>
 
 <style lang="postcss">
   header {
