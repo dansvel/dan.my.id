@@ -1,0 +1,71 @@
+<script context="module">
+  import { slugFromPath } from '$lib/util';
+
+  export async function load({ page }) {
+    const notes = await import.meta.glob('./*.md');
+
+    const slug = page.path.split('/').pop();
+    let note;
+    for (const path in notes) {
+      if (slugFromPath(path) === slug) {
+        note = await notes[path]();
+        note = note.metadata;
+        break;
+      }
+    }
+
+    return {
+      props: {
+        note
+      }
+    };
+  }
+</script>
+
+<script>
+  import { slugger, localDate } from '$lib/util';
+  import Webmention from '$lib/Webmention.svelte';
+  import SeoHead from '$lib/SeoHead.svelte';
+
+  export let note;
+</script>
+
+{#if note}
+<SeoHead title={note.title} description={note.description} tags={note.tags} image={note.image} />
+
+<article>
+  <header>
+    <h1>{note.title}</h1>
+    <small>Diperbarui {localDate(note.date)}</small>
+    <div>
+      Tentang <a href="/catatan?kategori={slugger(note.category)}">{note.category.toLowerCase()}</a>
+    </div>
+    <div>
+      Label :
+      {#each note.tags as tag}
+        <a href="/catatan?label={slugger(tag)}">#{tag}</a> &zwj;&nbsp;
+      {/each}
+    </div>
+  </header>
+  <slot />
+</article>
+
+<Webmention />
+{:else}
+  <slot/>
+{/if}
+
+<style lang="postcss">
+  article {
+    @apply mb-5;
+    header {
+      @apply py-5 border-b-2 border-gray-500 mb-5;
+      h1 {
+        @apply my-2;
+      }
+      small {
+        @apply text-gray-500;
+      }
+    }
+  }
+</style>
