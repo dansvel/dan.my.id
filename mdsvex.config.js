@@ -40,7 +40,4 @@ export default {
       )}</code></pre>`;
     }
   }
-  // layout: {
-  //   blog: "./src/routes/catatan/_layout.svelte",
-  // }
 };
