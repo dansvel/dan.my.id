@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
+    "postbuild": "svelte-sitemap --domain https://dan.my.id",
     "preview": "svelte-kit preview",
     "lint": "prettier --check --plugin-search-dir=. .",
     "format": "prettier --write --plugin-search-dir=. ."
@@ -29,6 +30,7 @@
     "remark-github": "11.1.0",
     "svelte": "^3.42.6",
     "svelte-preprocess": "^4.9.4",
+    "svelte-sitemap": "^2.1.1",
     "unified": "^10.1.0",
     "vite-plugin-windicss": "^1.4.3"
   },
