@@ -4,6 +4,7 @@ import stringfy from 'rehype-stringify';
 import toc from '@jsdevtools/rehype-toc';
 
 import hljs from 'highlight.js';
+import hljsvelte from 'highlightjs-svelte';
 
 const escape_svelty = (str) =>
   str
@@ -31,12 +32,13 @@ export default {
 
   highlight: {
     highlighter: (code, lang) => {
+      hljsvelte(hljs);
+      hljs.registerAliases('sveltehtml', { languageName: 'svelte' });
       lang = lang && hljs.getLanguage(lang) ? lang : 'plaintext';
-      return `<pre><code>${escape_svelty(
+      return `<pre><code class="hljs-${lang}">${escape_svelty(
         hljs.highlight(code, { language: lang }).value
       )}</code></pre>`;
-    },
-    alias: { sveltehtml: 'svelte' }
+    }
   }
   // layout: {
   //   blog: "./src/routes/catatan/_layout.svelte",
