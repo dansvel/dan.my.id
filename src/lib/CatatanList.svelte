@@ -1,29 +1,30 @@
 <script>
-  export let posts;
+  import { page } from "$app/stores";
   import { localDate, slugger } from '$lib/util';
 
   export let title;
+  export let notes;
 </script>
 
 <section>
   {#if title}
     <h2>{title}</h2>
   {/if}
-  {#each posts as post}
+  {#each notes as note}
     <article>
       <div class="thumbnail">
-        <img src={post.image} alt="Thumbnail for {post.title}" />
+        <img src={note.image} alt="Thumbnail for {note.title}" />
       </div>
-      <div class="post">
-        <h3><a sveltekit:prefetch href="catatan/{post.slug}">{post.title}</a></h3>
-        <small>{localDate(post.date)}</small>
+      <div class="note">
+        <h3><a sveltekit:prefetch href="catatan/{note.slug}">{note.title}</a></h3>
+        <small>{localDate(note.date)}</small>
         <div>
-          {#each post.tags as tag}
-            <a sveltekit:prefetch href="/catatan?label={slugger(tag)}">#{tag}</a>
+          {#each note.tags as tag}
+            <a sveltekit:prefetch href="catatan?label={slugger(tag)}">#{tag}</a>
             <span class="last:hidden">&nbsp;</span>
           {/each}
         </div>
-        <p>{post.description}</p>
+        <p>{note.description}</p>
       </div>
     </article>
   {:else}
@@ -47,7 +48,7 @@
             md:object-contain md:object-top m-0;
         }
       }
-      .post {
+      .note {
         @apply h-full p-0 md:px-4;
         h3 {
           @apply mt-2 md:mt-0 mb-2 border-0;

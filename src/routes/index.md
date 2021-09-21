@@ -12,7 +12,7 @@ layout: beranda
   import { get } from 'svelte/store';
   import CatatanList from '$lib/CatatanList.svelte';
 
-  const posts = get(session).notes;
+  const notes = get(session).notes;
 </script>
 
 <header>
@@ -25,7 +25,7 @@ Beberapa hal menarik yang kualami dan kupelajari selama perjalanan akan ku catat
 
 </header>
 
-<CatatanList {posts} title="Catatan terbaru" />
+<CatatanList {notes} title="Catatan terbaru" />
 <a sveltekit:prefetch href="/catatan?hal=2">Lebih banyak catatan</a>
 
 <style lang="postcss">
