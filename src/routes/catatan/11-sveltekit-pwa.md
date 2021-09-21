@@ -8,7 +8,6 @@ tags:
   - PWA
   - Svelte
   - Service Worker
-layout: catatan
 ---
 
 Aku memang belum begitu banyak membuat aplikasi web. Namun SvelteKit benar-benar memudahkanku.
