@@ -11,9 +11,12 @@ layout: beranda
   import { session } from '$app/stores';
   import { get } from 'svelte/store';
   import CatatanList from '$lib/CatatanList.svelte';
+  import SeoHead from '$lib/SeoHead.svelte';
 
   const notes = get(session).notes;
 </script>
+
+<SeoHead />
 
 <header>
   <h1>{title}</h1>
