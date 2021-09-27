@@ -1,5 +1,4 @@
 <script>
-  import { page } from "$app/stores";
   import { localDate, slugger } from '$lib/util';
 
   export let title;
@@ -12,10 +11,10 @@
   {/if}
   {#each notes as note}
     <article>
-      <div class="thumbnail">
-        <img src={note.image} alt="Thumbnail for {note.title}" />
-      </div>
-      <div class="note">
+<!--      <div class="thumbnail">-->
+<!--        <img src={note.image} alt="Thumbnail for {note.title}" />-->
+<!--      </div>-->
+<!--      <div class="note">-->
         <h3><a sveltekit:prefetch href="/catatan/{note.slug}">{note.title}</a></h3>
         <small>{localDate(note.date)}</small>
         <div>
@@ -25,7 +24,7 @@
           {/each}
         </div>
         <p>{note.description}</p>
-      </div>
+<!--      </div>-->
     </article>
   {:else}
     <blockquote>Oops, belum ada catatan tentang itu</blockquote>
@@ -39,17 +38,7 @@
       @apply text-center my-2 border-0;
     }
     article {
-      @apply py-4 flex flex-col md:flex-row;
-      .thumbnail {
-        @apply w-full md:w-32 md:h-auto
-          flex flex-grow-0 flex-shrink-0 justify-center;
-        img {
-          @apply max-h-46 object-cover w-max
-            md:object-contain md:object-top m-0;
-        }
-      }
-      .note {
-        @apply h-full p-0 md:px-4;
+      @apply py-4 h-full;
         h3 {
           @apply mt-2 md:mt-0 mb-2 border-0;
           a {
@@ -64,7 +53,7 @@
         p {
           @apply mt-2 mb-0;
         }
-      }
+
     }
   }
 </style>
