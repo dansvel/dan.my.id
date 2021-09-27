@@ -1,4 +1,4 @@
 This is a Brave Rewards publisher verification file.
 
-Domain: my.is
-Token: e99357d7bc778230ecb75d32976965000cbf81a8d989f38c4b3c03db0f4d0925
+Domain: dan.my.id
+Token: 5015b492544181b51916b9922ad14f83a619a75f85ab32cee9a164a49c4765cc
