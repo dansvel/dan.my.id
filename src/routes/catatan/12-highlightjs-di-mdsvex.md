@@ -77,4 +77,6 @@ export default {
 };
 ```
 
-Yang perlu diperhatikan disini adalah, kamu perlu melakukan sanitize untuk membuatnya bekerja. Terutama karena svelte akan mengeksekusi apapun di dalam kurung kurawal sebagai kode javascript, dan karakter spesial lain seperti backtick dan backslash. Jadi aku membuat fungsi sederhana untuk masalah ini, dan itu berhasil menyelesaikannya.
+Yang perlu diperhatikan disini adalah, kamu perlu melakukan sanitize untuk membuatnya bekerja. Terutama karena svelte akan mengeksekusi apapun di dalam kurung kurawal sebagai kode javascript, dan karakter spesial lain seperti backtick dan backslash. 
+
+Jadi aku membuat fungsi sederhana untuk masalah ini, dan itu berhasil menyelesaikannya. Sip...
