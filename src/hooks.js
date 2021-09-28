@@ -1,31 +1,32 @@
 import { arrSortBy, arrUnion, slugFromPath } from '$lib/util';
 
 export const getSession = async () => {
-  // let postPromises = []
-  // for (let [path, resolver] of Object.entries(import.meta.glob('/src/routes/catatan/*.md'))) {
-  //   const slug = slugFromPath(path);
-  //   const promise = resolver().then((post) => ({
-  //     slug,
-  //     ...post.metadata
-  //   }));
-  //
-  //   postPromises.push(promise);
-  // }
-  const files = await import.meta.glob('/src/routes/catatan/*.md');
-
+  const noteFiles = await import.meta.glob('/src/routes/catatan/*.md');
   let notes = [];
-  for (const path in files) {
-    const file = await files[path]();
+  for (const path in noteFiles) {
+    const file = await noteFiles[path]();
     const note = {
       slug: slugFromPath(path),
       ...file.metadata
     };
     notes.push(note);
   }
+
+  const pageFiles = await import.meta.glob('/src/routes/*.md');
+  let pages = [];
+  for (const path in pageFiles) {
+    const file = await pageFiles[path]();
+    const page = {
+      slug: slugFromPath(path),
+      ...file.metadata
+    };
+    pages.push(page);
+  }
   // const notes = await Promise.all(postPromises);
   // console.log(notes)
   return {
     notes: arrSortBy(notes, 'slug', { asc: false, natural: true }),
+    pages,
     tags: arrUnion(notes.map((note) => [...note.tags])).sort()
   };
 };

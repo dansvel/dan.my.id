@@ -1,33 +1,14 @@
-<script context="module">
-  import { slugFromPath } from '$lib/util';
-
-  export async function load({ page }) {
-    const notes = await import.meta.glob('./*.md');
-
-    const slug = page.path.split('/').pop();
-    let note;
-    for (const path in notes) {
-      if (slugFromPath(path) === slug) {
-        note = await notes[path]();
-        note = note.metadata;
-        break;
-      }
-    }
-
-    return {
-      props: {
-        note
-      }
-    };
-  }
-</script>
-
 <script>
   import { slugger, localDate } from '$lib/util';
   import Webmention from '$lib/Webmention.svelte';
   import SeoHead from '$lib/SeoHead.svelte';
 
-  export let note;
+  import { session, page } from '$app/stores';
+  import { get } from 'svelte/store';
+
+  const note = get(session).notes.filter(
+    (note) => note.slug === get(page).path.split('/').pop()
+  )[0];
 </script>
 
 {#if note}

@@ -1,39 +1,19 @@
-<script context="module">
-  import { slugFromPath } from '$lib/util';
-
-  export async function load({ page }) {
-    const slug = page.path.split('/').pop();
-
-    const contents = await import.meta.glob('./*.md');
-
-    let metadata;
-    for (const path in contents) {
-      if (slugFromPath(path) === slug) {
-        const content = await contents[path]();
-        metadata = content.metadata;
-        break;
-      }
-    }
-
-    return {
-      props: {
-        metadata
-      }
-    };
-  }
-</script>
-
 <script>
   import 'virtual:windi.css';
   import './app.postcss';
   import Nav from '$lib/Nav.svelte';
   import { onMount } from 'svelte';
 
-  import { page } from '$app/stores';
-
   import { localDate } from '$lib/util';
   import Webmention from '$lib/Webmention.svelte';
   import SeoHead from '$lib/SeoHead.svelte';
+
+  import { session, page } from '$app/stores';
+  import { get } from 'svelte/store';
+
+  const metadata = get(session).pages.filter(
+    (file) => file.slug === get(page).path.split('/').pop()
+  )[0];
 
   onMount(() => {
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -42,8 +22,6 @@
       document.querySelector('link[title=Light]').removeAttribute('disabled');
     }
   });
-
-  export let metadata;
 </script>
 
 <Nav />
