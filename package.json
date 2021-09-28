@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "svelte-kit dev",
+    "prebuild": "test \"$CI\" = true && npx pnpm install -r --store=node_modules/.pnpm-store || echo skipping pnpm install",
     "build": "svelte-kit build",
     "postbuild": "svelte-sitemap --domain https://dan.my.id",
     "preview": "svelte-kit preview",
