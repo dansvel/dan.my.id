@@ -26,13 +26,18 @@
 </script>
 
 <section>
-  <h2>Webmention</h2>
+  <h2>Webmention, menanggapi dengan ❤️</h2>
   <p>
     Ingin bertanya atau menanggapi?
     <a href="https://twitter.com/intent/tweet/?text={tweet}" target="_blank" rel="noopener"
       >Cuitkan di Twitter</a
     >, itu akan muncul disini.
   </p>
+  <pre>
+    <a href="/catatan/6-komentar-blog-statis-dengan-webmention">
+      <code>Apa itu Webmention?</code>
+    </a>
+  </pre>
 
   {#await mentions then data}
     {#if data !== undefined}
@@ -113,7 +118,7 @@
                   <small>{localDate(message.published, true)}</small>
                 </div>
                 {@html message.content.html
-                  .replace(/\n<a class=\"u-mention\".+><\/a>/gim, '')
+                  .replace(/\n<a class="u-mention".+><\/a>/gim, '')
                   .replace(
                     /<a href=\\"https:\/\/(?!dan\.my\.id)/gim,
                     '<a target="_blank" rel="noopener external" href="https://'
