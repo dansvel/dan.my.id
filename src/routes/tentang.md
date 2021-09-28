@@ -10,7 +10,7 @@ Memperkenalkan diri hanya dapat dilakukan jika orang telah mengenal dirinya send
 
 Aku menamakan diriku sendiri **Dan**. Hingga saat ini, aku masih berada dalam tubuh fana manusia.
 
-![Ilustrasi](https://avatars.githubusercontent.com/u/48936611?s=460&u=ab165eb0208f0de8b191af271505e20645ba75c0&v=4)
+![Ilustrasi](/images/me.png)
 
 ## Blog ini
 
@@ -30,24 +30,21 @@ Artinya, semua manusia sama saja, kan?
 
 Mengerti sedikit tentang Linux, tertarik menggunakannya. Namun belum dapat meninggalkan Windows. Aku suka pemrograman, namun ragu untuk menyebut diriku sebagai seorang programmer. Proyek yang kubuat tidak banyak, semuanya hanya sebagai bukti hasil belajar.
 
+```
 Sekadar mencoba:
-
 - Visual Basic
 - Codeigniter
 - React
 - Vue
 
 Berencana untuk terus menggunakan:
-
 - Python
 - Ruby
 
 Berhenti menggunakan:
-
 - Jquery
 
 Masih menggunakan:
-
 - PHP
 - Javascript
 - SQL: MySql, PostgreSQL
@@ -55,10 +52,7 @@ Masih menggunakan:
 - Bootstrap
 - Tailwind
 - Svelte
-
-## Kepribadian
-
-Hmmm...
+```
 
 ## Prinsip hidup saat ini
 
