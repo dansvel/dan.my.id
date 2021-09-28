@@ -9,7 +9,8 @@ tags:
   - Markdown
 ---
 
-Ceritanya, aku akhirnya beralih menggunakan **`mdsvex`**. Yang membuat menarik adalah, aku hanya perlu membuat
+Ceritanya, aku akhirnya beralih menggunakan **`mdsvex`**. Yang membuat menarik adalah, aku hanya perlu membuat file `__layout.svelte` dan sebuah file `.md` maka halaman web sudah jadi dengan indah. Mungkin aku bahas di catatan lain.
+
 Aku ini sudah _sreg_ sekali dengan **`highlight.js`**, tak ada lawan lah. Sayangnya `mdsvex` menggunakan `prismjs`. Sialnya, situs resminya ada 2, isinya berbeda, https://mdsvex.com/docs#highlight dan https://mdsvex.pngwn.io/docs#highlight
 
 Dan tidak bekerja seperti yang diharapkan. Setelah menemukan masalahnya, aku menuliskannya disini.
