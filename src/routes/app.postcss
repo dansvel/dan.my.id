@@ -17,7 +17,7 @@ body {
   text-gray-700 bg-gray-100
   dark:(text-gray-300 bg-gray-900);
   #svelte > main {
-    @apply max-w-5xl m-auto p-16 px-4 sm:px-16;
+    @apply max-w-5xl m-auto p-16 px-4 sm:px-16 break-words;
   }
 }
 
@@ -99,6 +99,9 @@ li {
 ul,
 ol {
   @apply pl-6 mt-0 mb-10;
+  li ol, li ul {
+    @apply my-2;
+  }
 }
 
 blockquote {
