@@ -159,37 +159,47 @@ Namun kali ini aku hanya akan mengawinkan Laravel dan Svelte disini.
 
 ## Menggunakan Laravel dan Svelte
 
-Untuk bagian Svelte, kamu dapat membuat view berekstensi `.svelte` di dalam direktori `resources/js/Pages` sesuai dengan yang tadi di atur pada inisialisasi. Semisal `resources/js/Pages/Books/Show.svelte`
+Untuk bagian data PHP, kamu dapat membuat controller seperti biasa
 
-`resources/js/Pages/Index.svelte`
+```php
+class UsersController extends Controller
+{
+    public function index()
+    {
+        return Inertia::render('Users/Index', [
+            'users' => User::all()->map(function ($user) {
+                return [
+                    'id' => $user->id,
+                    'name' => $user->name,
+                    'email' => $user->email,
+                    'edit_url' => URL::route('users.edit', $user),
+                ];
+            }),
+            'create_url' => URL::route('users.create'),
+        ]);
+    }
+}
+```
+
+Untuk bagian Svelte, kamu dapat membuat view berekstensi `.svelte` di dalam direktori `resources/js/Pages` sesuai dengan yang tadi di atur pada inisialisasi.
+
+`resources/js/Pages/User/Index.svelte`
 
 ```sveltehtml
 <script>
-  let name = 'dunia';
+  import Layout from './Layout.svelte'
+
+  export let user
 </script>
 
-<style>
-  h1 {
-    color: indigo;
-    font-family: 'Calibri', cursive;
-    font-size: 3em;
-  }
-</style>
-
-<h1>Svelte menyapa {name} melalui inertia</h1>
+<Layout>
+  <svelte:head>
+    <title>Welcome</title>
+  </svelte:head>
+  <H1>Welcome</H1>
+  <p>Hello {user.name}, welcome to your first Inertia app!</p>
+</Layout>
 ```
-
-Lalu pada bagian Laravel, kamu dapat membuat router untuk me-render view-nya atau mengolah data di controller seperti biasa. Jangan lupa untuk menambahkan `use Inertia\Inertia;` pada bagian atas controller
-
-`routes/web.php`
-
-```php
-Route::get('/', function () {
-    return Inertia\Inertia::render('Index');
-});
-```
-
-> Lebih lanjut mengenai respon di Inertia https://inertiajs.com/responses
 
 Terakhir tinggal di-build saja. Karena kita telah menggunakan [Valet di Windows](/catatan/2-valet-untuk-windows), maka yang perlu dilakukan hanya
 
