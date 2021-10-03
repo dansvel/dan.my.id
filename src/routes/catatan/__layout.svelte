@@ -4,11 +4,9 @@
   import SeoHead from '$lib/SeoHead.svelte';
 
   import { session, page } from '$app/stores';
-  import { get } from 'svelte/store';
 
-  const note = get(session).notes.filter(
-    (note) => note.slug === get(page).path.split('/').pop()
-  )[0];
+  let note;
+  $: note = $session.notes.find((note) => note.slug === $page.path.split('/').pop());
 </script>
 
 {#if note}
@@ -33,7 +31,9 @@
     <slot />
   </article>
 
-  <Webmention />
+  {#key note}
+    <Webmention />
+  {/key}
 {:else}
   <slot />
 {/if}

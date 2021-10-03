@@ -9,11 +9,9 @@
   import SeoHead from '$lib/SeoHead.svelte';
 
   import { session, page } from '$app/stores';
-  import { get } from 'svelte/store';
 
-  const metadata = get(session).pages.filter(
-    (file) => file.slug === get(page).path.split('/').pop()
-  )[0];
+  let metadata;
+  $: metadata = $session.pages.find((file) => file.slug === $page.path.split('/').pop());
 
   onMount(() => {
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -38,7 +36,9 @@
       </header>
       <slot />
     </article>
-    <Webmention />
+    {#key metadata}
+      <Webmention />
+    {/key}
   {/if}
 </main>
 
