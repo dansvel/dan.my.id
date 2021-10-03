@@ -22,8 +22,6 @@ export const getSession = async () => {
     };
     pages.push(page);
   }
-  // const notes = await Promise.all(postPromises);
-  // console.log(notes)
   return {
     notes: arrSortBy(notes, 'slug', { asc: false, natural: true }),
     pages,

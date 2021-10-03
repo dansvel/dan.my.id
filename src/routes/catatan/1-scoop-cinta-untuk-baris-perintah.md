@@ -6,7 +6,7 @@ image: https://i.imgur.com/ZsNjkYx.png
 category: Teknologi
 tags:
   - Terminal
-  - Package Manager
+  - Package manager
   - Windows
   - Scoop
 ---
