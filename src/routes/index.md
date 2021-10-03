@@ -13,7 +13,7 @@ layout: beranda
   import CatatanList from '$lib/CatatanList.svelte';
   import SeoHead from '$lib/SeoHead.svelte';
 
-  const notes = get(session).notes;
+  const notes = get(session).notes.slice(0, 9);
 </script>
 
 <SeoHead />
