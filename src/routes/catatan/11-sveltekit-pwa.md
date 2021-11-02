@@ -92,13 +92,11 @@ Jangan lupa untuk memanggil file manifest dari `/src/app.html` di antara tag `he
 Buat file `/src/service-worker.js`
 
 ```js
-import { build, files, timestamp } from '$service-worker';
+import { build, timestamp } from '$service-worker';
 const CACHE_NAME = `WebApp-cache-${timestamp}`;
 
-const to_cache = build.concat(files);
-
 self.addEventListener('install', (event) => {
-  event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(to_cache)));
+  event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(build)));
 });
 
 self.addEventListener('activate', (event) => {
