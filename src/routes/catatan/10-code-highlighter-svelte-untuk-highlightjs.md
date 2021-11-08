@@ -44,19 +44,19 @@ import markedOption from './marked.option.js';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-  preprocess: [preprocess()],
-  kit: {
-    target: '#svelte',
-    adapter: staticSite(),
-    vite: () => ({
-      plugins: [
-        WindiCSS.default({
-          configPath: './windi.config.js'
-        }),
-        vitePluginMarkdown(markedOption)
-      ]
-    })
-  }
+	preprocess: [preprocess()],
+	kit: {
+		target: '#svelte',
+		adapter: staticSite(),
+		vite: () => ({
+			plugins: [
+				WindiCSS.default({
+					configPath: './windi.config.js'
+				}),
+				vitePluginMarkdown(markedOption)
+			]
+		})
+	}
 };
 
 export default config;
@@ -75,9 +75,9 @@ hljsvelte(hljs);
 hljs.registerAliases('sveltehtml', { languageName: 'svelte' });
 
 const highlight = (code, lang) => {
-  // jika language tidak ditetapkan atau ngawur, gunakan plain text
-  lang = lang && hljs.getLanguage(lang) ? lang : 'plaintext';
-  return hljs.highlight(code, { language: lang }).value;
+	// jika language tidak ditetapkan atau ngawur, gunakan plain text
+	lang = lang && hljs.getLanguage(lang) ? lang : 'plaintext';
+	return hljs.highlight(code, { language: lang }).value;
 };
 
 export default { highlight };

@@ -27,15 +27,15 @@ import mdsvexConfig from './mdsvex.config.js';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-  extensions: ['.svelte', ...mdsvexConfig.extensions],
-  preprocess: [
-    md.mdsvex(mdsvexConfig)
-    // kalau pake preprocessor lain, tambahkan saja
-  ],
-  kit: {
-    // konfigurasi sveltekit-mu
-    // ...
-  }
+	extensions: ['.svelte', ...mdsvexConfig.extensions],
+	preprocess: [
+		md.mdsvex(mdsvexConfig)
+		// kalau pake preprocessor lain, tambahkan saja
+	],
+	kit: {
+		// konfigurasi sveltekit-mu
+		// ...
+	}
 };
 
 export default config;
@@ -52,29 +52,29 @@ import hljs from 'highlight.js';
 import hljsvelte from 'highlightjs-svelte';
 
 const escape_svelty = (str) =>
-  str
-    .replace(/[{}`]/g, (c) => ({ '{': '&#123;', '}': '&#125;', '`': '&#96;' }[c]))
-    .replace(/\\([trn])/g, '&#92;$1');
+	str
+		.replace(/[{}`]/g, (c) => ({ '{': '&#123;', '}': '&#125;', '`': '&#96;' }[c]))
+		.replace(/\\([trn])/g, '&#92;$1');
 
 export default {
-  extensions: ['.md'],
-  remarkPlugins: [
-    // jika kamu menggunakan remark plugin
-  ],
-  rehypePlugins: [
-    // jika kamu menggunakan rehype plugin
-  ],
+	extensions: ['.md'],
+	remarkPlugins: [
+		// jika kamu menggunakan remark plugin
+	],
+	rehypePlugins: [
+		// jika kamu menggunakan rehype plugin
+	],
 
-  highlight: {
-    highlighter: (code, lang) => {
-      hljsvelte(hljs);
-      hljs.registerAliases('sveltehtml', { languageName: 'svelte' });
-      lang = lang && hljs.getLanguage(lang) ? lang : 'plaintext';
-      return `<pre><code class="hljs-${lang}">${escape_svelty(
-        hljs.highlight(code, { language: lang }).value
-      )}</code></pre>`;
-    }
-  }
+	highlight: {
+		highlighter: (code, lang) => {
+			hljsvelte(hljs);
+			hljs.registerAliases('sveltehtml', { languageName: 'svelte' });
+			lang = lang && hljs.getLanguage(lang) ? lang : 'plaintext';
+			return `<pre><code class="hljs-${lang}">${escape_svelty(
+				hljs.highlight(code, { language: lang }).value
+			)}</code></pre>`;
+		}
+	}
 };
 ```
 
