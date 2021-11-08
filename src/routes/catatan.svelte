@@ -4,21 +4,15 @@
   import CatatanList from '$lib/CatatanList.svelte';
   import { get } from 'svelte/store';
   import SeoHead from '$lib/SeoHead.svelte';
-  import { browser, dev } from '$app/env';
 
-  let allPosts
+  let allPosts;
   const allTags = get(session).tags;
 
-  let notes, navurl, more
-  let pageNum = 1;
-  let filter
+  let notes, filter, navurl, more, pageNum;
   const per = 9;
 
-
-
   $: {
-    filter = $page.path.params ? getUrlParams($page.path.params) : {}
-
+    filter = $page.query ? getUrlParams($page.query.toString()) : {};
     if (filter.label) {
       allPosts = get(session).notes.filter((post) =>
         post.tags.map((tag) => slugger(tag)).includes(filter.label)
@@ -28,15 +22,12 @@
     } else {
       allPosts = get(session).notes;
     }
-    if (filter.hal) {
-      pageNum = parseInt(filter.hal);
-      delete filter.hal;
-    }
+    pageNum = parseInt(filter?.hal || 1);
+    delete filter.hal;
     more = allPosts.length - pageNum * per <= 0;
     notes = allPosts.slice(pageNum * per - per, pageNum * per);
 
     navurl = '?' + (Object.keys(filter).length ? urlParamsToQuery(filter) : '') + (Object.keys(filter).length ? '&' : '') + 'hal=';
-    // navurl = '?hal=';
   }
 </script>
 
@@ -50,8 +41,8 @@
     Catatan
     {#if JSON.stringify(filter) !== '{}'}
       tentang
-      <!--{filter.label ? get(session).tags.filter((slug) => slugger(slug) === filter.label) : ''}-->
-      <!--{filter.kategori ? capitalize(filter?.kategori) : ''}-->
+      {filter.label ? get(session).tags.filter((slug) => slugger(slug) === filter.label) : ''}
+      {filter.kategori ? capitalize(filter?.kategori) : ''}
     {/if}
   </h1>
   <div class="text-center">
