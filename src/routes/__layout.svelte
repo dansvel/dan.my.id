@@ -9,7 +9,8 @@
 	import SeoHead from '$lib/SeoHead.svelte';
 
 	import { session, page } from '$app/stores';
-	import Gads from '$lib/Gads.svelte';
+	import gads from '$lib/gads';
+	import { browser } from '$app/env';
 
 	let metadata;
 	$: metadata = $session.pages.find((file) => file.slug === $page.path.split('/').pop());
@@ -21,9 +22,15 @@
 			document.querySelector('link[title=Light]').removeAttribute('disabled');
 		}
 	});
+
+
+	$: if (browser && $page.path) {
+		gads();
+	}
 </script>
 
 <Nav />
+
 <main>
 	{#if !metadata}
 		<slot />
