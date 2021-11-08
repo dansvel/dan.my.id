@@ -12,6 +12,7 @@
 	const per = 9;
 
 	$: {
+		console.log(getUrlParams($page.query.toString()))
 		filter = $page.query ? getUrlParams($page.query.toString()) : {};
 		if (filter.label) {
 			allPosts = get(session).notes.filter((post) =>
