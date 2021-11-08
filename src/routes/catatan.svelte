@@ -61,8 +61,9 @@
 	</div>
 </header>
 
+{#key notes}
 <CatatanList {notes} />
-
+{/key}
 <div class="flex">
 	<a href={navurl + (pageNum - 1)} class:hidden={pageNum <= 1}>Lebih baru</a>
 	<a href={navurl + (pageNum + 1)} class="ml-auto" class:hidden={more}>Lebih lawas</a>
