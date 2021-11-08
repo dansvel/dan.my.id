@@ -4,15 +4,33 @@
 	import CatatanList from '$lib/CatatanList.svelte';
 	import { get } from 'svelte/store';
 	import SeoHead from '$lib/SeoHead.svelte';
+	import { browser } from '$app/env';
 
 	let allPosts;
 	const allTags = get(session).tags;
 
-	let notes, filter, navurl, more, pageNum;
+	let notes, navurl, more, pageNum;
+	let filter = {
+		label: false,
+		kategori: false,
+		hal: 1
+	}
 	const per = 9;
 
+
+
+	const getQuery = name => {
+		const query =  new URLSearchParams(document.location.search);
+		return query.get(name)
+	}
 	$: {
-		filter = $page.query ? getUrlParams($page.query.toString()) : {};
+		if (browser) {
+			filter.label = getQuery('label') || false
+			filter.kategori = getQuery('kategori') || false
+		}
+
+		console.log(filter)
+
 		if (filter.label) {
 			allPosts = get(session).notes.filter((post) =>
 				post.tags.map((tag) => slugger(tag)).includes(filter.label)
