@@ -11,10 +11,10 @@ const config = {
   kit: {
     adapter: adapter(),
     prerender: {
-      enabled: false
       //   onError: 'continue'
     },
     router: false,
+    // ssr: false,
     target: '#svelte',
     vite: () => ({
       plugins: [WindiCSS()]
