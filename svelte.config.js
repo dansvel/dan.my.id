@@ -12,6 +12,9 @@ const config = {
 		adapter: adapter(),
 		router: false,
 		target: '#svelte',
+		prerender: {
+			onError: 'continue'
+		},
 		vite: () => ({
 			plugins: [WindiCSS()]
 		})
