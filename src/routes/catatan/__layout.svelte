@@ -4,15 +4,12 @@
 	import SeoHead from '$lib/SeoHead.svelte';
 
 	import { session, page } from '$app/stores';
-	import Gads from '$lib/Gads.svelte';
+	import { browser } from '$app/env';
+	import gads from '$lib/gads';
 
 	let note;
 	$: note = $session.notes.find((note) => note.slug === $page.path.split('/').pop());
 </script>
-
-{#key $page.path}
-	<Gads />
-{/key}
 
 {#if note}
 	<SeoHead title={note.title} description={note.description} tags={note.tags} image={note.image} />
