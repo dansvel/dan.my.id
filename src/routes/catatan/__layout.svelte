@@ -9,11 +9,6 @@
 
 	let note;
 	$: note = $session.notes.find((note) => note.slug === $page.path.split('/').pop());
-
-
-	$: if (browser && $page.path) {
-		gads();
-	}
 </script>
 
 {#if note}

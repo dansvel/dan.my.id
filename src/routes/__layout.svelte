@@ -22,11 +22,6 @@
 			document.querySelector('link[title=Light]').removeAttribute('disabled');
 		}
 	});
-
-
-	$: if (browser && $page.path) {
-		gads();
-	}
 </script>
 
 <Nav />
