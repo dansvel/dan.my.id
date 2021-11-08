@@ -10,6 +10,10 @@ const config = {
   preprocess: [preprocess(), md.mdsvex(mdsvexConfig)],
   kit: {
     adapter: adapter(),
+    prerender: {
+      enabled: false
+      //   onError: 'continue'
+    },
     router: false,
     target: '#svelte',
     vite: () => ({

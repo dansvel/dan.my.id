@@ -1,6 +1,4 @@
 <script context="module">
-  export const prerender = false
-  export const ssr = false
   import { capitalize, slugger, urlParamsToQuery, getUrlParams } from '$lib/util'
 
   export async function load({ page: { query }, session: { notes, tags } }) {
@@ -18,8 +16,11 @@
     }
 
     const per = 9
-    delete filter.hal
-    const pageNum = parseInt(filter?.hal || 1)
+    let pageNum = 1
+    if (filter.hal) {
+      pageNum = parseInt(filter.hal)
+      delete filter.hal
+    }
 
     return {
       props: {

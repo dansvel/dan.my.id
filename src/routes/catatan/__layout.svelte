@@ -4,8 +4,6 @@
   import SeoHead from '$lib/SeoHead.svelte'
 
   import { session, page } from '$app/stores'
-  import { browser } from '$app/env'
-  import gads from '$lib/gads'
 
   let note
   $: note = $session.notes.find(note => note.slug === $page.path.split('/').pop())
