@@ -10,24 +10,14 @@
 	const allTags = get(session).tags;
 
 	let notes, navurl, more, pageNum;
-	let filter = {
-		label: false,
-		kategori: false,
-		hal: 1
-	}
+	let filter
 	const per = 9;
 
 
 
-	const getQuery = name => {
-		const query =  new URLSearchParams(document.location.search);
-		return query.get(name)
-	}
 	$: {
 		if (browser) {
-			filter.label = getQuery('label') || false
-			filter.kategori = getQuery('kategori') || false
-			filter.hal = getQuery('hal') || 1
+			filter = getUrlParams(window.location.search)
 		}
 
 		if (filter.label) {
