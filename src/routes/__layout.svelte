@@ -1,3 +1,15 @@
+<script context="module">
+	import { page } from '$app/stores';
+
+	export async function load({ page, session }) {
+		return {
+			props: {
+				metadata: session.pages.find((file) => file.slug === page.path.split('/').pop())
+			}
+		};
+	}
+</script>
+
 <script>
 	import 'virtual:windi.css';
 	import './app.postcss';
@@ -8,12 +20,7 @@
 	import Webmention from '$lib/Webmention.svelte';
 	import SeoHead from '$lib/SeoHead.svelte';
 
-	import { session, page } from '$app/stores';
-	import gads from '$lib/gads';
-	import { browser } from '$app/env';
-
-	let metadata;
-	$: metadata = $session.pages.find((file) => file.slug === $page.path.split('/').pop());
+	export let metadata;
 
 	onMount(() => {
 		if (window.matchMedia('(prefers-color-scheme: dark)').matches) {

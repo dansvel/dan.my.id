@@ -1,35 +1,53 @@
-<script>
-	import { session, page } from '$app/stores';
+<script context="module">
 	import { capitalize, slugger, urlParamsToQuery, getUrlParams } from '$lib/util';
-	import CatatanList from '$lib/CatatanList.svelte';
-	import { get } from 'svelte/store';
-	import SeoHead from '$lib/SeoHead.svelte';
 
-	let allPosts;
-	const allTags = get(session).tags;
+	export async function load({ page, session }) {
+		let allPosts;
 
-	let notes, filter, navurl, more, pageNum;
-	const per = 9;
-
-	$: {
-		console.log(getUrlParams($page.query.toString()))
-		filter = $page.query ? getUrlParams($page.query.toString()) : {};
+		let filter = page.query ? getUrlParams(page.query.toString()) : {};
 		if (filter.label) {
-			allPosts = get(session).notes.filter((post) =>
-				post.tags.map((tag) => slugger(tag)).includes(filter.label)
+			allPosts = session.notes.filter((note) =>
+				note.tags.map((tag) => slugger(tag)).includes(filter.label)
 			);
 		} else if (filter.kategori) {
-			allPosts = get(session).notes.filter((post) => slugger(post.category) === filter.kategori);
+			allPosts = session.notes.filter((note) => slugger(note.category) === filter.kategori);
 		} else {
-			allPosts = get(session).notes;
+			allPosts = session.notes;
 		}
-		pageNum = parseInt(filter?.hal || 1);
-		delete filter.hal;
-		more = allPosts.length - pageNum * per <= 0;
-		notes = allPosts.slice(pageNum * per - per, pageNum * per);
 
-		navurl = '?' + urlParamsToQuery(filter) + (Object.keys(filter).length ? '&' : '') + 'hal=';
+		const per = 9;
+		const pageNum = parseInt(filter?.hal || 1);
+		delete filter.hal;
+
+		const more = allPosts.length - pageNum * per <= 0;
+		const notes = allPosts.slice(pageNum * per - per, pageNum * per);
+
+		const navurl =
+			'?' + urlParamsToQuery(filter) + (Object.keys(filter).length ? '&' : '') + 'hal=';
+
+		return {
+			props: {
+				allTags: session.tags,
+				more,
+				notes,
+				filter,
+				navurl,
+				pageNum
+			}
+		};
 	}
+</script>
+
+<script>
+	import CatatanList from '$lib/CatatanList.svelte';
+	import SeoHead from '$lib/SeoHead.svelte';
+
+	export let allTags = [];
+	export let notes = [];
+	export let filter = [];
+	export let navurl = '';
+	export let more = false;
+	export let pageNum = 1;
 </script>
 
 <SeoHead
@@ -37,13 +55,12 @@
 	description="Tentang manusia yang ku amati dan teknologi yang ku pelajari"
 />
 
-{#key notes}
 <header>
 	<h1>
 		Catatan
 		{#if JSON.stringify(filter) !== '{}'}
 			tentang
-			{filter.label ? get(session).tags.filter((slug) => slugger(slug) === filter.label) : ''}
+			{filter.label ? allTags.filter((slug) => slugger(slug) === filter.label) : ''}
 			{filter.kategori ? capitalize(filter?.kategori) : ''}
 		{/if}
 	</h1>
@@ -69,10 +86,10 @@
 	<a href={navurl + (pageNum + 1)} class="ml-auto" class:hidden={more}>Lebih lawas</a>
 </div>
 
-{/key}
 <style lang="postcss">
 	header {
 		@apply py-4 border-b-2 border-gray-500;
+
 		h1 {
 			@apply my-2 text-center;
 		}

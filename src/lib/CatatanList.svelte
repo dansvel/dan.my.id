@@ -1,8 +1,8 @@
 <script>
 	import { localDate, slugger } from '$lib/util';
 
-	export let title;
-	export let notes;
+	export let title = '';
+	export let notes = [];
 </script>
 
 <section>
