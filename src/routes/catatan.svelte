@@ -36,6 +36,7 @@
 	description="Tentang manusia yang ku amati dan teknologi yang ku pelajari"
 />
 
+{#key notes}
 <header>
 	<h1>
 		Catatan
@@ -61,14 +62,13 @@
 	</div>
 </header>
 
-{#key notes}
 <CatatanList {notes} />
-{/key}
 <div class="flex">
 	<a href={navurl + (pageNum - 1)} class:hidden={pageNum <= 1}>Lebih baru</a>
 	<a href={navurl + (pageNum + 1)} class="ml-auto" class:hidden={more}>Lebih lawas</a>
 </div>
 
+{/key}
 <style lang="postcss">
 	header {
 		@apply py-4 border-b-2 border-gray-500;
