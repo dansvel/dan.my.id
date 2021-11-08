@@ -1,47 +1,33 @@
-<script context="module">
-  import { page } from '$app/stores'
-
-  export async function load({ page, session }) {
-    return {
-      props: {
-        metadata: session.pages.find(file => file.slug === page.path.split('/').pop())
-      }
-    }
-  }
-</script>
-
 <script>
-  import 'virtual:windi.css'
-  import './app.postcss'
-  import Nav from '$lib/Nav.svelte'
-  import { onMount } from 'svelte'
+  import 'virtual:windi.css';
+  import './app.postcss';
+  import Nav from '$lib/Nav.svelte';
+  import { onMount } from 'svelte';
 
-  import { localDate } from '$lib/util'
-  import Webmention from '$lib/Webmention.svelte'
-  import SeoHead from '$lib/SeoHead.svelte'
+  import { localDate } from '$lib/util';
+  import Webmention from '$lib/Webmention.svelte';
+  import SeoHead from '$lib/SeoHead.svelte';
 
-  export let metadata
+  import { session, page } from '$app/stores';
+
+  let metadata;
+  $: metadata = $session.pages.find((file) => file.slug === $page.path.split('/').pop());
 
   onMount(() => {
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.querySelector('link[title=Dark]').removeAttribute('disabled')
+      document.querySelector('link[title=Dark]').removeAttribute('disabled');
     } else {
-      document.querySelector('link[title=Light]').removeAttribute('disabled')
+      document.querySelector('link[title=Light]').removeAttribute('disabled');
     }
-  })
+  });
 </script>
 
 <Nav />
-
 <main>
   {#if !metadata}
     <slot />
   {:else}
-    <SeoHead
-      title={metadata.title}
-      description={metadata.description}
-      image={metadata.image}
-    />
+    <SeoHead title={metadata.title} description={metadata.description} image={metadata.image} />
     <article>
       <header>
         <h1>{metadata.title}</h1>

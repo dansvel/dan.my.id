@@ -1,54 +1,43 @@
-<script context="module">
-  import { capitalize, slugger, urlParamsToQuery, getUrlParams } from '$lib/util'
-
-  export async function load({ page: { query }, session: { notes, tags } }) {
-    let allPosts
-
-    let filter = query ? getUrlParams(query.toString()) : {}
-    if (filter.label) {
-      allPosts = notes.filter(note =>
-        note.tags.map(tag => slugger(tag)).includes(filter.label)
-      )
-    } else if (filter.kategori) {
-      allPosts = notes.filter(note => slugger(note.category) === filter.kategori)
-    } else {
-      allPosts = notes
-    }
-
-    const per = 9
-    let pageNum = 1
-    if (filter.hal) {
-      pageNum = parseInt(filter.hal)
-      delete filter.hal
-    }
-
-    return {
-      props: {
-        allTags: tags,
-        more: allPosts.length - pageNum * per <= 0,
-        notes: allPosts.slice(pageNum * per - per, pageNum * per),
-        filter,
-        navurl:
-          '?' +
-          urlParamsToQuery(filter) +
-          (Object.keys(filter).length ? '&' : '') +
-          'hal=',
-        pageNum
-      }
-    }
-  }
-</script>
-
 <script>
-  import CatatanList from '$lib/CatatanList.svelte'
-  import SeoHead from '$lib/SeoHead.svelte'
+  import { session, page } from '$app/stores';
+  import { capitalize, slugger, urlParamsToQuery, getUrlParams } from '$lib/util';
+  import CatatanList from '$lib/CatatanList.svelte';
+  import { get } from 'svelte/store';
+  import SeoHead from '$lib/SeoHead.svelte';
+  import { browser, dev } from '$app/env';
 
-  export let allTags = []
-  export let notes = []
-  export let filter = []
-  export let navurl = ''
-  export let more = false
-  export let pageNum = 1
+  let allPosts
+  const allTags = get(session).tags;
+
+  let notes, navurl, more
+  let pageNum = 1;
+  let filter
+  const per = 9;
+
+
+
+  $: {
+    filter = $page.path.params ? getUrlParams($page.path.params) : {}
+
+    if (filter.label) {
+      allPosts = get(session).notes.filter((post) =>
+        post.tags.map((tag) => slugger(tag)).includes(filter.label)
+      );
+    } else if (filter.kategori) {
+      allPosts = get(session).notes.filter((post) => slugger(post.category) === filter.kategori);
+    } else {
+      allPosts = get(session).notes;
+    }
+    if (filter.hal) {
+      pageNum = parseInt(filter.hal);
+      delete filter.hal;
+    }
+    more = allPosts.length - pageNum * per <= 0;
+    notes = allPosts.slice(pageNum * per - per, pageNum * per);
+
+    navurl = '?' + (Object.keys(filter).length ? urlParamsToQuery(filter) : '') + (Object.keys(filter).length ? '&' : '') + 'hal=';
+    // navurl = '?hal=';
+  }
 </script>
 
 <SeoHead
@@ -61,8 +50,8 @@
     Catatan
     {#if JSON.stringify(filter) !== '{}'}
       tentang
-      {filter.label ? allTags.filter(slug => slugger(slug) === filter.label) : ''}
-      {filter.kategori ? capitalize(filter?.kategori) : ''}
+      <!--{filter.label ? get(session).tags.filter((slug) => slugger(slug) === filter.label) : ''}-->
+      <!--{filter.kategori ? capitalize(filter?.kategori) : ''}-->
     {/if}
   </h1>
   <div class="text-center">
@@ -82,6 +71,7 @@
 </header>
 
 <CatatanList {notes} />
+
 <div class="flex">
   <a href={navurl + (pageNum - 1)} class:hidden={pageNum <= 1}>Lebih baru</a>
   <a href={navurl + (pageNum + 1)} class="ml-auto" class:hidden={more}>Lebih lawas</a>
@@ -90,7 +80,6 @@
 <style lang="postcss">
   header {
     @apply py-4 border-b-2 border-gray-500;
-
     h1 {
       @apply my-2 text-center;
     }

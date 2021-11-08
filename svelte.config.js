@@ -10,11 +10,7 @@ const config = {
   preprocess: [preprocess(), md.mdsvex(mdsvexConfig)],
   kit: {
     adapter: adapter(),
-    prerender: {
-      //   onError: 'continue'
-    },
-    router: false,
-    // ssr: false,
+    // router: false,
     target: '#svelte',
     vite: () => ({
       plugins: [WindiCSS()]
