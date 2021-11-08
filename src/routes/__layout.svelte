@@ -23,10 +23,6 @@
 	});
 </script>
 
-{#key $page.path}
-	<Gads />
-{/key}
-
 <Nav />
 <main>
 	{#if !metadata}

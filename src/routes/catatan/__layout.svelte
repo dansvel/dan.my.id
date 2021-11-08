@@ -10,10 +10,6 @@
 	$: note = $session.notes.find((note) => note.slug === $page.path.split('/').pop());
 </script>
 
-{#key $page.path}
-	<Gads />
-{/key}
-
 {#if note}
 	<SeoHead title={note.title} description={note.description} tags={note.tags} image={note.image} />
 
