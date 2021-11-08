@@ -1,5 +1,5 @@
 <script context="module">
-  export const prerender = false
+  export const ssr = false
   import { capitalize, slugger, urlParamsToQuery, getUrlParams } from '$lib/util'
 
   export async function load({ page: { query }, session: { notes, tags } }) {
