@@ -22,23 +22,23 @@ Jadi, kamu perlu memasang dan mengonfigurasi `mdsvex` di svelte-mu seperti yang 
 Di SvelteKit, aku menuliskannya seperti berikut
 
 ```js
-import md from 'mdsvex';
-import mdsvexConfig from './mdsvex.config.js';
+import md from 'mdsvex'
+import mdsvexConfig from './mdsvex.config.js'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	extensions: ['.svelte', ...mdsvexConfig.extensions],
-	preprocess: [
-		md.mdsvex(mdsvexConfig)
-		// kalau pake preprocessor lain, tambahkan saja
-	],
-	kit: {
-		// konfigurasi sveltekit-mu
-		// ...
-	}
-};
+  extensions: ['.svelte', ...mdsvexConfig.extensions],
+  preprocess: [
+    md.mdsvex(mdsvexConfig)
+    // kalau pake preprocessor lain, tambahkan saja
+  ],
+  kit: {
+    // konfigurasi sveltekit-mu
+    // ...
+  }
+}
 
-export default config;
+export default config
 ```
 
 Aku bukan expert, aku tidak mengerti mengapa harus mengimpor `md` dan menggunakan `md.sdsvex()` tidak seperti di dokumentasi resminya.
@@ -48,34 +48,34 @@ Aku bukan expert, aku tidak mengerti mengapa harus mengimpor `md` dan menggunaka
 Seperti yang sudah ditulis pada `svelte.config.js`, kita menyimpan konfigurasi mdsvex di _file_ tersendiri.
 
 ```js
-import hljs from 'highlight.js';
-import hljsvelte from 'highlightjs-svelte';
+import hljs from 'highlight.js'
+import hljsvelte from 'highlightjs-svelte'
 
-const escape_svelty = (str) =>
-	str
-		.replace(/[{}`]/g, (c) => ({ '{': '&#123;', '}': '&#125;', '`': '&#96;' }[c]))
-		.replace(/\\([trn])/g, '&#92;$1');
+const escape_svelty = str =>
+  str
+    .replace(/[{}`]/g, c => ({ '{': '&#123;', '}': '&#125;', '`': '&#96;' }[c]))
+    .replace(/\\([trn])/g, '&#92;$1')
 
 export default {
-	extensions: ['.md'],
-	remarkPlugins: [
-		// jika kamu menggunakan remark plugin
-	],
-	rehypePlugins: [
-		// jika kamu menggunakan rehype plugin
-	],
+  extensions: ['.md'],
+  remarkPlugins: [
+    // jika kamu menggunakan remark plugin
+  ],
+  rehypePlugins: [
+    // jika kamu menggunakan rehype plugin
+  ],
 
-	highlight: {
-		highlighter: (code, lang) => {
-			hljsvelte(hljs);
-			hljs.registerAliases('sveltehtml', { languageName: 'svelte' });
-			lang = lang && hljs.getLanguage(lang) ? lang : 'plaintext';
-			return `<pre><code class="hljs-${lang}">${escape_svelty(
-				hljs.highlight(code, { language: lang }).value
-			)}</code></pre>`;
-		}
-	}
-};
+  highlight: {
+    highlighter: (code, lang) => {
+      hljsvelte(hljs)
+      hljs.registerAliases('sveltehtml', { languageName: 'svelte' })
+      lang = lang && hljs.getLanguage(lang) ? lang : 'plaintext'
+      return `<pre><code class="hljs-${lang}">${escape_svelty(
+        hljs.highlight(code, { language: lang }).value
+      )}</code></pre>`
+    }
+  }
+}
 ```
 
 Yang perlu diperhatikan disini adalah, kamu perlu melakukan sanitize untuk membuatnya bekerja. Terutama karena svelte akan mengeksekusi apapun di dalam kurung kurawal sebagai kode javascript, dan karakter spesial lain seperti backtick dan backslash.

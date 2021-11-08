@@ -56,15 +56,18 @@ Namun kali ini aku hanya akan mengawinkan Laravel dan Svelte disini.
    ```html
    <!DOCTYPE html>
    <html>
-   	<head>
-   		<meta charset="utf-8" />
-   		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-   		<link href="{{ mix('/css/app.css') }}" rel="stylesheet" />
-   		<script src="{{ mix('/js/app.js') }}" defer></script>
-   	</head>
-   	<body>
-   		@inertia
-   	</body>
+     <head>
+       <meta charset="utf-8" />
+       <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+       />
+       <link href="{{ mix('/css/app.css') }}" rel="stylesheet" />
+       <script src="{{ mix('/js/app.js') }}" defer></script>
+     </head>
+     <body>
+       @inertia
+     </body>
    </html>
    ```
 
@@ -113,7 +116,7 @@ Namun kali ini aku hanya akan mengawinkan Laravel dan Svelte disini.
 
    ```json
    {
-   	"plugins": ["@babel/plugin-syntax-dynamic-import"]
+     "plugins": ["@babel/plugin-syntax-dynamic-import"]
    }
    ```
 
@@ -122,17 +125,18 @@ Namun kali ini aku hanya akan mengawinkan Laravel dan Svelte disini.
    `resources/js/app.js`
 
    ```js
-   import { InertiaApp } from '@inertiajs/inertia-svelte';
+   import { InertiaApp } from '@inertiajs/inertia-svelte'
 
-   const app = document.getElementById('app');
+   const app = document.getElementById('app')
 
    new InertiaApp({
-   	target: app,
-   	props: {
-   		initialPage: JSON.parse(app.dataset.page),
-   		resolveComponent: (name) => import(`./Pages/${name}.svelte`).then((module) => module.default)
-   	}
-   });
+     target: app,
+     props: {
+       initialPage: JSON.parse(app.dataset.page),
+       resolveComponent: name =>
+         import(`./Pages/${name}.svelte`).then(module => module.default)
+     }
+   })
    ```
 
 1. Konfigurasi script building
@@ -142,19 +146,19 @@ Namun kali ini aku hanya akan mengawinkan Laravel dan Svelte disini.
    `webpack.mix.js`
 
    ```js
-   const mix = require('laravel-mix');
-   require('laravel-mix-svelte');
+   const mix = require('laravel-mix')
+   require('laravel-mix-svelte')
 
    mix
-   	.js('resources/js/app.js', 'public/js')
-   	.sass('resources/sass/app.scss', 'public/dist')
-   	.svelte({
-   		dev: !mix.inProduction()
-   	})
-   	.webpackConfig({
-   		output: { chunkFilename: 'js/[name].js?id=[chunkhash]' }
-   	})
-   	.version();
+     .js('resources/js/app.js', 'public/js')
+     .sass('resources/sass/app.scss', 'public/dist')
+     .svelte({
+       dev: !mix.inProduction()
+     })
+     .webpackConfig({
+       output: { chunkFilename: 'js/[name].js?id=[chunkhash]' }
+     })
+     .version()
    ```
 
 ## Menggunakan Laravel dan Svelte

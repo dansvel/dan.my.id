@@ -13,11 +13,11 @@ tags:
 ## TLDR;
 
 ```js
-import hljs from 'highlight.js';
-import hljsvelte from 'highlightjs-svelte';
-hljsvelte(hljs);
+import hljs from 'highlight.js'
+import hljsvelte from 'highlightjs-svelte'
+hljsvelte(hljs)
 
-const highlighted = hljs.highlight('svelte', source).value;
+const highlighted = hljs.highlight('svelte', source).value
 ```
 
 ## Bagaimana aku melakukannya
@@ -36,51 +36,51 @@ Plugin yang aku buat memang tidak membutuhkan marked dan highlight.js, namun unt
 
 ```js
 // svelte.config.js
-import preprocess from 'svelte-preprocess';
-import WindiCSS from 'vite-plugin-windicss';
-import staticSite from '@sveltejs/adapter-static';
-import vitePluginMarkdown from '@dansvel/vite-plugin-markdown';
-import markedOption from './marked.option.js';
+import preprocess from 'svelte-preprocess'
+import WindiCSS from 'vite-plugin-windicss'
+import staticSite from '@sveltejs/adapter-static'
+import vitePluginMarkdown from '@dansvel/vite-plugin-markdown'
+import markedOption from './marked.option.js'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	preprocess: [preprocess()],
-	kit: {
-		target: '#svelte',
-		adapter: staticSite(),
-		vite: () => ({
-			plugins: [
-				WindiCSS.default({
-					configPath: './windi.config.js'
-				}),
-				vitePluginMarkdown(markedOption)
-			]
-		})
-	}
-};
+  preprocess: [preprocess()],
+  kit: {
+    target: '#svelte',
+    adapter: staticSite(),
+    vite: () => ({
+      plugins: [
+        WindiCSS.default({
+          configPath: './windi.config.js'
+        }),
+        vitePluginMarkdown(markedOption)
+      ]
+    })
+  }
+}
 
-export default config;
+export default config
 ```
 
 Di dalam `svelte.config.js` dapat dilihat aku menggunakan **Windi**. Selain desain blog secara keseluruhan, aku menggunakan plugin **typography** miliknya untuk memudahkan dalam mendesain konten. Yang perlu diperhatikan saat ini adalah bagian vite plugin, yaitu plugin yang kubuat dan optionnya yang aku tempatkan di file berbeda.
 
 ```js
 // marked.option.js
-import hljs from 'highlight.js';
-import hljsvelte from 'highlightjs-svelte';
+import hljs from 'highlight.js'
+import hljsvelte from 'highlightjs-svelte'
 
 // inisialisasi
-hljsvelte(hljs);
+hljsvelte(hljs)
 // membuat alias language untuk svelte
-hljs.registerAliases('sveltehtml', { languageName: 'svelte' });
+hljs.registerAliases('sveltehtml', { languageName: 'svelte' })
 
 const highlight = (code, lang) => {
-	// jika language tidak ditetapkan atau ngawur, gunakan plain text
-	lang = lang && hljs.getLanguage(lang) ? lang : 'plaintext';
-	return hljs.highlight(code, { language: lang }).value;
-};
+  // jika language tidak ditetapkan atau ngawur, gunakan plain text
+  lang = lang && hljs.getLanguage(lang) ? lang : 'plaintext'
+  return hljs.highlight(code, { language: lang }).value
+}
 
-export default { highlight };
+export default { highlight }
 ```
 
 Perhatikan bagaimana aku membutuhkan modul `hljs` untuk membuat option untuk pluginku. Jika kamu memerlukan option `renderer` milik **marked** kamu juga dapat menambahkannya di sini.
@@ -88,7 +88,7 @@ Perhatikan bagaimana aku membutuhkan modul `hljs` untuk membuat option untuk plu
 Setelah inisialisasi, sebenarnya kamu sudah dapat menggunakannya langsung seperti ini
 
 ```js
-const highlight = (code, lang) => hljs.highlight(code, { language: lang }).value;
+const highlight = (code, lang) => hljs.highlight(code, { language: lang }).value
 ```
 
 Namun tentu saja akan menjadi kurang aman.
