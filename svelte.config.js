@@ -14,10 +14,6 @@ const config = {
     // hydrate: false,
     router: false,
 
-    prerender: {
-      onError: 'continue'
-    },
-
     target: '#svelte',
 
     vite: () => ({
