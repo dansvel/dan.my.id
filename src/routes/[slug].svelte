@@ -4,7 +4,7 @@
   import SeoHead from '$lib/SeoHead.svelte'
   import { page } from '$app/stores'
 
-  const files = import.meta.globEager('./_posts/*.md')
+  const files = import.meta.globEager('../posts/*.md')
   let content
 
   for (const path in files) {
@@ -20,7 +20,12 @@
   } = content
 </script>
 
-<SeoHead {title} {description} {tags} {image} />
+<SeoHead
+  {title}
+  {description}
+  {tags}
+  image={`https://cdn.statically.io/og/theme=dark/${encodeURIComponent(title)}.png`}
+/>
 
 <article>
   <header>

@@ -1,9 +1,8 @@
 ---
-title: iseng
+title: Iseng
 description: Ketika ide, waktu, dan penasaran bertemu
 image: https://cdn.pixabay.com/photo/2015/05/15/15/00/building-768815_960_720.jpg
 date: 2021-03-29
-layout: page
 tags:
   - Belajar pemrograman
   - Latihan

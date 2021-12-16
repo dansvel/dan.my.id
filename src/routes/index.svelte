@@ -4,7 +4,7 @@
   import { arrSortBy } from '$lib/util'
   import SeoHead from '$lib/SeoHead.svelte'
 
-  const files = import.meta.globEager('./_posts/*.md')
+  const files = import.meta.globEager('../posts/*.md')
   const posts = []
 
   for (const path in files) {
@@ -32,7 +32,7 @@
 
 <style lang="postcss">
   header {
-    @apply py-2 text-center mb-2;
+    @apply py-5 text-center mb-2;
     h1 {
       @apply my-1;
     }
