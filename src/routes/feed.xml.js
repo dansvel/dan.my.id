@@ -1,19 +1,5 @@
 import RSS from 'rss'
-
-const files = import.meta.globEager('./_posts/*.md')
-const posts = []
-
-for (const path in files) {
-  const {
-    attributes: { title, description }
-  } = files[path]
-  posts.push({
-    title,
-    description,
-    url: 'https://dan.my.id/' + path.split('/').pop().split('.').shift()
-  })
-}
-
+console.log('=== feed.xml ===')
 export const get = () => {
   const feed = new RSS({
     title: 'Blog milik Dan',
@@ -22,7 +8,19 @@ export const get = () => {
     language: 'id'
   })
 
-  posts.forEach(post => feed.item(post))
+  const files = import.meta.globEager('./_posts/*.md')
+  for (const path in files) {
+    const {
+      attributes: { title, description }
+    } = files[path]
+
+    feed.item({
+      title,
+      description,
+      url: 'https://dan.my.id/' + path.split('/').pop().split('.').shift()
+    })
+  }
+
   return {
     headers: { 'content-type': 'application/xml' },
     body: feed.xml()

@@ -7,7 +7,7 @@
 <section>
   {#each blogs as blog}
     <article>
-      <h3><a sveltekit:prefetch href="/{blog.url}">{blog.title}</a></h3>
+      <h3><a href="/{blog.url}">{blog.title}</a></h3>
       <p>
         <small>{localDate(blog.date)}</small>
         <small

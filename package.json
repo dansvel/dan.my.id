@@ -2,8 +2,8 @@
   "name": "dan.my.id",
   "version": "2.0.0",
   "scripts": {
-    "dev": "rm -fr .svelte-kit/* &&svelte-kit dev",
-    "build": "rm -fr build/* && svelte-kit build",
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
     "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. .",
@@ -11,18 +11,16 @@
   },
   "devDependencies": {
     "@dansvel/vite-plugin-markdown": "^2.0.2",
-    "@sveltejs/adapter-auto": "next",
     "@sveltejs/adapter-static": "^1.0.0-next.21",
     "@sveltejs/kit": "next",
     "highlight.js": "^11.3.1",
     "highlightjs-svelte": "^1.0.6",
     "marked": "^4.0.7",
-    "prettier": "^2.4.1",
-    "prettier-plugin-svelte": "^2.4.0",
+    "prettier": "^2.5.1",
+    "prettier-plugin-svelte": "^2.5.1",
     "rss": "^1.2.2",
-    "svelte": "^3.44.0",
+    "svelte": "^3.44.3",
     "svelte-preprocess": "^4.10.0",
-    "svelte-preprocess-markdown": "^2.7.3",
     "vite-plugin-windicss": "^1.5.4"
   },
   "type": "module"
