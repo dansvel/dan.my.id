@@ -1,49 +1,40 @@
-<script context="module">
-  export const load = async ({
-    page: {
-      params: { slug }
-    }
-  }) => {
-    let content
-    const contents = await import.meta.glob('/src/routes/*.md')
-    for (const path in contents) {
-      if (slug === path.split('/').pop().split('.').shift()) {
-        const { body, attributes } = (await contents[path]()).default
-        content = { ...attributes, slug, body }
-      }
-    }
-    return { props: { content } }
-  }
-</script>
-
 <script>
   import Webmention from '$lib/Webmention.svelte'
   import { localDate } from '$lib/util.js'
   import SeoHead from '$lib/SeoHead.svelte'
+  import { page } from '$app/stores'
 
-  export let content
+  const files = import.meta.globEager('./_posts/*.md')
+  let content
+
+  for (const path in files) {
+    // console.log($page.path)
+
+    if ($page.path.substring(1) === path.split('/').pop().split('.').shift()) {
+      content = files[path]
+    }
+  }
+  const {
+    attributes: { title, description, tags, image, date },
+    body
+  } = content
 </script>
 
-<SeoHead
-  title={content.title}
-  description={content.description}
-  tags={content.tags}
-  image={content.image}
-/>
+<SeoHead {title} {description} {tags} {image} />
 
 <article>
   <header>
-    <h1>{content.title}</h1>
-    <p>Diperbarui {localDate(content.date)}</p>
-    {#if content.tags}
+    <h1>{title}</h1>
+    <p>Diperbarui {localDate(date)}</p>
+    {#if tags}
       <p>
-        Label: {#each content.tags as tag}<span>{tag}</span> {/each}
+        Label: {#each tags as tag}<span>{tag}</span>{' '}{/each}
       </p>
     {/if}
-    <p>{content.description}</p>
+    <p>{description}</p>
   </header>
 
-  {@html content.body}
+  {@html body}
 </article>
 
 <Webmention />

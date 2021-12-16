@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@dansvel/vite-plugin-markdown': ^2.0.0
+  '@dansvel/vite-plugin-markdown': ^2.0.2
   '@sveltejs/adapter-auto': next
   '@sveltejs/adapter-static': ^1.0.0-next.21
   '@sveltejs/kit': next
@@ -10,13 +10,14 @@ specifiers:
   marked: ^4.0.7
   prettier: ^2.4.1
   prettier-plugin-svelte: ^2.4.0
+  rss: ^1.2.2
   svelte: ^3.44.0
   svelte-preprocess: ^4.10.0
   svelte-preprocess-markdown: ^2.7.3
   vite-plugin-windicss: ^1.5.4
 
 devDependencies:
-  '@dansvel/vite-plugin-markdown': 2.0.1
+  '@dansvel/vite-plugin-markdown': 2.0.2
   '@sveltejs/adapter-auto': 1.0.0-next.4
   '@sveltejs/adapter-static': 1.0.0-next.21
   '@sveltejs/kit': 1.0.0-next.202_svelte@3.44.2
@@ -25,6 +26,7 @@ devDependencies:
   marked: 4.0.7
   prettier: 2.5.0
   prettier-plugin-svelte: 2.5.0_prettier@2.5.0+svelte@3.44.2
+  rss: 1.2.2
   svelte: 3.44.2
   svelte-preprocess: 4.10.0_svelte@3.44.2
   svelte-preprocess-markdown: 2.7.3
@@ -40,10 +42,10 @@ packages:
       '@types/throttle-debounce': 2.1.0
     dev: true
 
-  /@dansvel/vite-plugin-markdown/2.0.1:
+  /@dansvel/vite-plugin-markdown/2.0.2:
     resolution:
       {
-        integrity: sha512-BXZd6Ey41O833fbBaVg738Kh64GxmmsI4dAooBF3VLKm1oPmmIEnO7x8DPPLLp/rLlRtGkMT2HtLmLLAGWznYw==
+        integrity: sha512-ZutzHphZkx34aIsSZfr1X7FfypIPGDuOHKsPTkIsnfVzrSarFBuIN/JU7er9L7LW5K1afBR6bZY3drKyocWJdA==
       }
     engines: { node: '>=16.0.0', npm: '>=8.0.0' }
     peerDependencies:
@@ -820,6 +822,18 @@ packages:
       picomatch: 2.3.0
     dev: true
 
+  /mime-db/1.25.0:
+    resolution: { integrity: sha1-wY29fHOl2/b0SgJNwNFloeexw5I= }
+    engines: { node: '>= 0.6' }
+    dev: true
+
+  /mime-types/2.1.13:
+    resolution: { integrity: sha1-4HqqnGxrmnyjASxpADrSWjnpKog= }
+    engines: { node: '>= 0.6' }
+    dependencies:
+      mime-db: 1.25.0
+    dev: true
+
   /min-indent/1.0.1:
     resolution:
       {
@@ -993,6 +1007,13 @@ packages:
     hasBin: true
     optionalDependencies:
       fsevents: 2.3.2
+    dev: true
+
+  /rss/1.2.2:
+    resolution: { integrity: sha1-UKFpiHYTgTOnT5oF0r3I240nqSE= }
+    dependencies:
+      mime-types: 2.1.13
+      xml: 1.0.1
     dev: true
 
   /run-parallel/1.2.0:
@@ -1208,4 +1229,8 @@ packages:
 
   /wrappy/1.0.2:
     resolution: { integrity: sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8= }
+    dev: true
+
+  /xml/1.0.1:
+    resolution: { integrity: sha1-eLpyAgApxbyHuKgaPPzXS0ovweU= }
     dev: true

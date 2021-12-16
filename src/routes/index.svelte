@@ -1,32 +1,24 @@
-<script context="module">
-  import { arrSortBy } from '$lib/util.js'
+<script>
+  import BlogList from '$lib/BlogList.svelte'
+  import content from '/src/routes/index.md'
+  import { arrSortBy } from '$lib/util'
+  import SeoHead from '$lib/SeoHead.svelte'
 
-  export const load = async () => {
-    const blogs = []
-    const contents = await import.meta.glob('/src/routes/*.md')
-    for (const path in contents) {
-      const { attributes } = (await contents[path]()).default
+  const files = import.meta.globEager('./_posts/*.md')
+  const posts = []
 
-      if (path.split('/').pop().match(/^\d/))
-        blogs.push({
-          slug: path.split('/').pop().split('.').shift(),
-          ...attributes
-        })
-    }
-    return {
-      props: {
-        blogs: arrSortBy(blogs, 'slug', { asc: false, natural: true })
-      }
+  for (const path in files) {
+    if (path.split('/').pop().match(/^\d/)) {
+      const { attributes } = files[path]
+      posts.push({
+        url: path.split('/').pop().split('.').shift(),
+        ...attributes
+      })
     }
   }
 </script>
 
-<script>
-  import BlogList from '$lib/BlogList.svelte'
-  import content from '/src/routes/index.md'
-
-  export let blogs = []
-</script>
+<SeoHead />
 
 <header>
   <h1>{content.attributes.title}</h1>
@@ -36,7 +28,7 @@
 
 <h2>Catatan Perjalanan</h2>
 <hr />
-<BlogList {blogs} />
+<BlogList blogs={arrSortBy(posts, 'url', { asc: false, natural: true })} />
 
 <style lang="postcss">
   header {

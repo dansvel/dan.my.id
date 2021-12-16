@@ -1,8 +1,8 @@
 {
-  "name": "svelog",
-  "version": "0.0.1",
+  "name": "dan.my.id",
+  "version": "2.0.0",
   "scripts": {
-    "dev": "svelte-kit dev",
+    "dev": "rm -fr .svelte-kit/* &&svelte-kit dev",
     "build": "rm -fr build/* && svelte-kit build",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
@@ -10,7 +10,7 @@
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
   },
   "devDependencies": {
-    "@dansvel/vite-plugin-markdown": "^2.0.0",
+    "@dansvel/vite-plugin-markdown": "^2.0.2",
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/adapter-static": "^1.0.0-next.21",
     "@sveltejs/kit": "next",
@@ -19,6 +19,7 @@
     "marked": "^4.0.7",
     "prettier": "^2.4.1",
     "prettier-plugin-svelte": "^2.4.0",
+    "rss": "^1.2.2",
     "svelte": "^3.44.0",
     "svelte-preprocess": "^4.10.0",
     "svelte-preprocess-markdown": "^2.7.3",
