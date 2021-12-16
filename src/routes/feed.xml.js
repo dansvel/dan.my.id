@@ -1,5 +1,5 @@
 import RSS from 'rss'
-console.log('=== feed.xml ===')
+
 export const get = () => {
   const feed = new RSS({
     title: 'Blog milik Dan',
@@ -11,13 +11,14 @@ export const get = () => {
   const files = import.meta.globEager('./_posts/*.md')
   for (const path in files) {
     const {
-      attributes: { title, description }
+      attributes: { title, description, date }
     } = files[path]
 
     feed.item({
       title,
       description,
-      url: 'https://dan.my.id/' + path.split('/').pop().split('.').shift()
+      url: 'https://dan.my.id/' + path.split('/').pop().split('.').shift(),
+      date,
     })
   }
 

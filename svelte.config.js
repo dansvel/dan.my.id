@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-static'
+import adapter from '@sveltejs/adapter-netlify'
 import markdown from '@dansvel/vite-plugin-markdown'
 import preprocess from 'svelte-preprocess'
 import WindiCSS from 'vite-plugin-windicss'
