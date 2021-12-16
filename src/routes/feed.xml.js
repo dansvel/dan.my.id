@@ -1,6 +1,6 @@
 import RSS from 'rss'
 
-const files = import.meta.globEager('../posts/*.md')
+const files = import.meta.globEager('./_posts/*.md')
 const posts = []
 
 for (const path in files) {
