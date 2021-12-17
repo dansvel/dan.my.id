@@ -67,7 +67,7 @@
 <div class="hidden">
   <a href="/404">404</a>
   <a href="/500">500</a>
-  <a href="/404">catatan/404</a>
+  <a href="/feed.xml">RSS feed</a>
 </div>
 
 <style lang="postcss">

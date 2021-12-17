@@ -10,12 +10,8 @@ const config = {
   preprocess: [preprocess()],
   kit: {
     adapter: adapter(),
-
-    // hydrate: false,
     router: false,
-
     target: '#svelte',
-
     vite: () => ({
       plugins: [markdown({ markedOptions }), WindiCSS()]
     })
