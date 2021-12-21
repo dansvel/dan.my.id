@@ -8,7 +8,7 @@ export const get = () => {
     language: 'id'
   })
 
-  const files = import.meta.globEager('./_posts/*.md')
+  const files = import.meta.globEager('../posts/*.md')
   for (const path in files) {
     const {
       attributes: { title, description, date }
