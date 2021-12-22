@@ -18,7 +18,7 @@ export const get = () => {
       title,
       description,
       url: 'https://dan.my.id/' + path.split('/').pop().split('.').shift(),
-      date,
+      date
     })
   }
 

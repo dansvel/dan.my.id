@@ -15,14 +15,14 @@
             <a href="/{blog.url}">{blog.title}</a>
           {/if}
         </p>
-        <time datetime="{blog.date}">{localDate(blog.date)}</time>
+        <time datetime={blog.date}>{localDate(blog.date)}</time>
       </div>
-      
-<!--      <p>-->
-<!--        <small-->
-<!--          >Label: {#each blog.tags.split(', ') as tag}<span>#{tag}</span> {/each}</small-->
-<!--        >-->
-<!--      </p>-->
+
+      <!--      <p>-->
+      <!--        <small-->
+      <!--          >Label: {#each blog.tags.split(', ') as tag}<span>#{tag}</span> {/each}</small-->
+      <!--        >-->
+      <!--      </p>-->
       <p>{blog.description}</p>
     </article>
   {/each}

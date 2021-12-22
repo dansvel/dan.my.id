@@ -6,9 +6,7 @@ category: Teknologi
 tags: Svelte, Markdown, Javascript, Vite
 ---
 
-
 > Tulisan ini sudah kadaluarsa, gunakan sebagai referensi saja
-
 
 Oke. Mempertimbangkan isi catatan yang lebih singkat namun berbobot, dan tentu saja cacat verbal yang ku miliki. Mungkin mulai dari catatan ini hingga ke depannya, aku akan menjadi lebih _to the point_. Jadi, mari mulai.
 

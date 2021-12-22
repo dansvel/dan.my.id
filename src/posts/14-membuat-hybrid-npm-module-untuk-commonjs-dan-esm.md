@@ -1,8 +1,8 @@
 ---
-title: Membuat hybrid NPM module untuk CommonJS dan ESM 
-date: 2021-12-16 
-description: Satu kode yang sama dapat digunakan pada 2 jenis javascript yang berbeda 
-category: Teknologi 
+title: Membuat hybrid NPM module untuk CommonJS dan ESM
+date: 2021-12-16
+description: Satu kode yang sama dapat digunakan pada 2 jenis javascript yang berbeda
+category: Teknologi
 tags: NPM Module
 ---
 
@@ -64,102 +64,100 @@ Sebenarnya kamu dapat membuat dua file kode pluginmu dengan ekstensi `.mjs` dan 
 
 1. Tulis kode mu satu kali saja di dalam folder `src` menggunakan ES6, ES-Next (`.js`) atau Typescript (`.ts`) menggunakan import dan export.
 
-    Dari dasar ini, kamu dapat mengimport module pihak ketiga walaupun itu menggunakan CJS. Jika kamu menulis kode module mu dalam CJS, maka kamu tidak dapat menggunakan yang berbentuk ESM.
+   Dari dasar ini, kamu dapat mengimport module pihak ketiga walaupun itu menggunakan CJS. Jika kamu menulis kode module mu dalam CJS, maka kamu tidak dapat menggunakan yang berbentuk ESM.
 
 2. Build 2 kali untuk masing-masing CJS dan ESM
-  
-     Berikut ini adalah yang perlu ditambahkan pada `package.json` mu
-   
-     ```json
-     {
-       "scripts": {
-         "fix": "echo { \"type\": \"commonjs\" } > dist/cjs/package.json && echo { \"type\": \"module\" } > dist/mjs/package.json",
-         "build": "rm -fr dist/* && tsc -p tsconfig.json && tsc -p tsconfig-cjs.json && npm run fix",
-         "prepare": "npm run build"
-       },
-       "main": "dist/cjs/index.js",
-       "module": "dist/mjs/index.js",
-       "exports": {
-         ".": {
-           "import": "./dist/mjs/index.js",
-           "require": "./dist/cjs/index.js"
-         }
-       },
-       "devDependencies": {
-         "@babel/core": "^7.16.0",
-         "@types/node": "^16.11.12",
-         "@typescript-eslint/eslint-plugin": "^5.6.0",
-         "@typescript-eslint/parser": "^5.6.0",
-         "eslint": "^8.4.1",
-         "shx": "^0.3.3",
-         "typescript": "^4.5.3",
-         "vite": "^2.7.1"
-       },
-       "files": [
-         "dist/"
-       ],
-       "engines": {
-         "node": ">=16.0.0",
-         "npm": ">=8.0.0"
+
+   Berikut ini adalah yang perlu ditambahkan pada `package.json` mu
+
+   ```json
+   {
+     "scripts": {
+       "fix": "echo { \"type\": \"commonjs\" } > dist/cjs/package.json && echo { \"type\": \"module\" } > dist/mjs/package.json",
+       "build": "rm -fr dist/* && tsc -p tsconfig.json && tsc -p tsconfig-cjs.json && npm run fix",
+       "prepare": "npm run build"
+     },
+     "main": "dist/cjs/index.js",
+     "module": "dist/mjs/index.js",
+     "exports": {
+       ".": {
+         "import": "./dist/mjs/index.js",
+         "require": "./dist/cjs/index.js"
        }
+     },
+     "devDependencies": {
+       "@babel/core": "^7.16.0",
+       "@types/node": "^16.11.12",
+       "@typescript-eslint/eslint-plugin": "^5.6.0",
+       "@typescript-eslint/parser": "^5.6.0",
+       "eslint": "^8.4.1",
+       "shx": "^0.3.3",
+       "typescript": "^4.5.3",
+       "vite": "^2.7.1"
+     },
+     "files": ["dist/"],
+     "engines": {
+       "node": ">=16.0.0",
+       "npm": ">=8.0.0"
      }
-     ```
-   
-     `tsconfig.json` adalah pengaturan untuk build ESM.
-     
-     ```json
-     {
-       "extends": "./tsconfig-base.json",
-       "compilerOptions": {
-         "module": "esnext",
-         "outDir": "dist/mjs",
-         "target": "esnext"
-       }
+   }
+   ```
+
+   `tsconfig.json` adalah pengaturan untuk build ESM.
+
+   ```json
+   {
+     "extends": "./tsconfig-base.json",
+     "compilerOptions": {
+       "module": "esnext",
+       "outDir": "dist/mjs",
+       "target": "esnext"
      }
-     ```
-   
-     Dan `tsconfig-cjs.json` untuk CJS.
-   
-     ```json
-     {
-       "extends": "./tsconfig-base.json",
-       "compilerOptions": {
-         "module": "commonjs",
-         "outDir": "dist/cjs",
-         "target": "es2015"
-       }
+   }
+   ```
+
+   Dan `tsconfig-cjs.json` untuk CJS.
+
+   ```json
+   {
+     "extends": "./tsconfig-base.json",
+     "compilerOptions": {
+       "module": "commonjs",
+       "outDir": "dist/cjs",
+       "target": "es2015"
      }
-     ```
-   
-     Untuk menghidanri duplikasi kode, kita menggunakan satu file yang sama yaitu `tsconfig-base.json` yang digunakan sebagai dasar pengaturan keduanya.
-     
-     ```json
-     {
-       "compilerOptions": {
-         "allowJs": true,
-         "allowSyntheticDefaultImports": true,
-         "baseUrl": "src",
-         "declaration": true,
-         "esModuleInterop": true,
-         "inlineSourceMap": false,
-         "lib": ["esnext"],
-         "listEmittedFiles": false,
-         "listFiles": false,
-         "moduleResolution": "node",
-         "noFallthroughCasesInSwitch": true,
-         "noImplicitAny": false,
-         "pretty": true,
-         "resolveJsonModule": true,
-         "rootDir": "src",
-         "skipLibCheck": true,
-         "strict": false,
-         "traceResolution": false,
-         "types": ["node"]
-       },
-       "compileOnSave": false,
-       "exclude": ["node_modules", "dist"],
-       "include": ["src"]
-     }
-     ```
+   }
+   ```
+
+   Untuk menghidanri duplikasi kode, kita menggunakan satu file yang sama yaitu `tsconfig-base.json` yang digunakan sebagai dasar pengaturan keduanya.
+
+   ```json
+   {
+     "compilerOptions": {
+       "allowJs": true,
+       "allowSyntheticDefaultImports": true,
+       "baseUrl": "src",
+       "declaration": true,
+       "esModuleInterop": true,
+       "inlineSourceMap": false,
+       "lib": ["esnext"],
+       "listEmittedFiles": false,
+       "listFiles": false,
+       "moduleResolution": "node",
+       "noFallthroughCasesInSwitch": true,
+       "noImplicitAny": false,
+       "pretty": true,
+       "resolveJsonModule": true,
+       "rootDir": "src",
+       "skipLibCheck": true,
+       "strict": false,
+       "traceResolution": false,
+       "types": ["node"]
+     },
+     "compileOnSave": false,
+     "exclude": ["node_modules", "dist"],
+     "include": ["src"]
+   }
+   ```
 
 Lengkapnya silakan cek plugin buatanku di https://github.com/dansvel/vite-plugin-markdown

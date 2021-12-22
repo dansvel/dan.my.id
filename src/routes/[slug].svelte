@@ -22,7 +22,8 @@
   {title}
   {description}
   {tags}
-  image={image || `https://cdn.statically.io/og/theme=dark/${encodeURIComponent(title)}.png`}
+  image={image ||
+    `https://cdn.statically.io/og/theme=dark/${encodeURIComponent(title)}.png`}
 />
 
 <article>
