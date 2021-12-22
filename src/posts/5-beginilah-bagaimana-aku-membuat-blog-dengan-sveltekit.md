@@ -1,10 +1,14 @@
 ---
 title: Beginilah bagaimana aku membuat blog dengan SvelteKit
 date: 2021-03-27
-description: Blog statis menggunakan SSG pastilah kamu telah hafal bagaimana membuatnya. Namun catatan ini bukan untukmu, ini untuk diriku sendiri yang dengan bangga mampu mengutak-atik SvelteKit yang masih dalam Public Beta menjadi blog personal yang sederhana.
+description: Blog statis menggunakan SvelteKit yang masih dalam Public Beta menjadi blog personal yang sederhana.
 category: Teknologi
 tags: Svelte, Markdown, Javascript, Vite
 ---
+
+
+> Tulisan ini sudah kadaluarsa, gunakan sebagai referensi saja
+
 
 Oke. Mempertimbangkan isi catatan yang lebih singkat namun berbobot, dan tentu saja cacat verbal yang ku miliki. Mungkin mulai dari catatan ini hingga ke depannya, aku akan menjadi lebih _to the point_. Jadi, mari mulai.
 

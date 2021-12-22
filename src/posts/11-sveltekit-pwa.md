@@ -1,7 +1,7 @@
 ---
 title: SvelteKit PWA
 date: 2021-09-14
-description: Membuat aplikasi web menggunakan Sveltekit memang mudah. Sekarang kamu hanya perlu melakukan langkah-langkah pada catatan ini, lalu itu akan dapat diinstall di mana pun.
+description: Supaya aplikasi web dapat diinstall di mana pun.
 category: Teknologi
 tags: PWA, Svelte, Service Worker
 ---

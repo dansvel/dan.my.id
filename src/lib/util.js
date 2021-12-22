@@ -2,7 +2,7 @@
 //   path.match(/([\w-]+)\.(svelte\.md|md|svx)/i)?.[1] ?? null
 export const localDate = (date, withHour = false) => {
   let options = {
-    weekday: 'long',
+    // weekday: 'long',
     year: 'numeric',
     month: 'short',
     day: 'numeric'

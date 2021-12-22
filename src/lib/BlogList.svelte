@@ -7,18 +7,22 @@
 <section>
   {#each blogs as blog}
     <article>
-      <h3>
-        {#if blog.draft}
-          {blog.title}
-        {:else}
-          <a href="/{blog.url}">{blog.title}</a>
-        {/if}
-      </h3>
-      <p>
-        <small
-          >Label: {#each blog.tags.split(', ') as tag}<span>#{tag}</span> {/each}</small
-        >
-      </p>
+      <div>
+        <p>
+          {#if blog.draft}
+            {blog.title}
+          {:else}
+            <a href="/{blog.url}">{blog.title}</a>
+          {/if}
+        </p>
+        <time datetime="{blog.date}">{localDate(blog.date)}</time>
+      </div>
+      
+<!--      <p>-->
+<!--        <small-->
+<!--          >Label: {#each blog.tags.split(', ') as tag}<span>#{tag}</span> {/each}</small-->
+<!--        >-->
+<!--      </p>-->
       <p>{blog.description}</p>
     </article>
   {/each}
@@ -26,28 +30,23 @@
 
 <style lang="postcss">
   section {
-    @apply mt-2 divide-y-2 divide-gray-200 dark:divide-gray-800;
+    @apply divide-y-2 divide-gray-200 dark:divide-gray-800;
     h2 {
       @apply text-center my-2 border-0;
     }
     article {
-      @apply py-4 h-full;
-      h3 {
-        @apply mt-2 md:mt-0 mb-2 border-0 leading-relaxed;
-        a {
-          @apply border-b hover:(border-b-3)
-            text-indigo-700 dark:text-indigo-300
-            visible m-0;
+      @apply py-2 h-full;
+      div {
+        @apply flex items-center justify-between;
+        p {
+          @apply font-bold;
         }
-      }
-      small {
-        @apply text-gray-600 dark:text-gray-400;
-        span {
-          @apply bg-gray-200 dark:bg-gray-800 px-1;
+        time {
+          @apply flex-shrink-0 ml-3 font-bold;
         }
       }
       p {
-        @apply my-1 mb-0;
+        @apply my-1 truncate;
       }
     }
   }

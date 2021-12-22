@@ -26,7 +26,6 @@
 </header>
 {@html content.body}
 
-<h2>Catatan Perjalanan</h2>
 <hr />
 <BlogList blogs={arrSortBy(posts, 'url', { asc: false, natural: true })} />
 
