@@ -2,12 +2,8 @@
 title: Valet untuk windows
 date: 2020-10-03
 description: Lingkungan pengembang PHP dari Laravel awalnya hanya tersedia untuk MacOS. Seseorang telah melakukannya sejak lawas, kini kamu dapat memasangnya pada Windows kesayanganmu.
-image: https://camo.githubusercontent.com/20e38db41f641f6797a43bc6fdba2169df8ceb0cf439170a94ff3fef66ee90b2/68747470733a2f2f6c61726176656c2e636f6d2f6173736574732f696d672f636f6d706f6e656e74732f6c6f676f2d76616c65742e737667
 category: Teknologi
-tags:
-  - PHP
-  - Laravel
-  - Valet
+tags: PHP, Laravel, Valet
 ---
 
 Sudah hampir pertengahan tahun 2020, dan kamu masih menggunakan paket modul untuk pengembangan proyek PHP-mu? **WAMPP** dan, **XAMPP** itu sudah ketinggalan jaman. Cobalah ganti ke [**Laragon**](https://laragon.org/).

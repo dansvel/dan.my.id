@@ -7,11 +7,16 @@
 <section>
   {#each blogs as blog}
     <article>
-      <h3><a href="/{blog.url}">{blog.title}</a></h3>
+      <h3>
+        {#if blog.draft}
+          {blog.title}
+        {:else}
+          <a href="/{blog.url}">{blog.title}</a>
+        {/if}
+      </h3>
       <p>
-        <small>{localDate(blog.date)}</small>
         <small
-          >{#each blog.tags as tag}<span>#{tag}</span> {/each}</small
+          >Label: {#each blog.tags.split(', ') as tag}<span>#{tag}</span> {/each}</small
         >
       </p>
       <p>{blog.description}</p>
@@ -28,7 +33,7 @@
     article {
       @apply py-4 h-full;
       h3 {
-        @apply mt-2 md:mt-0 mb-2 border-0;
+        @apply mt-2 md:mt-0 mb-2 border-0 leading-relaxed;
         a {
           @apply border-b hover:(border-b-3)
             text-indigo-700 dark:text-indigo-300
@@ -36,9 +41,9 @@
         }
       }
       small {
-        @apply text-gray-500;
+        @apply text-gray-600 dark:text-gray-400;
         span {
-          @apply bg-gray-200 dark:bg-gray-700 px-1;
+          @apply bg-gray-200 dark:bg-gray-800 px-1;
         }
       }
       p {

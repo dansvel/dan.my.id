@@ -2,12 +2,8 @@
 title: Code highlighter Svelte untuk highlight.js
 date: 2021-06-21
 description: Menggunakan markdown memang membuat mudah, kita tinggal tambahkan highlight.js lalu BOOM!
-image: https://lh3.googleusercontent.com/taqKTksgZ5Fztb5NCpAnxRHKIAoj6k1PZ30X1GpQjUURCj_hRFfN8rij-4R_qHq9mlDJTf2NG2175_dgzGps_M-yOg=w640-h400-e365-rj-sc0x00ffffff
 category: Teknologi
-tags:
-  - highlight.js
-  - Svelte
-  - Markdown
+tags: highlight.js, Svelte, Markdown
 ---
 
 ## TLDR;

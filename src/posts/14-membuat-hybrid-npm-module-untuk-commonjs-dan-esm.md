@@ -3,8 +3,7 @@ title: Membuat hybrid NPM module untuk CommonJS dan ESM
 date: 2021-12-16 
 description: Satu kode yang sama dapat digunakan pada 2 jenis javascript yang berbeda 
 category: Teknologi 
-tags:
-  - NPM Module
+tags: NPM Module
 ---
 
 Seperti yang telah diketahui, kode untuk menggunakan NPM module adalah seperti berikut

@@ -3,14 +3,13 @@
   export let url
   export let title = 'Blog milik Dan'
   export let description = 'Catatan perjalanan setengah manusia'
-  export let tags = []
+  export let tags = ''
   export let image = '/images/perjalanan-setengah-manusia.png'
 
   const author = 'Dan'
   const host = 'https://dan.my.id'
 
   url = host + (url ?? $page.path)
-  tags = ['dan', 'setengah manusia'].concat(tags)
   image = image.startsWith('http') ? image : host + image
 </script>
 
@@ -19,7 +18,7 @@
   <title>{title}</title>
   <meta name="title" content={title} />
   <meta name="description" content={description} />
-  <meta name="keywords" content={tags.join(', ')} />
+  <meta name="keywords" content={tags} />
   <meta name="author" content={author} />
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />

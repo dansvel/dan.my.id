@@ -2,11 +2,8 @@
 title: Komentar blog statis dengan Webmention
 date: 2021-03-31
 description: Menanggapi dan berkomentar sekaligus promosi di media sosial, kenapa tidak?
-image: https://cdn.pixabay.com/photo/2018/02/12/10/45/heart-3147976_960_720.jpg
 category: Teknologi
-tags:
-  - Webmention
-  - Sistem komentar
+tags: Webmention, Sistem Komentar
 ---
 
 Aku menemukan Webmention ini belum lama, jadi aku belum begitu memahami dan belum begitu mampu menjelaskan. Jadi biar ku beri saran lebih dahulu, cek situs resminya di https://webmention.io/

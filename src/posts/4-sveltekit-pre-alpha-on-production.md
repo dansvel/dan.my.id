@@ -2,10 +2,8 @@
 title: SvelteKit pre-alpha on Production
 date: 2021-02-21
 description: Blog yang dibuat menggunakan teknologi yang belum kelar. Antara penasaran dan nekat sudah seperti tetangga. Pengalaman memang guru yang berharga, namun akan bijak jika kamu belajar dari pengalaman orang-orang nekat ini.
-image: https://pbs.twimg.com/media/El9fOLpVoAAF5u-.jpg
 category: Teknologi
-tags:
-  - Svelte
+tags: Svelte
 ---
 
 Jika kamu telah cukup mengamati, kamu akan sadar bahwa catatan ini adalah yang pertama di blog ini. Karena tiga catatan sebelumnya adalah catatan lawas yang sebenarnya telah aku tulis di blog lawasku yang saat ini telah lenyap.

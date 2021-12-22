@@ -2,11 +2,8 @@
 title: highlight.js di mdsvex
 date: 2021-09-21
 description: Karena bawaan mdsvex menggunakan prismjs, jadi aku menggantinya
-image: https://cdn.statically.io/og/theme=dark/highlight.js%20di%20mdsvex.jpg
 category: Teknologi
-tags:
-  - highlight.js
-  - Markdown
+tags: highlight.js, Markdown
 ---
 
 Ceritanya, aku akhirnya beralih menggunakan **`mdsvex`**. Yang membuat menarik adalah, aku hanya perlu membuat file `__layout.svelte` dan sebuah file `.md` maka halaman web sudah jadi dengan indah. Mungkin aku bahas di catatan lain.

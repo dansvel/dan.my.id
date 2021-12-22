@@ -2,13 +2,8 @@
 title: Scoop, cinta untuk baris perintah
 date: 2020-04-09
 description: Sebuah baris-perintah manajemen paket aplikasi untuk Windows. Dengan segala kesederhanaan, keindahan dan kekuatan yang dimiliki. Para pengembang yang menggunakan Windows setidaknya harus mencoba mengenalnya.
-image: https://i.imgur.com/ZsNjkYx.png
 category: Teknologi
-tags:
-  - Terminal
-  - Package manager
-  - Windows
-  - Scoop
+tags: Terminal, Package manager, Windows, Scoop
 ---
 
 Berapa banyak langkah yang kamu butuhkan untuk memasang perangkat lunak. Kamu berpikir sekedar klik tidaklah sesulit itu.

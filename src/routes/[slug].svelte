@@ -8,8 +8,6 @@
   let content
 
   for (const path in files) {
-    // console.log($page.path)
-
     if ($page.path.substring(1) === path.split('/').pop().split('.').shift()) {
       content = files[path]
     }
@@ -24,7 +22,7 @@
   {title}
   {description}
   {tags}
-  image={`https://cdn.statically.io/og/theme=dark/${encodeURIComponent(title)}.png`}
+  image={image || `https://cdn.statically.io/og/theme=dark/${encodeURIComponent(title)}.png`}
 />
 
 <article>
@@ -33,7 +31,7 @@
     <p>Diperbarui {localDate(date)}</p>
     {#if tags}
       <p>
-        Label: {#each tags as tag}<span>{tag}</span>{' '}{/each}
+        Label: {#each tags.split(', ') as tag}<span>#{tag}</span>{' '}{/each}
       </p>
     {/if}
     <p>{description}</p>
@@ -55,7 +53,7 @@
       p {
         @apply text-gray-600 dark:text-gray-400 my-1;
         span {
-          @apply bg-gray-200 dark:bg-gray-700 px-1;
+          @apply bg-gray-200 dark:bg-gray-800 px-1;
         }
       }
     }

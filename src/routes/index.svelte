@@ -1,6 +1,6 @@
 <script>
   import BlogList from '$lib/BlogList.svelte'
-  import content from '/src/routes/index.md'
+  import content from './index.md'
   import { arrSortBy } from '$lib/util'
   import SeoHead from '$lib/SeoHead.svelte'
 

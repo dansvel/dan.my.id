@@ -2,13 +2,8 @@
 title: Aku membuat aplikasi transliterasi aksara Jawa
 date: 2021-04-01
 description: Mengubah teks huruf alfabet menjadi aksara Jawa jadi mudah.
-image: https://play-lh.googleusercontent.com/iLJ3OV4oCRIHmpd-tdf6U68oaWM4mclrTN7pIbt_kFybJZfzn48W_Hw64Wed8_M1JqA=s180-rw
 category: Teknologi
-tags:
-  - Aplikasi
-  - Svelte
-  - Akasara
-  - Jawa
+tags: Aplikasi, Svelte, Aksara, Jawa
 ---
 
 Awalnya aku menulis aksara Jawa di laptop menggunakan papan ketik bawaan dari _Windows 10_, aku hanya memasangnya lalu menggunakannya dengan menekan `Win` + `.`. Itu sudah berlangsung satu tahun lebih.

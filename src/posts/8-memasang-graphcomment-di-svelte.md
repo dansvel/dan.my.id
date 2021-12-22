@@ -2,11 +2,8 @@
 title: Memasang Graphcomment di Svelte
 date: 2021-04-01
 description: Sebuah alternatif untuk sistem komentar yang mudah, sederhana dan ringan.
-image: https://cdn.pixabay.com/photo/2019/04/25/00/35/german-4153622_960_720.jpg
 category: Teknologi
-tags:
-  - Graphcomment
-  - Sistem komentar
+tags: Graphcomment, Sistem komentar
 ---
 
 Sebelumnya aku telah menulis [catatan tentang Webmention](https://dan.my.id/6-komentar-blog-statis-dengan-webmention). Namun satu kekurangannya adalah, itu hanya dapat menggunakan satu Webmention untuk satu akun media sosial kita. Karena syaratnya akun kita itu harus mencantumkan alamat link ke web kita yang menggunakan Webmention.

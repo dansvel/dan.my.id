@@ -1,13 +1,8 @@
 ---
 title: Iseng
-description: Ketika ide, waktu, dan penasaran bertemu
-image: https://cdn.pixabay.com/photo/2015/05/15/15/00/building-768815_960_720.jpg
 date: 2021-03-29
-tags:
-  - Belajar pemrograman
-  - Latihan
-  - Javascript
-  - Proyek belajar membuat aplikasi
+description: Ketika ide, waktu, dan penasaran bertemu
+tags: Belajar pemrograman, Latihan, Javascript, Membuat aplikasi
 ---
 
 Seperti halnya aku yang terinspirasi dari yang dilakukan orang lain, barangkali beberapa keisenganku dapat menjadi ide maupun refrensi belajar. Dan entah bagaimana kembali lagi menjadi masukan untukku.

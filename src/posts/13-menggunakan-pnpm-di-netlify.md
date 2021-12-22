@@ -2,11 +2,8 @@
 title: Menggunakan PNPM di Netlify
 date: 2021-09-29
 description: PNPM itu keren, sayangnya Netlify belum menyediakannya secara default. Mari kita akalin.
-image: https://cdn.statically.io/og/theme=dark/Menggunakan%20PNPM%20di%20Netlify.png
 category: Teknologi
-tags:
-  - Package manager
-  - Deploy
+tags: Package manager, Deploy
 ---
 
 Aku menggunakan PNPM di laptopku untuk pengembangan, namun [Netlify hanya mendukung NPM, Yarn, dan Bower](https://docs.netlify.com/configure-builds/manage-dependencies/#javascript-dependencies) dan belum ada rencana menambahkan PNPM ke depannya.

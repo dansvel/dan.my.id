@@ -1,8 +1,8 @@
 ---
 title: Apa ini?
-description: Tentang blog ini dan penciptanya
-image: https://avatars.githubusercontent.com/u/48936611?s=460&u=ab165eb0208f0de8b191af271505e20645ba75c0&v=4
 date: 2021-01-16
+description: Tentang blog ini dan penciptanya
+image: /images/me.png
 ---
 
 Memperkenalkan diri hanya dapat dilakukan jika orang telah mengenal dirinya sendiri lebih dahulu. Jadi, ini bukan perkenalan, ini hanya catatan bagaimana aku mencoba mengenali diriku.

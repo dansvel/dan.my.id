@@ -2,12 +2,8 @@
 title: Macapat Dhandhanggula Semut Ireng
 date: 2021-04-02
 description: Sebuah renungan yang penuh makna dalam lagu pengantar tidur
-image: https://cdn.pixabay.com/photo/2012/03/04/01/01/father-22194_960_720.jpg
 category: Manusia
-tags:
-  - Lagu
-  - Macapat
-  - Jawa
+tags: Lagu, Macapat, Jawa
 ---
 
 Dulu ketika kecil, bapakku menyanyikan aku dengan tembang ini. Aku yang masih kecil itu hanya menikmati suaranya dan meninggalkannya dalam lelap. Entah apa maksud dari lagu itu.
