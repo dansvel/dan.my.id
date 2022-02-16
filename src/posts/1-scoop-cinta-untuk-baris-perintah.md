@@ -1,9 +1,13 @@
 ---
-title: Scoop, cinta untuk baris perintah
-date: 2020-04-09
-description: Sebuah baris-perintah manajemen paket aplikasi untuk Windows. Dengan segala kesederhanaan, keindahan dan kekuatan yang dimiliki. Para pengembang yang menggunakan Windows setidaknya harus mencoba mengenalnya.
+title: 'Scoop, cinta untuk baris perintah'
+date: {}
+description: >-
+  Sebuah baris-perintah manajemen paket aplikasi untuk Windows. Dengan segala
+  kesederhanaan, keindahan dan kekuatan yang dimiliki. Para pengembang yang
+  menggunakan Windows setidaknya harus mencoba mengenalnya.
 category: Teknologi
-tags: Terminal, Package manager, Windows, Scoop
+tags: 'Terminal, Package manager, Windows, Scoop'
+published: true
 ---
 
 Berapa banyak langkah yang kamu butuhkan untuk memasang perangkat lunak. Kamu berpikir sekedar klik tidaklah sesulit itu.
@@ -15,7 +19,7 @@ Namun CMD... tidak sehebat itu. Kita sepakat saja, CMD itu payah.
 
 Untuk menenagainya aku sempat mencoba [Chocolatey](https://chocolatey.org/) untuk menyiapkan lingkungan pengembang di Windows. Namun masih terasa ribet , jadi aku berhenti menggunakannya.
 
-## Apa itu Scoop?
+## Apa itu Scoop??
 
 [**Scoop**](https://scoop.sh/) juga CLI pemasang untuk Windows. Scoop lebih sederhana dan indah, tepat seperti yang aku butuhkan. Aku pikir setiap pengembang yang menggunakan Windows sebagai sistem operasi utama mereka perlu mencoba Scoop.
 
