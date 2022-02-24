@@ -7,7 +7,7 @@
 
 <div class="typography">
   {#if title}
-    <div />
+    <div></div>
     <h2>{title}</h2>
   {/if}
 
@@ -15,22 +15,22 @@
     {#each posts as post}
       <article>
         <h4>
-          {#if post.draft}
-            {post.title}
-          {:else}
+          <!--{#if post.draft}-->
+          <!--  {post.title}-->
+          <!--{:else}-->
             <a href="/catatan/{post.slug}">{post.title}</a>
-          {/if}
+          <!--{/if}-->
         </h4>
 
         <p>
           <time datetime={post.date}>{localDate.format(new Date(post.date))}</time>
           <span>
             {#each post.tags.sort() as tag}
-              {#if post.draft}
-                <span class="disabled-button">{tag}</span>
-              {:else}
+              <!--{#if post.draft}-->
+              <!--  <span class="disabled-button">{tag}</span>-->
+              <!--{:else}-->
                 <a href="/catatan/label/{slugger(tag)}" class="button">{tag}</a>
-              {/if}
+              <!--{/if}-->
             {/each}
           </span>
         </p>

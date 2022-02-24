@@ -12,10 +12,10 @@ const config = {
   preprocess: [preprocess(), mdsvex(mdsvexConfig)],
   kit: {
     adapter: adapter(),
-    browser: {
-      hydrate: false,
-      router: false,
-    },
+    // browser: {
+      // hydrate: false,
+      // router: false,
+    // },
     prerender: {
       onError: 'continue',
     },
