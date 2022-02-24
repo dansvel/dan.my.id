@@ -7,7 +7,7 @@
   $: {
     console.log($page.url.pathname)
     target = `https://dan.my.id${$page.url.pathname}`
-    tweet = `Menurutku... %0A%0A@dansvel ${target}`
+    tweet = `%0A%0ACatatan menarik dari @dansvel ${target}`
   }
 
   onMount(() => {
