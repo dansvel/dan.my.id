@@ -18,7 +18,7 @@
 
   $: for (const path in files) {
     if ($page.params.slug === path.split('/').pop().slice(0, -3)) {
-      content = files[path]
+      content = !files[path].metadata.draft && files[path]
     }
   }
 </script>

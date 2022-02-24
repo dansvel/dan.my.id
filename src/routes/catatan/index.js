@@ -7,10 +7,11 @@ export const get = async () => {
   for (const path in files) {
     if (path.split('/').pop().match(/\.md$/)) {
       const { metadata } = files[path]
-      posts.push({
-        slug: path.split('/').pop().slice(0, -3),
-        ...metadata,
-      })
+      if (!metadata.draft)
+        posts.push({
+          slug: path.split('/').pop().slice(0, -3),
+          ...metadata,
+        })
     }
   }
   let tags = posts.map(post => post.tags)
