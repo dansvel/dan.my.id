@@ -47,13 +47,15 @@
     <p>{content.metadata.description}</p>
   </header>
   <svelte:component this={content.default} />
+  <!-- prettier-ignore -->
+  <div></div>
 </article>
 
 <Webmention />
 
 <style lang="postcss">
   header {
-    @apply mb-2 border-b-2 border-gray-500;
+    @apply border-b-2 border-light-900 dark:border-dark-100;
 
     p {
       a {

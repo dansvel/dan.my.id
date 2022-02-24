@@ -13,7 +13,7 @@
   
   <p>
     Halaman ini seharusnya bersisi pagination seperti <code>dan.myid/catatan/2</code>, namun aku
-    menemukan bug pada Sveltekit dan membahasnya pada channel Discord, lalu seseorang membuatkaan
+    menemukan bug pada Sveltekit dan membahasnya pada channel Discord, lalu seseorang membuatkan
     issue
     <a href="https://github.com/sveltejs/kit/issues/4038" rel="noopener external"
     >https://github.com/sveltejs/kit/issues/4038</a

@@ -31,18 +31,9 @@
 </script>
 
 <section class="typography">
-  <div />
+  <!-- prettier-ignore -->
+  <div></div>
   <h2>Beri tanggapan</h2>
-  <!--  <p>-->
-  <!--    Berikan komentar dengan cara-->
-  <!--    <a-->
-  <!--      href="https://twitter.com/intent/tweet/?text={tweet}"-->
-  <!--      rel="noopener external"-->
-  <!--      class="button"-->
-  <!--    >-->
-  <!--      nge-Twit-->
-  <!--    </a>-->
-  <!--  </p>-->
 
   {#await mentions}
     <blockquote>loading...</blockquote>
@@ -186,7 +177,7 @@
     @apply mx-1 bg-light-700 dark:bg-dark-300;
   }
   section {
-    @apply my-20 border-t-2 border-light-900 dark:border-dark-100;
+    @apply border-t-2 border-light-900 dark:border-dark-100;
   }
 
   .avatar {
