@@ -24,7 +24,6 @@ const config = {
         include: ['highlight.js/lib/core'],
       },
       plugins: [
-        // markdown({ markedOptions }),
         WindiCSS(),
       ],
       resolve: {

@@ -18,11 +18,11 @@ export default {
         'b-5': '0 5px rgba(0, 0, 0, 0.05)',
       },
       colors: myColors,
-      fontFamily: {
-        sans: 'Calibri, ui-sans-serif',
-        mono: 'Consolas, ui-sans',
-        serif: 'Cambria, ui-monospace',
-      },
+      // fontFamily: {
+      //   sans: 'Calibri, ui-sans-serif',
+      //   mono: 'Consolas, ui-sans',
+      //   serif: 'Cambria, ui-monospace',
+      // },
       ringColor: myColors,
       shadowColors: myColors,
     },
