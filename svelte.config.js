@@ -23,9 +23,7 @@ const config = {
       optimizeDeps: {
         include: ['highlight.js/lib/core'],
       },
-      plugins: [
-        WindiCSS(),
-      ],
+      plugins: [WindiCSS()],
       resolve: {
         alias: {
           $content: resolve('./src/content'),
