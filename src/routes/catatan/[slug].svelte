@@ -24,7 +24,7 @@
 </script>
 
 <SeoHead
-  url="catatan/{$page.params.slug}"
+  url="/catatan/{$page.params.slug}"
   title={content.metadata.title}
   description={content.metadata.description}
   tags={content.metadata.tags}
