@@ -14,6 +14,7 @@
     "@sveltejs/kit": "next",
     "highlight.js": "^11.4.0",
     "highlightjs-svelte": "^1.0.6",
+    "html-minifier": "^4.0.0",
     "mdsvex": "^0.10.5",
     "prettier": "^2.5.1",
     "prettier-plugin-svelte": "^2.6.0",
