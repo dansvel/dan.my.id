@@ -1,6 +1,11 @@
 [build]
-  command = "npm run build"
+  command = "pnpm build || ( npm install pnpm && pnpm build )"
   publish = "build"
+  NODE_ENV = "production"
+  NODE_VERSION = "16.14.0"
+  GO_VERSION = false
+  RUBY_VERSION = false
+  PYTHON_VERSION = false
 
 #[[redirects]]
 #  status = 404

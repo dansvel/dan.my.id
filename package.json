@@ -1,6 +1,6 @@
 {
-  "name": "blog",
-  "version": "0.0.1",
+  "name": "dan.my.id",
+  "version": "2.0.2",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
@@ -22,6 +22,7 @@
     "rehype-figure": "^1.0.1",
     "rehype-slug": "^5.0.1",
     "rehype-stringify": "^9.0.3",
+    "rss": "^1.2.2",
     "svelte": "^3.44.0",
     "svelte-preprocess": "^4.10.3",
     "vite": "^2.8.4",
