@@ -1,21 +1,39 @@
 import adapter from '@sveltejs/adapter-static'
-import markdown from '@dansvel/vite-plugin-markdown'
+import { resolve } from 'path'
 import preprocess from 'svelte-preprocess'
 import WindiCSS from 'vite-plugin-windicss'
 
-import markedOptions from './marked.config.js'
+import { mdsvex } from 'mdsvex'
+import mdsvexConfig from './mdsvex.config.js'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-  preprocess: [preprocess()],
+  extensions: ['.svelte', '.md'],
+  preprocess: [preprocess(), mdsvex(mdsvexConfig)],
   kit: {
     adapter: adapter(),
-    router: false,
-    target: '#svelte',
+    browser: {
+      hydrate: false,
+      // router: false
+    },
+    prerender: {
+      onError: 'continue',
+    },
     vite: () => ({
-      plugins: [markdown({ markedOptions }), WindiCSS()]
-    })
-  }
+      optimizeDeps: {
+        include: ['highlight.js/lib/core'],
+      },
+      plugins: [
+        // markdown({ markedOptions }),
+        WindiCSS(),
+      ],
+      resolve: {
+        alias: {
+          $content: resolve('./src/content'),
+        },
+      },
+    }),
+  },
 }
 
 export default config

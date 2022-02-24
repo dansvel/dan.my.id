@@ -1,12 +1,13 @@
 <script>
   import { onMount } from 'svelte'
-  import { localDate } from './util'
+  import { localDateTime } from './util'
   import { page } from '$app/stores'
 
   let target, mentions, tweet
   $: {
-    target = `https://dan.my.id${$page.path}`
-    tweet = `Catatan menarik dari @dansvel ${target}`
+    console.log($page.url.pathname)
+    target = `https://dan.my.id${$page.url.pathname}`
+    tweet = `Menurutku... %0A%0A@dansvel ${target}`
   }
 
   onMount(() => {
@@ -14,57 +15,86 @@
       `https://webmention.io/api/mentions.jf2?sort-by=published&sort-dir=up&target=${target}/`
     )
       .then(res => res.json())
-      .then(x => {
-        const likes = x.children.filter(x => x['wm-property'] === 'like-of')
-        const retweets = x.children.filter(x => x['wm-property'] === 'repost-of')
-        const replies = x.children.filter(
-          x => x['wm-property'] === 'mention-of' || x['wm-property'] === 'in-reply-to'
+      .then(wms => {
+        const likes = wms.children.filter(wm => wm['wm-property'] === 'like-of')
+        const retweets = wms.children.filter(wm => wm['wm-property'] === 'repost-of')
+        const replies = wms.children.filter(
+          wm => wm['wm-property'] === 'mention-of' || wm['wm-property'] === 'in-reply-to'
         )
-        return { likes, retweets, replies }
+        const tweetId = wms.children
+          .find(x => x['wm-property'] === 'like-of')
+          ?.url.match(/[0-9]+/)[0]
+        console.log('tweetId ', tweetId)
+        return { likes, retweets, replies, tweetId }
       })
   })
 </script>
 
-<section>
-  <h2>Webmention, menanggapi dengan ❤️</h2>
-  <p>
-    Ingin bertanya atau menanggapi?
-    <a
-      href="https://twitter.com/intent/tweet/?text={tweet}"
-      target="_blank"
-      rel="noopener">Cuitkan di Twitter</a
-    >, itu akan muncul disini.
-  </p>
-  <pre>
-    <a href="/6-komentar-blog-statis-dengan-webmention">
-      <code>Apa itu Webmention?</code>
-    </a>
-  </pre>
+<section class="typography">
+  <div />
+  <h2>Beri tanggapan</h2>
+  <!--  <p>-->
+  <!--    Berikan komentar dengan cara-->
+  <!--    <a-->
+  <!--      href="https://twitter.com/intent/tweet/?text={tweet}"-->
+  <!--      rel="noopener external"-->
+  <!--      class="button"-->
+  <!--    >-->
+  <!--      nge-Twit-->
+  <!--    </a>-->
+  <!--  </p>-->
 
   {#await mentions}
     <blockquote>loading...</blockquote>
   {:then data}
     {#if data !== undefined}
-      {#if !data.likes.length && !data.retweets.length && !data.replies.length}
-        <blockquote>Jadilah yang pertamax memberi tanggapan.</blockquote>
-      {/if}
+      <blockquote>
+        {#if !data.likes.length && !data.retweets.length && !data.replies.length}
+          <p>
+            Jadilah yang pertamax
+            <a
+              href="https://twitter.com/intent/tweet/?text={tweet}"
+              rel="noopener external"
+              class="button"
+            >
+              memberi tanggapan
+            </a>
+          </p>
+        {/if}
+
+        {#if data.tweetId}
+          <p>
+            Retweet, beri ❤️, atau balas langsung di
+            <a
+              href="https://twitter.com/dansvel/status/{data.tweetId}"
+              rel="noopener external"
+              class="button"
+            >
+              Tweet-ku
+            </a>
+          </p>
+          <p>
+            Atau sekedar
+            <a
+              href="https://twitter.com/intent/tweet/?text={tweet}"
+              rel="noopener external"
+              class="button"
+            >
+              beri komentar
+            </a>
+          </p>
+        {/if}
+      </blockquote>
 
       {#if data.likes.length}
         <h3>Suka</h3>
-        <ul>
+        <ul id="likes">
           {#each data.likes as like}
             <li>
-              <a
-                href={like.url}
-                target="_blank"
-                rel="noopener external"
-                title={like.author.name}
-              >
+              <a href={like.url} rel="noopener external" title={like.author.name} class="avatar">
                 <img
                   src={like.author.photo ?? '/images/default-avatar.png'}
                   alt={like.author.name}
-                  width="48"
-                  height="48"
                   loading="lazy"
                 />
               </a>
@@ -75,20 +105,18 @@
 
       {#if data.retweets.length}
         <h3>Retweet</h3>
-        <ul>
+        <ul id="retweets">
           {#each data.retweets as retweet}
             <li>
               <a
-                target="_blank"
                 href={retweet.url}
                 rel="noopener external"
                 title={retweet.author.name}
+                class="avatar"
               >
                 <img
                   src={retweet.author.photo ?? '/images/default-avatar.png'}
                   alt={retweet.author.name}
-                  width="48"
-                  height="48"
                   loading="lazy"
                 />
               </a>
@@ -99,40 +127,36 @@
 
       {#if data.replies.length}
         <h3>Balasan</h3>
-        <ul class="replies">
+        <ul id="replies">
           {#each data.replies as message}
             <li>
-              <div class="avatar">
-                <a
-                  href={message.url}
-                  target="_blank"
-                  rel="noopener external"
-                  title={message.author.name}
-                >
-                  <img
-                    src={message.author.photo ?? '/images/default-avatar.png'}
-                    alt={message.author.name}
-                    width="48"
-                    height="48"
-                    loading="lazy"
-                  />
-                </a>
-              </div>
+              <!--              <div class="avatar">-->
+              <a
+                href={message.url}
+                rel="noopener external"
+                class="avatar"
+                title={message.author.name}
+              >
+                <img
+                  src={message.author.photo ?? '/images/default-avatar.png'}
+                  alt={message.author.name}
+                  loading="lazy"
+                />
+              </a>
+              <!--              </div>-->
               <div class="message">
-                <div class="meta">
-                  <strong
-                    >{message.author.name}
-                    <span
-                      >@{message.author.url.replace(/https:\/\/twitter.com\//i, '')}</span
-                    >
+                <p class="meta">
+                  {message.author.name}
+                  <strong>
+                    @{message.author.url.replace(/https:\/\/twitter.com\//i, '')}
                   </strong>
-                  <small>{localDate(message.published, true)}</small>
-                </div>
+                  <time>{localDateTime.format(new Date(message.published))}</time>
+                </p>
                 {@html message.content.html
                   .replace(/\n<a class="u-mention".+><\/a>/gim, '')
                   .replace(
                     /<a href=\\"https:\/\/(?!dan\.my\.id)/gim,
-                    '<a target="_blank" rel="noopener external" href="https://'
+                    '<a rel="noopener external" href="https://'
                   )
                   .replace(/\n/gim, '<br />')}
               </div>
@@ -141,58 +165,67 @@
         </ul>
       {/if}
     {/if}
+  {:catch error}
+    <blockquote>
+      <p>
+        Oops, sepertinya kamu sedang luring. Jangan lupa
+        <a
+          href="https://twitter.com/intent/tweet/?text={tweet}"
+          rel="noopener external"
+          class="button"
+        >
+          beri komentar
+        </a> jika koneksi internetmu kembali.
+      </p>
+    </blockquote>
   {/await}
 </section>
 
 <style lang="postcss">
+  a.button {
+    @apply mx-1 bg-light-700 dark:bg-dark-300;
+  }
   section {
-    @apply mb-5 border-t-2 border-gray-400 dark::border-gray-600;
+    @apply my-20 border-t-2 border-light-900 dark:border-dark-100;
   }
 
-  ul:not(.replies) {
-    @apply flex flex-wrap list-none p-0;
-    li {
-      @apply m-1;
-      a {
-        @apply text-gray-500 no-underline border-0;
-        img {
-          @apply border-b border-gray-400 dark::border-gray-600 m-0
-          rounded-full;
-          &:hover {
-            box-shadow: 0 0 5px 2px;
-          }
-        }
-      }
+  .avatar {
+    @apply rounded-full w-12 h-12 ring-offset-2 ring-2 ring-offset-dark-500 ring-lightgreen;
+    @apply hover:ring-4;
+    img {
+      @apply rounded-full m-0;
     }
   }
-  ul.replies {
-    @apply mt-2 p-0;
+
+  ul {
     li {
-      @apply py-2 flex flex-row;
-      .avatar {
-        @apply w-12 h-auto
-        flex flex-grow-0 flex-shrink-0 justify-center;
-        a {
-          @apply text-gray-500 no-underline border-0;
+      @apply p-0;
+      &::before {
+        content: none;
+      }
+    }
+    &#likes,
+    &#retweets {
+      @apply flex flex-wrap;
+      li {
+        @apply flex -mr-3 my-2;
+      }
+      a {
+        @apply m-0 shadow-none;
+      }
+    }
+    &#replies {
+      @apply flex flex-col space-y-6;
+      li {
+        @apply flex space-x-8;
+        .avatar {
+          @apply mt-4 ml-2 w-12 flex-shrink-0;
         }
-        img {
-          @apply border-2 border-gray-400 dark::border-gray-600 m-0
-          rounded-full w-max object-contain object-top;
-          &:hover {
-            box-shadow: 0 0 5px 2px;
+        .message {
+          @apply m-0 w-full;
+          .meta {
+            @apply m-0;
           }
-        }
-      }
-      .message {
-        @apply h-full px-4;
-        p {
-          @apply mt-2 mb-0 text-base;
-        }
-      }
-      .meta {
-        span,
-        small {
-          @apply text-gray-500;
         }
       }
     }

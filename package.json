@@ -1,6 +1,6 @@
 {
-  "name": "dan.my.id",
-  "version": "2.0.0",
+  "name": "blog",
+  "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
@@ -10,18 +10,23 @@
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
   },
   "devDependencies": {
-    "@dansvel/vite-plugin-markdown": "^2.0.2",
-    "@sveltejs/adapter-static": "^1.0.0-next.21",
+    "@sveltejs/adapter-static": "next",
     "@sveltejs/kit": "next",
-    "highlight.js": "^11.3.1",
+    "highlight.js": "^11.4.0",
     "highlightjs-svelte": "^1.0.6",
-    "marked": "^4.0.7",
+    "mdsvex": "^0.10.5",
     "prettier": "^2.5.1",
-    "prettier-plugin-svelte": "^2.5.1",
-    "rss": "^1.2.2",
-    "svelte": "^3.44.3",
-    "svelte-preprocess": "^4.10.0",
-    "vite-plugin-windicss": "^1.5.4"
+    "prettier-plugin-svelte": "^2.6.0",
+    "rehype-autolink-headings": "^6.1.1",
+    "rehype-external-links": "^1.0.1",
+    "rehype-figure": "^1.0.1",
+    "rehype-slug": "^5.0.1",
+    "rehype-stringify": "^9.0.3",
+    "svelte": "^3.44.0",
+    "svelte-preprocess": "^4.10.3",
+    "vite": "^2.8.4",
+    "vite-plugin-windicss": "^1.7.1",
+    "windicss": "^3.4.3"
   },
   "type": "module"
 }

@@ -1,42 +1,23 @@
 <script>
-  import BlogList from '$lib/BlogList.svelte'
-  import content from './index.md'
-  import { arrSortBy } from '$lib/util'
+  import { default as content, metadata } from '$content/index.md'
+  import PostList from '$lib/PostList.svelte'
+  import Pagination from '$lib/Pagination.svelte'
   import SeoHead from '$lib/SeoHead.svelte'
 
-  const files = import.meta.globEager('../posts/*.md')
-  const posts = []
-
-  for (const path in files) {
-    if (path.split('/').pop().match(/^\d/)) {
-      const { attributes } = files[path]
-      posts.push({
-        url: path.split('/').pop().split('.').shift(),
-        ...attributes
-      })
-    }
-  }
+  const { title, description, image } = metadata
+  export let posts = []
+  export let morePosts
 </script>
 
 <SeoHead />
 
-<header>
-  <h1>{content.attributes.title}</h1>
-  <p>{content.attributes.subtitle}</p>
-</header>
-{@html content.body}
+<article class="typography">
+  <header>
+    <h1>{title}</h1>
+  </header>
+  <svelte:component this={content} />
+</article>
 
-<hr />
-<BlogList blogs={arrSortBy(posts, 'url', { asc: false, natural: true })} />
+<PostList {posts} title="Catatan terbaru" />
 
-<style lang="postcss">
-  header {
-    @apply py-5 text-center mb-2;
-    h1 {
-      @apply my-1;
-    }
-    p {
-      @apply text-large;
-    }
-  }
-</style>
+<Pagination {morePosts} currentPage={1} path="catatan" />

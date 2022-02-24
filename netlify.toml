@@ -2,12 +2,12 @@
   command = "npm run build"
   publish = "build"
 
-[[redirects]]
-  status = 404
-  from = "/*"
-  to = "/404/"
-
-[[redirects]]
-  status = 500
-  from = "/*"
-  to = "/500/"
+#[[redirects]]
+#  status = 404
+#  from = "/*"
+#  to = "/404/"
+#
+#[[redirects]]
+#  status = 500
+#  from = "/*"
+#  to = "/500/"

@@ -1,16 +1,21 @@
 <script>
   import { page } from '$app/stores'
+  import {
+    siteTitle,
+    siteDescription,
+    siteURL,
+    siteAuthor as author,
+    siteImage,
+  } from '$lib/config.js'
+
   export let url
-  export let title = 'Blog milik Dan'
-  export let description = 'Catatan perjalanan setengah manusia'
-  export let tags = ''
-  export let image = '/images/perjalanan-setengah-manusia.png'
+  export let title = siteTitle
+  export let description = siteDescription
+  export let tags = []
+  export let image = siteImage
 
-  const author = 'Dan'
-  const host = 'https://dan.my.id'
-
-  url = host + (url ?? $page.path)
-  image = image.startsWith('http') ? image : host + image
+  url = siteURL + (url ?? $page.url.pathname)
+  image = image.startsWith('http') ? image : siteURL + image
 </script>
 
 <svelte:head>
@@ -18,7 +23,7 @@
   <title>{title}</title>
   <meta name="title" content={title} />
   <meta name="description" content={description} />
-  <meta name="keywords" content={tags} />
+  <meta name="keywords" content={tags.join(', ')} />
   <meta name="author" content={author} />
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
