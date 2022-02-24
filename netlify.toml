@@ -3,11 +3,7 @@
   publish = "build"
 
 [build.environment ]
-  NODE_ENV = "production"
   NODE_VERSION = "16.14.0"
-  GO_VERSION = false
-  RUBY_VERSION = false
-  PYTHON_VERSION = false
 
 [build.processing]
   skip_processing = false
