@@ -28,7 +28,7 @@
   title={content.metadata.title}
   description={content.metadata.description}
   tags={content.metadata.tags}
-  image="https://cdn.statically.io/og/theme=dark/{content.metadata.title}"
+  image="https://cdn.statically.io/og/{content.metadata.title}"
 />
 
 <article class="typography">
