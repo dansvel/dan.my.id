@@ -1,5 +1,4 @@
 <script>
-  import { page } from '$app/stores'
   import {
     siteTitle,
     siteDescription,
@@ -8,13 +7,13 @@
     siteImage,
   } from '$lib/config.js'
 
-  export let url
+  export let url = ''
   export let title = siteTitle
   export let description = siteDescription
   export let tags = []
   export let image = siteImage
 
-  url = siteURL + (url ?? $page.url.pathname)
+  url = siteURL + url
   image = image.startsWith('http') ? image : siteURL + image
 </script>
 

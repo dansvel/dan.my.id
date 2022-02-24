@@ -121,7 +121,6 @@
         <ul id="replies">
           {#each data.replies as message}
             <li>
-              <!--              <div class="avatar">-->
               <a
                 href={message.url}
                 rel="noopener external"
@@ -134,7 +133,6 @@
                   loading="lazy"
                 />
               </a>
-              <!--              </div>-->
               <div class="message">
                 <p class="meta">
                   {message.author.name}
