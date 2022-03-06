@@ -1,3 +1,14 @@
+<script context="module">
+  import { get as getPosts } from '../_index'
+
+  /** @type {import('@sveltejs/kit').Load} */
+  export const load = async () => {
+    let { tags } = await getPosts()
+
+    return { props: { tags } }
+  }
+</script>
+
 <script>
   import TagsCloud from '$lib/TagsCloud.svelte'
   export let tags

@@ -1,26 +1,28 @@
 <script context="module">
-  export function load({ params }) {
+  /** @type {import('@sveltejs/kit').Load} */
+  export const load = async ({ params }) => {
     if (params.slug.match(/^\d+$/)) return { fallthrough: true }
 
-    return true
+    const files = import.meta.glob('../../content/posts/*.md')
+
+    let content
+    for (const path in files) {
+      if (path.match(params.slug)) content = await files[path]()
+    }
+
+    if (content && !content.metadata.draft) return { props: { content } }
+
+    return { status: 404 }
   }
 </script>
 
 <script>
   import { page } from '$app/stores'
-  // import SeoHead from '$lib/SeoHead.svelte'
-  import { localDate, slugger } from '$lib/util.js'
+  import { localDate, slugger } from '$lib/util'
   import Webmention from '$lib/Webmention.svelte'
   import SeoHead from '$lib/SeoHead.svelte'
 
-  const files = import.meta.globEager('../../content/posts/*.md')
-  let content
-
-  $: for (const path in files) {
-    if ($page.params.slug === path.split('/').pop().slice(0, -3)) {
-      content = !files[path].metadata.draft && files[path]
-    }
-  }
+  export let content
 </script>
 
 <SeoHead

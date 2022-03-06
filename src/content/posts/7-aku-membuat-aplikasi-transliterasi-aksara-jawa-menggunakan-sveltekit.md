@@ -6,6 +6,10 @@ category: Teknologi
 tags: [Aplikasi, Svelte, Aksara, Jawa]
 ---
 
+<script>
+import Youtube from '$lib/Youtube.svelte'
+</script>
+
 Awalnya aku menulis aksara Jawa di laptop menggunakan papan ketik bawaan dari _Windows 10_, aku hanya memasangnya lalu menggunakannya dengan menekan `Win` + `.`. Itu sudah berlangsung satu tahun lebih.
 
 Memang sih aku telah menemukan aplikasi semacam ini di internet, namun hasilnya kurang memuaskanku. Hingga aku bertemu Svelte.
@@ -25,6 +29,8 @@ Lalu dari hasil regex berbentuk array tadi, aku konversi setiap hurufnya dengan 
 Karena tujuannya hanya itu, jadi aku terlalu malas mendesain aplikasinya, lalu hanya kutambahkan halaman petunjuk dan halaman tentang.
 
 ## Aplikasinya bernama **Hana**
+
+<Youtube id="dl-vxkR81S8"/>
 
 Langsung saja coba aplikasinya di dengan mengunjungi situs https://hana.rip/
 

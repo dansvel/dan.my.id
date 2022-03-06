@@ -5,7 +5,6 @@
 
   let target, mentions, tweet
   $: {
-    console.log($page.url.pathname)
     target = `https://dan.my.id${$page.url.pathname}`
     tweet = `%0A%0ACatatan menarik dari @dansvel ${target}`
   }
@@ -24,7 +23,7 @@
         const tweetId = wms.children
           .find(x => x['wm-property'] === 'like-of')
           ?.url.match(/[0-9]+/)[0]
-        console.log('tweetId ', tweetId)
+
         return { likes, retweets, replies, tweetId }
       })
   })
@@ -36,10 +35,14 @@
   <h2>Beri tanggapan</h2>
 
   {#await mentions}
-    <blockquote>loading...</blockquote>
+    <blockquote>
+      <p>Menanggapi dan berkomentar melalui Twitter</p>
+      <p>loading...</p>
+    </blockquote>
   {:then data}
     {#if data !== undefined}
       <blockquote>
+        <p>Menanggapi dan berkomentar melalui Twitter</p>
         {#if !data.likes.length && !data.retweets.length && !data.replies.length}
           <p>
             Jadilah yang pertamax
@@ -55,16 +58,9 @@
 
         {#if data.tweetId}
           <p>
-            Retweet, beri ❤️, atau balas langsung di
-            <a
-              href="https://twitter.com/dansvel/status/{data.tweetId}"
-              rel="noopener external"
-              class="button"
-            >
-              Tweet-ku
+            <a href="https://twitter.com/dansvel/status/{data.tweetId}" rel="noopener external">
+              Retweet, beri ❤️, atau balas Tweet-ku.
             </a>
-          </p>
-          <p>
             Atau sekedar
             <a
               href="https://twitter.com/intent/tweet/?text={tweet}"
@@ -72,6 +68,16 @@
               class="button"
             >
               beri komentar
+            </a>
+          </p>
+        {:else}
+          <p>
+            <a
+              href="https://twitter.com/intent/tweet/?text={tweet}"
+              rel="noopener external"
+              class="button"
+            >
+              Beri komentar
             </a>
           </p>
         {/if}
@@ -179,8 +185,8 @@
   }
 
   .avatar {
-    @apply rounded-full w-12 h-12 ring-offset-2 ring-2 ring-offset-dark-500 ring-lightgreen;
-    @apply hover:ring-4;
+    @apply rounded-full w-12 h-12 ring-offset-2 ring-2 ring-offset-dark-500 ring-lightgreen hover:ring-4;
+    @apply bg-light-500 dark:bg-dark-500;
     img {
       @apply rounded-full m-0;
     }

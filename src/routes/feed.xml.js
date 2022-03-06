@@ -1,11 +1,11 @@
 import RSS from 'rss'
-import { siteTitle, siteDescription, siteURL } from '$lib/config.js'
+import { site } from '$lib/config'
 
 export const get = () => {
   const feed = new RSS({
-    title: siteTitle,
-    description: siteDescription,
-    site_url: siteURL,
+    title: site.title,
+    description: site.description,
+    site_url: site.url,
     language: 'id',
   })
 
@@ -22,7 +22,7 @@ export const get = () => {
         feed.item({
           title: metadata.title,
           description: metadata.description,
-          url: siteURL + '/' + path.split('/').pop().slice(0, -3),
+          url: site.url + '/' + path.split('/').pop().slice(0, -3),
           date: metadata.date,
         })
       }

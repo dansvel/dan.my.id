@@ -7,6 +7,7 @@
 
 <div class="typography">
   {#if title}
+    <!-- prettier-ignore -->
     <div></div>
     <h2>{title}</h2>
   {/if}

@@ -8,12 +8,14 @@
   {#if currentPage > 1}
     <a sveltekit:prefetch href="/{path}/{currentPage - 1}" class="button"> Lebih baru </a>
   {:else}
+    <!-- prettier-ignore -->
     <div></div>
   {/if}
 
   {#if morePosts}
     <a sveltekit:prefetch href="/{path}/{currentPage + 1}" class="button"> Lebih lawas </a>
   {:else}
+    <!-- prettier-ignore -->
     <div></div>
   {/if}
 </nav>

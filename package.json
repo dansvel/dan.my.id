@@ -11,7 +11,7 @@
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
   },
   "devDependencies": {
-    "@sveltejs/adapter-static": "next",
+    "@sveltejs/adapter-static": "^1.0.0-next.29",
     "@sveltejs/kit": "next",
     "highlight.js": "^11.4.0",
     "highlightjs-svelte": "^1.0.6",
@@ -26,10 +26,10 @@
     "rehype-stringify": "^9.0.3",
     "rss": "^1.2.2",
     "svelte": "^3.44.0",
-    "svelte-preprocess": "^4.10.3",
-    "vite": "^2.8.4",
+    "svelte-preprocess": "^4.10.4",
+    "vite": "^2.8.6",
     "vite-plugin-windicss": "^1.7.1",
-    "windicss": "^3.4.3"
+    "windicss": "^3.5.1"
   },
   "type": "module"
 }

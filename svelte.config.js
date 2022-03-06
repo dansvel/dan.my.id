@@ -13,11 +13,12 @@ const config = {
   kit: {
     adapter: adapter(),
     // browser: {
-      // hydrate: false,
-      // router: false,
+    // hydrate: false,
+    // router: false,
     // },
     prerender: {
-      onError: 'continue',
+      // onError: 'continue',
+      default: true,
     },
     vite: () => ({
       optimizeDeps: {

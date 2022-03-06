@@ -1,12 +1,19 @@
 // main configuration of your site
-export const siteTitle = 'Blog milik Dan'
-export const siteDescription = 'Catatan perjalanan setengah manusia'
-export const siteURL = 'https://dan.my.id' // full url starts with http
-export const siteAuthor = 'dan'
-export const siteImage = '/images/catatan-perjalanan-setengah-manusia.png'
-
+export const site = {
+  title: '',
+  description: 'Powered by SvelteKit/Urara', // description
+  lang: 'id-ID', // language
+  author: {
+    name: 'Dan', // author name
+    avatar: '/images/me.png', // author image
+    // status: '🌸', // author status
+    // bio: 'lorem ipsum dolor sit amet, consectetur adipiscing elit.', // author bio
+  },
+  url: 'https://dan.my.id',
+  image: 'images/perjalanan-setengah-manusia.png',
+}
 // Controls how many posts are shown per page on the pagination
-export const postsPerPage = 99
+export const postsPerPage = 9
 
 // Edit this to alter the main nav menu.
 export const navItems = [

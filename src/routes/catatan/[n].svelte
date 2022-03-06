@@ -1,8 +1,28 @@
 <script context="module">
-  export function load({ params }) {
+  import { get as getPosts } from './_index'
+  import { postsPerPage } from '$lib/config'
+
+  /** @type {import('@sveltejs/kit').Load} */
+  export async function load({ params }) {
     if (!params.n.match(/^\d+$/)) return { fallthrough: true }
 
-    return true
+    if (parseInt(params.n) === 1)
+      return {
+        redirect: '/',
+        status: 301,
+      }
+
+    let { posts, tags } = await getPosts()
+
+    const morePosts = posts.length - params.n * postsPerPage > 0
+    posts = posts.slice(params.n * postsPerPage - postsPerPage, params.n * postsPerPage)
+
+    if (posts.length)
+      return {
+        props: { morePosts, posts, tags },
+      }
+
+    return { status: 404 }
   }
 </script>
 
@@ -15,10 +35,6 @@
   export let morePosts
   export let posts = []
   export let tags = []
-
-  $: console.log('morePosts', morePosts)
-  $: console.log('posts', posts)
-  $: console.log('tags', tags)
 
   $: currentPage = parseInt($page.params.n)
 </script>
