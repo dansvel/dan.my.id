@@ -1,5 +1,5 @@
-import { build, timestamp } from '$service-worker'
-const CACHE_NAME = `dan.my.id-cache-${timestamp}`
+import { build, version } from '$service-worker'
+const CACHE_NAME = `dan.my.id-cache-${version}`
 
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(build)))
