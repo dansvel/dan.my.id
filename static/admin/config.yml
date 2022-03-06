@@ -3,7 +3,7 @@ backend:
   branch: main # Branch to update (optional; defaults to master)
 
 site_url: https://dan.my.id
-logo_url: https://dan.my.id/favicon.svg
+logo_url: https://dan.my.id/logo.svg
 
 locale: 'id'
 
