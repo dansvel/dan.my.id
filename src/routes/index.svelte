@@ -1,16 +1,16 @@
 <script context="module">
-  import { get as getPosts } from './catatan/_index'
-  import { postsPerPage } from '$lib/config'
+  import { get as getblogs } from './catatan/_index'
+  import { blogsPerPage } from '$lib/config'
 
   /** @type {import('@sveltejs/kit').Load} */
   export const load = async () => {
-    const { posts } = await getPosts()
-    const morePosts = posts.length - postsPerPage > 0
+    const { blogs } = await getblogs()
+    const moreBlogs = blogs.length - blogsPerPage > 0
 
     return {
       props: {
-        morePosts,
-        posts: posts.slice(0, postsPerPage),
+        moreBlogs,
+        blogs: blogs.slice(0, blogsPerPage),
       },
     }
   }
@@ -18,14 +18,14 @@
 
 <script>
   import { default as content, metadata } from '$content/index.md'
-  import PostList from '$lib/PostList.svelte'
+  import BlogList from '$lib/BlogList.svelte'
   import Pagination from '$lib/Pagination.svelte'
   import SeoHead from '$lib/SeoHead.svelte'
 
   const { title, description } = metadata
 
-  export let posts = []
-  export let morePosts
+  export let blogs = []
+  export let moreBlogs
 </script>
 
 <SeoHead />
@@ -37,6 +37,6 @@
   <svelte:component this={content} />
 </article>
 
-<PostList {posts} title="Catatan terbaru" />
+<BlogList {blogs} title="Catatan terbaru" />
 
-<Pagination {morePosts} currentPage={1} path="catatan" />
+<Pagination {moreBlogs} currentPage={1} path="catatan" />

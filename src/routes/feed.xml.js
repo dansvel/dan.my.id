@@ -9,10 +9,10 @@ export const get = () => {
     language: 'id',
   })
 
-  const posts = import.meta.globEager('../content/posts/*.md')
+  const blogs = import.meta.globEager('../content/blogs/*.md')
   const pages = import.meta.globEager('../content/pages/*.md')
 
-  const files = { ...posts, ...pages }
+  const files = { ...blogs, ...pages }
 
   for (const path in files) {
     if (path.split('/').pop().match(/\.md$/)) {

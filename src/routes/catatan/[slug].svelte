@@ -3,7 +3,7 @@
   export const load = async ({ params }) => {
     if (params.slug.match(/^\d+$/)) return { fallthrough: true }
 
-    const files = import.meta.glob('../../content/posts/*.md')
+    const files = import.meta.glob('../../content/blogs/*.md')
 
     let content
     for (const path in files) {

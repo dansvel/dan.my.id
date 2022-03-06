@@ -13,7 +13,7 @@ export const site = {
   image: 'images/perjalanan-setengah-manusia.png',
 }
 // Controls how many posts are shown per page on the pagination
-export const postsPerPage = 9
+export const blogsPerPage = 9
 
 // Edit this to alter the main nav menu.
 export const navItems = [

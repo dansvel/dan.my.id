@@ -21,10 +21,15 @@ collections:
     fields: # The fields for each document, usually in front matter
       - { label: 'No.', name: 'num', widget: 'number' }
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'date' }
+      - {
+          label: 'Publish Date',
+          name: 'date',
+          widget: 'datetime',
+          date_format: 'YYYY-MM-DD',
+          time_format: false,
+        }
       - { label: 'Tags', name: 'tags', widget: 'list', min: 1 }
-      - { label: 'Featured Image', name: 'thumbnail', widget: 'image' }
-      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'blog' }
+      - { label: 'Featured Image', name: 'thumbnail', widget: 'image', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'page' # Used in routes, e.g., /admin/collections/blog
     label: 'Page' # Used in the UI
@@ -33,8 +38,13 @@ collections:
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'date' }
+      - {
+          label: 'Publish Date',
+          name: 'date',
+          widget: 'datetime',
+          date_format: 'YYYY-MM-DD',
+          time_format: false,
+        }
       - { label: 'Tags', name: 'tags', widget: 'list', min: 1 }
-      - { label: 'Featured Image', name: 'thumbnail', widget: 'image' }
-      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'page' }
+      - { label: 'Featured Image', name: 'thumbnail', widget: 'image', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown' }

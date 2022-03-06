@@ -1,7 +1,7 @@
 <script>
   import { localDate, slugger } from '$lib/util'
 
-  export let posts = []
+  export let blogs = []
   export let title
 </script>
 
@@ -12,22 +12,22 @@
     <h2>{title}</h2>
   {/if}
 
-  {#if posts.length}
-    {#each posts as post}
+  {#if blogs.length}
+    {#each blogs as blog}
       <article>
         <h4>
-          <a href="/catatan/{post.slug}">{post.title}</a>
+          <a href="/catatan/{blog.slug}">{blog.title}</a>
         </h4>
 
         <p>
-          <time datetime={post.date}>{localDate.format(new Date(post.date))}</time>
+          <time datetime={blog.date}>{localDate.format(new Date(blog.date))}</time>
           <span>
-            {#each post.tags.sort() as tag}
+            {#each blog.tags.sort() as tag}
               <a href="/catatan/label/{slugger(tag)}" class="button">{tag}</a>
             {/each}
           </span>
         </p>
-        <p>{post.description}</p>
+        <p>{blog.description}</p>
       </article>
     {/each}
   {:else}

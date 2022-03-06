@@ -1,9 +1,9 @@
 <script context="module">
-  import { get as getPosts } from '../_index'
+  import { get as getblogs } from '../_index'
 
   /** @type {import('@sveltejs/kit').Load} */
   export const load = async () => {
-    let { tags } = await getPosts()
+    let { tags } = await getblogs()
 
     return { props: { tags } }
   }
