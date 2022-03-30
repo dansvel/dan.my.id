@@ -15,7 +15,15 @@
         document.querySelector('link[title=Light]').removeAttribute('disabled')
       }
     </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H9GPGHY7WF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
+      gtag('config', 'G-H9GPGHY7WF');
+    </script>
     %svelte.head%
 
     <link rel="webmention" href="https://webmention.io/dan.my.id/webmention" />

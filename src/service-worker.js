@@ -27,7 +27,7 @@ self.addEventListener('fetch', event => {
         const fetchPromise = fetch(event.request)
         const networkResponse = await fetchPromise
         await cache.put(event.request, networkResponse.clone())
-        return cachedResponse || networkResponse
+        return networkResponse || cachedResponse
       } catch (e) {
         return cachedResponse
       }
