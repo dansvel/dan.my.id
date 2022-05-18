@@ -12,9 +12,16 @@
 <script>
   import Webmention from '$lib/components/Webmention.svelte'
   import { localDate, slugging } from '$lib/util'
+  import SeoHead from '$lib/components/SeoHead.svelte'
 
   export let content
 </script>
+
+<SeoHead
+  title={content.metadata.title}
+  description={content.metadata.description}
+  keywords={content.metadata.tags.join(', ')}
+/>
 
 <div class="typography">
   <h1>{content.metadata.title}</h1>

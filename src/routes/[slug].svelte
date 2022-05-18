@@ -10,8 +10,16 @@
 </script>
 
 <script>
+  import SeoHead from '$lib/components/SeoHead.svelte'
+
   export let content
 </script>
+
+<SeoHead
+  title={content.metadata.title}
+  description={content.metadata.description}
+  keywords={content.metadata.tags.join(', ')}
+/>
 
 <div class="typography">
   <h1>{content.metadata.title}</h1>

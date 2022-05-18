@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa0f7fe-a60d-4f38-991b-5d03d3e15133" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/content.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/SeoHead.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/SeoHead.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/[slug].svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/[slug].svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/catatan/[slug].svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/catatan/[slug].svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/index.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +79,8 @@
       <workItem from="1652713325732" duration="11886000" />
       <workItem from="1652875837332" duration="4652000" />
       <workItem from="1652883682697" duration="6308000" />
-      <workItem from="1652897369233" duration="587000" />
+      <workItem from="1652897369233" duration="696000" />
+      <workItem from="1652898496617" duration="629000" />
     </task>
     <servers />
   </component>

@@ -12,10 +12,14 @@
   import { default as content, metadata } from '../content/index.md'
   import BlogList from '$lib/components/BlogList.svelte'
   import Pagination from '$lib/components/Pagination.svelte'
+  import SeoHead from '$lib/components/SeoHead.svelte'
+  import site from '$lib/config.yaml'
 
   export let blogs
   export let more
 </script>
+
+<SeoHead title={site.title} description={site.description} keywords={site.keywords} />
 
 <article class="typography">
   <h1>{metadata.title}</h1>
