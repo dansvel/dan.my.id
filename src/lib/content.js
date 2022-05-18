@@ -49,16 +49,10 @@ export const getBlogs = async ({ filterTag = '', pageNumber = 0 } = {}) => {
   }
 }
 
-export const getTags = async () => {
-  const { blogs } = await getBlogs()
-  // console.log(blogs)
-  let tags = [...new Set(arrFlat(blogs.map(blog => blog.metadata.tags)))]
-  return tags.sort(strCompareByHuman)
-}
-
 export const getBlog = async slug => {
   const { blogs } = await getBlogs()
-  const index = blogs.findIndex(blog => blog.slug === slug)
+  const index = blogs.findIndex(blog => blog.slug === 'catatan/' + slug)
+
   try {
     return {
       slug,
@@ -69,4 +63,11 @@ export const getBlog = async slug => {
   } catch (e) {
     return null
   }
+}
+
+export const getTags = async () => {
+  const { blogs } = await getBlogs()
+  // console.log(blogs)
+  let tags = [...new Set(arrFlat(blogs.map(blog => blog.metadata.tags)))]
+  return tags.sort(strCompareByHuman)
 }

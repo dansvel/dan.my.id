@@ -2,71 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa0f7fe-a60d-4f38-991b-5d03d3e15133" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/_redirects" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mdsvex.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app.postcss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/content/blogs/1-scoop-cinta-untuk-baris-perintah.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/content/blogs/10-code-highlighter-svelte-untuk-highlightjs.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/content/blogs/11-sveltekit-pwa.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/content/blogs/12-highlightjs-di-mdsvex.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/content/blogs/13-menggunakan-pnpm-di-netlify.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/content/blogs/14-membuat-hybrid-npm-module-untuk-commonjs-dan-esm.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/content/blogs/2-valet-untuk-windows.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/content/blogs/3-innertia-menjodohkan-laravel-dengan-svelte.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/content/blogs/4-sveltekit-pre-alpha-on-production.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/content/blogs/5-beginilah-bagaimana-aku-membuat-blog-dengan-sveltekit.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/content/blogs/6-komentar-blog-statis-dengan-webmention.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/content/blogs/7-aku-membuat-aplikasi-transliterasi-aksara-jawa-menggunakan-sveltekit.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/content/blogs/8-memasang-graphcomment-di-svelte.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/content/blogs/9-macapat-dhandhanggula-semut-ireng.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/content/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/content/pages/proyek.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/content/pages/tentang.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/BlogList.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/Footer.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/Nav.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/Pagination.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/SeoHead.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/TagsCloud.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/Webmention.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/Youtube.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/content.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/params/integer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/404.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/[slug].svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/__layout.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/catatan/[pageNumber=integer].svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/catatan/[slug].svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/catatan/index.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/catatan/label/[tag].svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/catatan/label/index.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/feed.xml.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/sitemap.xml.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service-worker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/ads.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/app-ads.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/dist/atom-one-dark.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/dist/atom-one-light.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/banner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/default-avatar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/me.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/perjalanan-setengah-manusia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/windi.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/jsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/index.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/svelte.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/svelte.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/content.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/catatan/[slug].svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/catatan/[slug].svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,6 +76,7 @@
       <workItem from="1652713325732" duration="11886000" />
       <workItem from="1652875837332" duration="4652000" />
       <workItem from="1652883682697" duration="6308000" />
+      <workItem from="1652897369233" duration="587000" />
     </task>
     <servers />
   </component>
