@@ -1,7 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f43e1839-5282-4ae1-afd9-6e5b701e2d50" name="Changes" comment="set adapter to static">
+    <list default="true" id="0fa0f7fe-a60d-4f38-991b-5d03d3e15133" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/_redirects" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mdsvex.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app.postcss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/blogs/1-scoop-cinta-untuk-baris-perintah.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/blogs/10-code-highlighter-svelte-untuk-highlightjs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/blogs/11-sveltekit-pwa.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/blogs/12-highlightjs-di-mdsvex.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/blogs/13-menggunakan-pnpm-di-netlify.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/blogs/14-membuat-hybrid-npm-module-untuk-commonjs-dan-esm.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/blogs/2-valet-untuk-windows.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/blogs/3-innertia-menjodohkan-laravel-dengan-svelte.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/blogs/4-sveltekit-pre-alpha-on-production.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/blogs/5-beginilah-bagaimana-aku-membuat-blog-dengan-sveltekit.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/blogs/6-komentar-blog-statis-dengan-webmention.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/blogs/7-aku-membuat-aplikasi-transliterasi-aksara-jawa-menggunakan-sveltekit.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/blogs/8-memasang-graphcomment-di-svelte.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/blogs/9-macapat-dhandhanggula-semut-ireng.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/pages/proyek.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/pages/tentang.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/components/BlogList.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/components/Footer.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/components/Nav.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/components/Pagination.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/components/SeoHead.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/components/TagsCloud.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/components/Webmention.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/components/Youtube.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/content.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/params/integer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/404.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/[slug].svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/__layout.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/catatan/[pageNumber=integer].svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/catatan/[slug].svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/catatan/index.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/catatan/label/[tag].svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/catatan/label/index.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/feed.xml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/sitemap.xml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service-worker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/ads.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/app-ads.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/dist/atom-one-dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/dist/atom-one-light.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/default-avatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/me.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/perjalanan-setengah-manusia.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windi.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/jsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/index.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/svelte.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/svelte.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +79,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="28muWNtJ9FGGbghprnZRlgN64xn" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="29D2jaipXQA8rlxcFHoxREgfDR4" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -25,41 +88,57 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/lib" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="C:\Users\dan\scoop\apps\pnpm\current" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\dan\www\dan.my.id\node_modules\prettier" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dan\www\dan.my.id\src\lib" />
       <recent name="C:\Users\dan\www\dan.my.id" />
+      <recent name="C:\Users\dan\www\dan.my.id\src\routes" />
+      <recent name="C:\Users\dan\www\dan.my.id\src" />
+      <recent name="C:\Users\dan\www\dan.my.id\static" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dan\www\dan.my.id\src\lib\components" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <package-manager value="C:\Users\dan\scoop\apps\pnpm\current" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f43e1839-5282-4ae1-afd9-6e5b701e2d50" name="Changes" comment="" />
-      <created>1651834122936</created>
+      <changelist id="0fa0f7fe-a60d-4f38-991b-5d03d3e15133" name="Changes" comment="" />
+      <created>1652633475906</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1651834122936</updated>
-      <workItem from="1651834125826" duration="1937000" />
+      <updated>1652633475906</updated>
+      <workItem from="1652633478270" duration="2384000" />
+      <workItem from="1652682833254" duration="10455000" />
+      <workItem from="1652713325732" duration="11886000" />
+      <workItem from="1652875837332" duration="4652000" />
+      <workItem from="1652883682697" duration="6308000" />
     </task>
-    <task id="LOCAL-00001" summary="set adapter to static">
-      <created>1651837506235</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1651837506236</updated>
-    </task>
-    <task id="LOCAL-00002" summary="set adapter to static">
-      <created>1651837528767</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1651837528767</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -75,10 +154,6 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="set adapter to static" />
-    <option name="LAST_COMMIT_MESSAGE" value="set adapter to static" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

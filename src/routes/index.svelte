@@ -1,2 +1,27 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script context="module">
+  import { getBlogs } from '$lib/content'
+
+  /** @type {import('./index.svelte').load} */
+  export const load = async () => {
+    const { blogs, more } = await getBlogs({ pageNumber: 1 })
+    return { props: { blogs, more } }
+  }
+</script>
+
+<script>
+  import { default as content, metadata } from '../content/index.md'
+  import BlogList from '$lib/components/BlogList.svelte'
+  import Pagination from '$lib/components/Pagination.svelte'
+
+  export let blogs
+  export let more
+</script>
+
+<article class="typography">
+  <h1>{metadata.title}</h1>
+  <p>{metadata.description}</p>
+  <svelte:component this={content} />
+</article>
+
+<BlogList {blogs} />
+<Pagination {more} pageNumber="1" path="catatan" />
