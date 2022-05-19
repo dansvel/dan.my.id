@@ -1,5 +1,5 @@
 <script context="module">
-  import { getBlogs } from '$lib/content'
+  import { getPosts } from '$lib/content'
   import { page } from '$app/stores'
 
   /** @type {import('./[pageNumber=integer].svelte').load} */
@@ -10,11 +10,11 @@
         status: 301,
       }
 
-    const { blogs, more } = await getBlogs({ pageNumber })
+    const { posts, more } = await getPosts({ pageNumber })
 
-    if (blogs.length)
+    if (posts.length)
       return {
-        props: { pageNumber, blogs, more },
+        props: { pageNumber, posts, more },
       }
 
     return { status: 404 }
@@ -25,11 +25,11 @@
   // import Pagination from '$lib/Pagination.svelte'
   // import TagsCloud from '$lib/TagsCloud.svelte'
 
-  import BlogList from '$lib/components/BlogList.svelte'
+  import PostList from '$lib/components/PostList.svelte'
   import Pagination from '$lib/components/Pagination.svelte'
 
   export let pageNumber
-  export let blogs
+  export let posts
   export let more
 </script>
 
@@ -39,5 +39,5 @@
   <!--  <TagsCloud {tags} />-->
 </div>
 
-<BlogList {blogs} />
+<PostList {posts} />
 <Pagination {more} {pageNumber} path="catatan" />

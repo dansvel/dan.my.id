@@ -23,45 +23,45 @@ export const getPage = async slug => {
   }
 }
 
-export const getBlogs = async ({ filterTag = '', pageNumber = 0 } = {}) => {
+export const getPosts = async ({ filterTag = '', pageNumber = 0 } = {}) => {
   if (typeof pageNumber !== 'number' && pageNumber < 0) return []
 
-  const files = await import.meta.glob('../content/blogs/**.md')
-  let blogs = Object.entries(files).map(async ([path, content]) => {
+  const files = await import.meta.glob('../content/posts/**.md')
+  let posts = Object.entries(files).map(async ([path, content]) => {
     return {
       slug: 'catatan/' + path.split('/').pop().slice(0, -3),
       metadata: (await content()).metadata,
     }
   })
 
-  blogs = await Promise.all(blogs).then(r =>
+  posts = await Promise.all(posts).then(r =>
     r.sort((a, b) => new Date(b.metadata.date) - new Date(a.metadata.date))
   )
 
-  if (!dev) blogs = blogs.filter(blog => new Date(blog.metadata.date) < new Date())
+  if (!dev) posts = posts.filter(post => new Date(post.metadata.date) < new Date())
 
   if (filterTag)
-    return { blogs: blogs.filter(blog => blog.metadata.tags.map(slugging).includes(filterTag)) }
+    return { posts: posts.filter(post => post.metadata.tags.map(slugging).includes(filterTag)) }
 
-  if (pageNumber === 0) return { blogs }
+  if (pageNumber === 0) return { posts }
 
-  const more = blogs.length - pageNumber * pageSize > 0
+  const more = posts.length - pageNumber * pageSize > 0
   return {
-    blogs: blogs.slice(pageNumber * pageSize - pageSize, pageNumber * pageSize),
+    posts: posts.slice(pageNumber * pageSize - pageSize, pageNumber * pageSize),
     more,
   }
 }
 
-export const getBlog = async slug => {
-  const { blogs } = await getBlogs()
-  const index = blogs.findIndex(blog => blog.slug === 'catatan/' + slug)
+export const getPost = async slug => {
+  const { posts } = await getPosts()
+  const index = posts.findIndex(post => post.slug === 'catatan/' + slug)
 
   try {
     return {
       slug,
-      ...(await import(`../content/blogs/${slug}.md`)),
-      prev: blogs[index - 1] || null,
-      next: blogs[index + 1] || null,
+      ...(await import(`../content/posts/${slug}.md`)),
+      prev: posts[index - 1] || null,
+      next: posts[index + 1] || null,
     }
   } catch (e) {
     return null
@@ -69,8 +69,8 @@ export const getBlog = async slug => {
 }
 
 export const getTags = async () => {
-  const { blogs } = await getBlogs()
-  // console.log(blogs)
-  let tags = [...new Set(arrFlat(blogs.map(blog => blog.metadata.tags)))]
+  const { posts } = await getPosts()
+  // console.log(posts)
+  let tags = [...new Set(arrFlat(posts.map(post => post.metadata.tags)))]
   return tags.sort(strCompareByHuman)
 }

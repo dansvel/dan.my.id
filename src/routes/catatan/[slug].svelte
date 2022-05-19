@@ -1,9 +1,9 @@
 <script context="module">
-  import { getBlog } from '$lib/content'
+  import { getPost } from '$lib/content'
 
   /** @type {import('./[slug].svelte').load} */
   export const load = async ({ params }) => {
-    const content = await getBlog(params.slug)
+    const content = await getPost(params.slug)
     if (content) return { props: { content } }
     return { status: 404 }
   }

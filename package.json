@@ -19,6 +19,7 @@
     "@modyfi/vite-plugin-yaml": "^1.0.2",
     "@sveltejs/adapter-static": "next",
     "@sveltejs/kit": "next",
+    "commander": "^9.2.0",
     "highlight.js": "^11.5.1",
     "highlightjs-svelte": "^1.0.6",
     "html-minifier": "^4.0.0",

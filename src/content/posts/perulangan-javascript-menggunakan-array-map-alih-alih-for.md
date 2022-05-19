@@ -42,3 +42,7 @@ for (let i = 0; i < 5; i++) {
   /* ... */
 })
 ```
+
+## Begitulah
+
+Fungsi bawaan Array sebenarnya masih banyak, mungkin nanti bisa dibahas di catatan lainnya. Terima kasih.

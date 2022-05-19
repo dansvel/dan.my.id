@@ -1,21 +1,21 @@
 <script context="module">
-  import { getBlogs } from '$lib/content'
+  import { getPosts } from '$lib/content'
 
   /** @type {import('./index.svelte').load} */
   export const load = async () => {
-    const { blogs, more } = await getBlogs({ pageNumber: 1 })
-    return { props: { blogs, more } }
+    const { posts, more } = await getPosts({ pageNumber: 1 })
+    return { props: { posts, more } }
   }
 </script>
 
 <script>
   import { default as content, metadata } from '../content/index.md'
-  import BlogList from '$lib/components/BlogList.svelte'
+  import PostList from '$lib/components/PostList.svelte'
   import Pagination from '$lib/components/Pagination.svelte'
   import SeoHead from '$lib/components/SeoHead.svelte'
   import site from '$lib/config.yaml'
 
-  export let blogs
+  export let posts
   export let more
 </script>
 
@@ -27,5 +27,5 @@
   <svelte:component this={content} />
 </article>
 
-<BlogList {blogs} />
+<PostList {posts} />
 <Pagination {more} pageNumber="1" path="catatan" />

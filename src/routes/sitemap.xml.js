@@ -1,14 +1,14 @@
 import site from '$lib/config.yaml'
 import { getBlogs } from '$lib/content'
-// import { getPosts, getPostsContent } from '$lib/utilities/blog';
-const { blogs } = await getBlogs()
+// import { getPosts, getPostsContent } from '$lib/utilities/post';
+const { posts } = await getBlogs()
 
 /**
  * @returns string
  * @param {string[]} pages
- * @param {{medata:{date: string}; slug: string;}[]} blogs
+ * @param {{medata:{date: string}; slug: string;}[]} posts
  */
-function render(pages, blogs) {
+function render(pages, posts) {
   console.log(pages)
   return `<?xml version="1.0" encoding="UTF-8" ?>
 <urlset
@@ -35,12 +35,12 @@ function render(pages, blogs) {
     )
     .join('\n')}
 	
-	${blogs
-    .map(blog => {
+	${posts
+    .map(post => {
       return `
 	<url>
-	  <loc>${site.url}/catatan/${blog.slug}/</loc>
-		<lastmod>${`${blog.metadata.date}`}</lastmod>
+	  <loc>${site.url}/catatan/${post.slug}/</loc>
+		<lastmod>${`${post.metadata.date}`}</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>0.7</priority>
 	</url>
@@ -65,7 +65,7 @@ export async function get() {
     )
 
   return {
-    body: render([...pages, ...etc], blogs),
+    body: render([...pages, ...etc], posts),
     headers: {
       'Cache-Control': `max-age=0, s-max-age=${600}`,
       'Content-Type': 'application/xml',

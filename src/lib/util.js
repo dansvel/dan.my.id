@@ -22,7 +22,11 @@ export const arrFlat = arr =>
 
 export const slugging = text => {
   if (typeof text !== 'string') text = text.toString()
-  return text.toLowerCase().replace(/[^a-zA-Z0-9]/, '-')
+  return text
+    .toLowerCase()
+    .trim()
+    .replace('.', '')
+    .replace(/[^a-zA-Z0-9]/, '-')
 }
 
 export const parseMarkdownLine = markdownText => {

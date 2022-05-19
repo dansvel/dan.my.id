@@ -1,15 +1,15 @@
 <script context="module">
-  import { getBlogs, getTags } from '$lib/content'
+  import { getPosts, getTags } from '$lib/content'
   import { page } from '$app/stores'
   import { slugging } from '$lib/util'
 
   /** @type {import('./[tag].svelte').load} */
   export async function load({ params }) {
-    const { blogs } = await getBlogs({ filterTag: params.tag })
+    const { posts } = await getPosts({ filterTag: params.tag })
     const tags = await getTags()
     const tag = tags.find(tag => slugging(tag) === params.tag)
     return {
-      props: { tag, blogs, tags },
+      props: { tag, posts, tags },
     }
 
     // return { status: 404 };
@@ -19,10 +19,10 @@
 <script>
   // import Pagination from '$lib/Pagination.svelte'
   import TagsCloud from '$lib/components/TagsCloud.svelte'
-  import BlogList from '$lib/components/BlogList.svelte'
+  import PostList from '$lib/components/PostList.svelte'
 
   export let tag
-  export let blogs
+  export let posts
   export let tags
 </script>
 
@@ -36,4 +36,4 @@
   <TagsCloud {tags} />
 </div>
 
-<BlogList {blogs} />
+<PostList {posts} />

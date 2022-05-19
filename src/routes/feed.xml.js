@@ -11,10 +11,10 @@ export const get = async () => {
   })
 
   const pages = await getPages()
-  const { blogs } = await getBlogs()
-  // console.log(pages, blogs)
+  const { posts } = await getBlogs()
+  // console.log(pages, posts)
 
-  pages.concat(blogs).map(page => {
+  pages.concat(posts).map(page => {
     feed.item({
       title: page.metadata.title,
       description: page.metadata.description,
