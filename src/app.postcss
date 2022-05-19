@@ -67,10 +67,15 @@ html {
         }
       }
 
+      code {
+        @apply px-1 py-0 font-mono font-normal;
+        @apply bg-light-700 dark:bg-dark-300;
+        @apply whitespace-pre-wrap break-words;
+      }
       pre {
-        @apply text-dark-500 bg-light-600 dark:(text-light-500 bg-dark-400);
-        @apply p-0 -mx-4  bg-light-700 dark:bg-dark-300;
-        @apply relative overflow-x-auto <2xl:rounded-none;
+        @apply text-dark-500 bg-light-700 dark:(text-light-500 bg-dark-300);
+        @apply <2xl:p-0 -mx-4;
+        @apply relative overflow-x-auto <2xl:rounded-none ring-2 ring-light-700 dark:ring-dark-300;
 
         &::before {
           content: attr(data-title);
@@ -78,7 +83,7 @@ html {
         }
 
         code {
-          @apply p-4 font-mono bg-transparent whitespace-pre;
+          @apply p-4 font-mono whitespace-pre;
           @apply bg-light-600 dark:bg-dark-400;
           * {
             @apply font-mono;
@@ -95,12 +100,6 @@ html {
         * {
           @apply first:mt-0 last:mb-0;
         }
-      }
-
-      code {
-        @apply px-1 py-0 font-mono font-normal;
-        @apply bg-light-700 dark:bg-dark-300;
-        @apply whitespace-pre-wrap break-words;
       }
 
       figure {

@@ -49,7 +49,7 @@
   {/if}
 </nav>
 
-<Webmention slug={`/${content.slug}`} />
+<Webmention slug="catatan/{content.slug}" />
 
 <style lang="postcss">
   p {

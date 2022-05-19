@@ -3,11 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa0f7fe-a60d-4f38-991b-5d03d3e15133" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/SeoHead.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/SeoHead.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/[slug].svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/[slug].svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.postcss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.postcss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/blogs/14-membuat-hybrid-npm-module-untuk-commonjs-dan-esm.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blogs/14-membuat-hybrid-npm-module-untuk-commonjs-dan-esm.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/Webmention.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/Webmention.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/content.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/catatan/[slug].svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/catatan/[slug].svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/index.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/svelte.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/svelte.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +30,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/lib" />
+    <property name="last_opened_file_path" value="$USER_HOME$/scoop/apps/nodejs-lts/current/bin/node_modules/pnpm" />
     <property name="nodejs_interpreter_path" value="node" />
-    <property name="nodejs_package_manager_path" value="C:\Users\dan\scoop\apps\pnpm\current" />
+    <property name="nodejs_package_manager_path" value="C:\Users\dan\scoop\apps\nodejs-lts\current\bin\node_modules\pnpm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\dan\www\dan.my.id\node_modules\prettier" />
     <property name="settings.editor.selected.configurable" value="settings.nodejs" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -56,7 +57,7 @@
         <script value="dev" />
       </scripts>
       <node-interpreter value="project" />
-      <package-manager value="C:\Users\dan\scoop\apps\pnpm\current" />
+      <package-manager value="pnpm" />
       <envs />
       <method v="2" />
     </configuration>
@@ -80,7 +81,8 @@
       <workItem from="1652875837332" duration="4652000" />
       <workItem from="1652883682697" duration="6308000" />
       <workItem from="1652897369233" duration="696000" />
-      <workItem from="1652898496617" duration="629000" />
+      <workItem from="1652898496617" duration="707000" />
+      <workItem from="1652931693909" duration="2656000" />
     </task>
     <servers />
   </component>

@@ -1,13 +1,15 @@
 <script>
+  export const hydrate = false
+
   import { onMount } from 'svelte'
   import { localDateTime } from '../util'
 
   export let slug
   let target, mentions, tweet
-  $: {
-    target = `https://dan.my.id${slug}`
-    tweet = `%0A%0ACatatan menarik dari @dansvel ${target}`
-  }
+
+  target = `https://dan.my.id/${slug}`
+  console.log(target)
+  tweet = `%0A%0ACatatan menarik dari @dansvel ${target}`
 
   onMount(() => {
     mentions = fetch(

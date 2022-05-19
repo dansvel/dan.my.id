@@ -34,8 +34,10 @@ export const getBlogs = async ({ filterTag = '', pageNumber = 0 } = {}) => {
   })
 
   blogs = await Promise.all(blogs).then(r =>
-    r.sort((a, b) => strCompareByHuman(b.metadata.date, a.metadata.date))
+    r.sort((a, b) => new Date(b.metadata.date) - new Date(a.metadata.date))
   )
+
+  blogs = blogs.filter(blog => new Date(blog.metadata.date) < new Date())
 
   if (filterTag)
     return { blogs: blogs.filter(blog => blog.metadata.tags.map(slugging).includes(filterTag)) }
