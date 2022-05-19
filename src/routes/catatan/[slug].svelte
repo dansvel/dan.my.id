@@ -11,7 +11,7 @@
 
 <script>
   import Webmention from '$lib/components/Webmention.svelte'
-  import { localDate, slugging } from '$lib/util'
+  import { localDate, slugging, parseMarkdownLine } from '$lib/util'
   import SeoHead from '$lib/components/SeoHead.svelte'
 
   export let content
@@ -24,7 +24,7 @@
 />
 
 <div class="typography">
-  <h1>{content.metadata.title}</h1>
+  <h1>{@html parseMarkdownLine(content.metadata.title)}</h1>
   <p class="metadata">
     <time>{localDate.format(new Date(content.metadata.date))}</time>
     {#each content.metadata.tags as tag}

@@ -1,6 +1,6 @@
 <script>
   import { localDate } from '$lib/util'
-  import { slugging } from '../util.js'
+  import { slugging, parseMarkdownLine } from '../util.js'
 
   export let blogs
 </script>
@@ -9,7 +9,7 @@
   {#each blogs as blog}
     <div class="catatan">
       <h3>
-        <a href="/{blog.slug}">{blog.metadata.title}</a>
+        <a href="/{blog.slug}">{@html parseMarkdownLine(blog.metadata.title)}</a>
       </h3>
       <p class="metadata">
         <time>{localDate.format(new Date(blog.metadata.date))}</time>

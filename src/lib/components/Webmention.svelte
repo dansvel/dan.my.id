@@ -1,6 +1,4 @@
 <script>
-  export const hydrate = false
-
   import { onMount } from 'svelte'
   import { localDateTime } from '../util'
 
@@ -8,7 +6,6 @@
   let target, mentions, tweet
 
   target = `https://dan.my.id/${slug}`
-  console.log(target)
   tweet = `%0A%0ACatatan menarik dari @dansvel ${target}`
 
   onMount(() => {

@@ -25,6 +25,19 @@ export const slugging = text => {
   return text.toLowerCase().replace(/[^a-zA-Z0-9]/, '-')
 }
 
+export const parseMarkdownLine = markdownText => {
+  const htmlText = markdownText
+    .replace(/\*\*(.*?)\*\*/gim, '<b>$1</b>')
+    .replace(/\*(.*?)\*/gim, '<i>$1</i>')
+    .replace(/`(.*?)`/gi, '<code>$1</code>')
+    .replace(/~~(.*?)~~/gim, '<del>$1</del>')
+    .replace(/~(.*?)~/gim, '<sub>$1</sub>')
+    .replace(/\^(.*?)\^/gim, '<sup>$1</sup>')
+  // .replace(/==(.*?)==/gim, '<mark>$1</mark>')
+
+  return htmlText.trim()
+}
+
 // export const urltoFile = (url, filename, mimeType) =>
 //   fetch(url)
 //     .then(res => res.arrayBuffer())
