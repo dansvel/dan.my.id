@@ -1,7 +1,7 @@
 import site from '$lib/config.yaml'
-import { getBlogs } from '$lib/content'
-// import { getPosts, getPostsContent } from '$lib/utilities/post';
-const { posts } = await getBlogs()
+import { getPosts } from '$lib/content'
+
+const { posts } = await getPosts()
 
 /**
  * @returns string
