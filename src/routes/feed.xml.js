@@ -1,6 +1,6 @@
 import RSS from 'rss'
 import site from '$lib/config.yaml'
-import { getPages, getBlogs } from '$lib/content'
+import { getPages, getPosts } from '$lib/content'
 
 export const get = async () => {
   const feed = new RSS({
@@ -11,7 +11,7 @@ export const get = async () => {
   })
 
   const pages = await getPages()
-  const { posts } = await getBlogs()
+  const { posts } = await getPosts()
   // console.log(pages, posts)
 
   pages.concat(posts).map(page => {
