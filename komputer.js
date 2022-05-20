@@ -22,17 +22,21 @@ program
   .argument('<judulnya>', 'judulnya')
   .action((apa, judulnya) => {
     const filename = slugging(judulnya) + '.md'
-    if (apa === 'postingan') {
+
+    const newContentPath = apa === 'halaman' ? contentPath + '/pages'
+      : apa === 'postingan' ? contentPath + '/posts' : ''
+
+    if (newContentPath === '') program.error('tipe salah, postingan / halaman')
+
       const files = fs.readdirSync(contentPath + '/posts')
       const exist = files.filter(file => file === filename)
 
       if (exist.length) program.error('postingan sudah ada, silahkan beri judul yang berbeda')
 
-      const content = template.replace('{title}', judulnya)
-      fs.writeFileSync(contentPath + '/posts/' + filename, content)
-    }
+      console.log(newContentPath, filename)
+      // const content = template.replace('{title}', judulnya.replace(/ {2,}/g, ' '))
+      // fs.writeFileSync(contentPath + '/posts/' + filename, content)
 
-    console.log(apa, '|', judulnya)
   })
 
 program.parse()

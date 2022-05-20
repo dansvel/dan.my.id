@@ -24,9 +24,8 @@ export const slugging = text => {
   if (typeof text !== 'string') text = text.toString()
   return text
     .toLowerCase()
-    .trim()
-    .replace('.', '')
-    .replace(/[^a-zA-Z0-9]/, '-')
+    .replace(/ {2,}/g, ' ')
+    .replace(/[^a-zA-Z0-9]/g, '-')
 }
 
 export const parseMarkdownLine = markdownText => {

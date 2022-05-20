@@ -3,34 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa0f7fe-a60d-4f38-991b-5d03d3e15133" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.postcss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.postcss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blogs/1-scoop-cinta-untuk-baris-perintah.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blogs/10-code-highlighter-svelte-untuk-highlightjs.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blogs/11-sveltekit-pwa.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blogs/12-highlightjs-di-mdsvex.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blogs/13-menggunakan-pnpm-di-netlify.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blogs/14-membuat-hybrid-npm-module-untuk-commonjs-dan-esm.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blogs/15-perulangan-javascript-menggunakan-array-map-alih-alih-for.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blogs/2-valet-untuk-windows.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blogs/3-innertia-menjodohkan-laravel-dengan-svelte.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blogs/4-sveltekit-pre-alpha-on-production.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blogs/5-beginilah-bagaimana-aku-membuat-blog-dengan-sveltekit.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blogs/6-komentar-blog-statis-dengan-webmention.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blogs/7-aku-membuat-aplikasi-transliterasi-aksara-jawa-menggunakan-sveltekit.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blogs/8-memasang-graphcomment-di-svelte.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blogs/9-macapat-dhandhanggula-semut-ireng.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/BlogList.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/PostList.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/content.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/komputer.js" beforeDir="false" afterPath="$PROJECT_DIR$/komputer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/posts/svelkit-pwas" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/util.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/catatan/[pageNumber=integer].svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/catatan/[pageNumber=integer].svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/catatan/[slug].svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/catatan/[slug].svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/catatan/label/[tag].svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/catatan/label/[tag].svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/feed.xml.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/feed.xml.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/index.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/sitemap.xml.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/sitemap.xml.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/svelte.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/svelte.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +90,7 @@
       <workItem from="1652897369233" duration="696000" />
       <workItem from="1652898496617" duration="707000" />
       <workItem from="1652931693909" duration="21662000" />
+      <workItem from="1653014212518" duration="1748000" />
     </task>
     <servers />
   </component>
