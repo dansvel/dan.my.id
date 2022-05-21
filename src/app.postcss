@@ -30,6 +30,27 @@ html {
         @apply not-first:(max-w-3xl w-full mx-auto px-4);
       }
 
+      > header {
+        @apply py-4 sticky z-99 top-0;
+        @apply shadow-b shadow-md shadow-light-500 bg-light-500 dark:(shadow-dark-500 bg-dark-500);
+
+        nav {
+          @apply max-w-3xl w-full mx-auto px-4;
+          @apply flex justify-between;
+          div {
+            @apply flex basis-full space-x-2;
+            &#brand {
+              @apply font-bold;
+            }
+            &#social {
+              @apply justify-end;
+            }
+            ul {
+              @apply flex;
+            }
+          }
+        }
+      }
       > main {
         @apply py-16;
       }
@@ -117,7 +138,10 @@ html {
 
       ul,
       ol {
-        @apply p-0 list-inside;
+        @apply p-6;
+        li {
+          @apply p-0;
+        }
       }
 
       ul {

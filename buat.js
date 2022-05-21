@@ -28,9 +28,9 @@ program
 
     if (exist.length) program.error('postingan sudah ada, silahkan beri judul yang berbeda')
 
-    // const content = template.replace('{title}', judulnya.replace(/ {2,}/g, ' '))
-    // fs.writeFileSync(postsPath+ '/' + filename, content)
-    console.log('silakan mulai meulis di:', postsPath + '/' + filename)
+    const content = template.replace('{title}', judulnya.replace(/ {2,}/g, ' '))
+    fs.writeFileSync(postsPath + '/' + filename, content)
+    console.log('silakan mulai menulis di:', postsPath + '/' + filename)
   })
 
 program.parse()

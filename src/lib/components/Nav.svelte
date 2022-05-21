@@ -9,22 +9,22 @@
       <a href="/" {title} sveltekit:prefetch>{textLogo}</a>
     </div>
     <div id="menu">
-<!--      <ul>-->
-        {#each navItems as menu}
-<!--          <li>-->
-            <a href={menu.route}>{menu.title}</a>
-<!--          </li>-->
-        {/each}
-<!--      </ul>-->
+      <!--      <ul>-->
+      {#each navItems as menu}
+        <!--          <li>-->
+        <a href={menu.route}>{menu.title}</a>
+        <!--          </li>-->
+      {/each}
+      <!--      </ul>-->
     </div>
     <div id="social">
-<!--      <ul>-->
-        {#each socialLinks as social}
-<!--          <li>-->
-            <a href="https://{social.link}" rel="external noopener">{social.platform}</a>
-<!--          </li>-->
-        {/each}
-<!--      </ul>-->
+      <!--      <ul>-->
+      {#each socialLinks as social}
+        <!--          <li>-->
+        <a href="https://{social.link}" rel="external noopener">{social.platform}</a>
+        <!--          </li>-->
+      {/each}
+      <!--      </ul>-->
     </div>
   </nav>
 </header>
@@ -35,27 +35,3 @@
   <a href="/sitemap.xml">Sitemap</a>
   <a href="/feed.xml">RSS feed</a>
 </div>
-
-<style lang="postcss">
-  header {
-    @apply py-4 sticky z-99 top-0;
-    @apply shadow-b shadow-md shadow-light-500 bg-light-500 dark:(shadow-dark-500 bg-dark-500);
-
-    nav {
-      @apply max-w-3xl w-full mx-auto px-4;
-      @apply flex justify-between;
-      > div {
-        @apply flex basis-full space-x-2;
-        &#brand {
-          @apply font-bold;
-        }
-        &#social {
-          @apply justify-end;
-        }
-        ul {
-          @apply flex;
-        }
-      }
-    }
-  }
-</style>
