@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa0f7fe-a60d-4f38-991b-5d03d3e15133" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/komputer.js" beforeDir="false" afterPath="$PROJECT_DIR$/komputer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/Nav.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/Nav.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/svelte.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/svelte.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +36,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="16.15.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="16.11.36" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/scoop/apps/nodejs-lts/current/bin/node_modules/pnpm" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="C:\Users\dan\scoop\apps\nodejs-lts\current\bin\node_modules\pnpm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\dan\www\dan.my.id\node_modules\prettier" />
@@ -53,7 +55,17 @@
       <recent name="C:\Users\dan\www\dan.my.id\src\lib\components" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.preview">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -61,12 +73,24 @@
         <script value="dev" />
       </scripts>
       <node-interpreter value="project" />
-      <package-manager value="pnpm" />
+      <package-manager value="C:\Users\dan\scoop\apps\nodejs-lts\current\bin\node_modules\pnpm" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="preview" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="preview" />
+      </scripts>
+      <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.preview" />
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
@@ -88,6 +112,8 @@
       <workItem from="1652898496617" duration="707000" />
       <workItem from="1652931693909" duration="21662000" />
       <workItem from="1653014212518" duration="4223000" />
+      <workItem from="1653124112400" duration="901000" />
+      <workItem from="1653134269576" duration="547000" />
     </task>
     <servers />
   </component>
