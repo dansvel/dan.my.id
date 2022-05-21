@@ -65,7 +65,7 @@
 
     nav {
       @apply max-w-3xl w-full mx-auto px-4;
-      @apply flex justify-between;
+      @apply flex justify-between transition-none duration-0;
 
       > div {
         @apply flex basis-full;
