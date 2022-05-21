@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa0f7fe-a60d-4f38-991b-5d03d3e15133" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.postcss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.postcss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/Nav.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/Nav.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +112,7 @@
       <workItem from="1652931693909" duration="21662000" />
       <workItem from="1653014212518" duration="4223000" />
       <workItem from="1653124112400" duration="901000" />
-      <workItem from="1653134269576" duration="2016000" />
+      <workItem from="1653134269576" duration="2337000" />
     </task>
     <servers />
   </component>
