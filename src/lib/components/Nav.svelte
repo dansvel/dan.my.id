@@ -9,22 +9,22 @@
       <a href="/" {title} sveltekit:prefetch>{textLogo}</a>
     </div>
     <div id="menu">
-      <ul>
+<!--      <ul>-->
         {#each navItems as menu}
-          <li>
+<!--          <li>-->
             <a href={menu.route}>{menu.title}</a>
-          </li>
+<!--          </li>-->
         {/each}
-      </ul>
+<!--      </ul>-->
     </div>
     <div id="social">
-      <ul>
+<!--      <ul>-->
         {#each socialLinks as social}
-          <li>
+<!--          <li>-->
             <a href="https://{social.link}" rel="external noopener">{social.platform}</a>
-          </li>
+<!--          </li>-->
         {/each}
-      </ul>
+<!--      </ul>-->
     </div>
   </nav>
 </header>
@@ -42,8 +42,10 @@
     @apply shadow-b shadow-md shadow-light-500 bg-light-500 dark:(shadow-dark-500 bg-dark-500);
 
     nav {
+      @apply max-w-3xl w-full mx-auto px-4;
+      @apply flex justify-between;
       > div {
-        @apply flex basis-full;
+        @apply flex basis-full space-x-2;
         &#brand {
           @apply font-bold;
         }
@@ -51,7 +53,7 @@
           @apply justify-end;
         }
         ul {
-          @apply flex space-x-2;
+          @apply flex;
         }
       }
     }
