@@ -9,11 +9,13 @@ const program = new Command()
 
 const template = `---
 title: {title}
-date: 
-description: 
-category: 
-tags: 
----`
+date: yyyy-mm-dd
+description: string
+category: manusia|teknologi
+tags: [string]
+---
+
+Hai, `
 
 program
   .command('buatkan')
