@@ -58,14 +58,14 @@
   header {
     @apply py-4 sticky z-99 top-0;
     @apply shadow-b shadow-md shadow-light-500 bg-light-500 dark:(shadow-dark-500 bg-dark-500);
-    @apply transform -translate-y-20 transition-transform duration-1000;
+    @apply transform -translate-y-20;
     &.show {
       @apply transform-none;
     }
 
     nav {
       @apply max-w-3xl w-full mx-auto px-4;
-      @apply flex justify-between transition-none duration-0;
+      @apply flex justify-between;
 
       > div {
         @apply flex basis-full;

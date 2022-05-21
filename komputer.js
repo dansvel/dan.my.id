@@ -1,7 +1,6 @@
 import fs from 'fs'
 import { Command } from 'commander'
 import { slugging } from './src/lib/util.js'
-import process from 'process'
 
 const contentPath = './src/content'
 
