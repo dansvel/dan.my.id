@@ -47,7 +47,7 @@
             Jadilah yang <strong>pertamax</strong> memberi tanggapan
           </p>
         {/if}
-        
+
         {#if data.tweetId}
           <p>
             <a href="https://twitter.com/dansvel/status/{data.tweetId}" rel="noopener external">

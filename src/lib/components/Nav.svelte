@@ -2,26 +2,9 @@
   import config from '$lib/config.yaml'
   const { title, textLogo, navItems, socialLinks } = config
 
-  let show = true
-  let last_scroll = 0
-  let hash_changed = false
-  function handle_hashchange() {
-    hash_changed = true
-  }
-
-  function handle_scroll() {
-    const scroll = window.pageYOffset
-    if (!hash_changed) {
-      show = scroll < 1500 || scroll < last_scroll
-    }
-
-    last_scroll = scroll
-    hash_changed = false
-  }
 </script>
 
-<svelte:window on:hashchange={handle_hashchange} on:scroll={handle_scroll} />
-<header class:show>
+<header>
   <nav>
     <div id="brand">
       <a href="/" {title} sveltekit:prefetch>{textLogo}</a>
