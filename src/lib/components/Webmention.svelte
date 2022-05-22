@@ -44,17 +44,10 @@
         <p>Menanggapi dan berkomentar melalui Twitter</p>
         {#if !data.likes.length && !data.retweets.length && !data.replies.length}
           <p>
-            Jadilah yang pertamax
-            <a
-              href="https://twitter.com/intent/tweet/?text={tweet}"
-              rel="noopener external"
-              class="button"
-            >
-              memberi tanggapan
-            </a>
+            Jadilah yang <strong>pertamax</strong> memberi tanggapan
           </p>
         {/if}
-
+        
         {#if data.tweetId}
           <p>
             <a href="https://twitter.com/dansvel/status/{data.tweetId}" rel="noopener external">

@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
-    "postbuild": "webmention build/feed.xml --limit 1 --send",
+    "postbuild": "webmention https://dan.my.id/feed.xml --limit 1 --send",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
     "prepare": "svelte-kit sync",
