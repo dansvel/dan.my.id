@@ -38,12 +38,12 @@ export const getPosts = async ({ filterTag = '', pageNumber = 0 } = {}) => {
     r.sort((a, b) => new Date(b.metadata.date) - new Date(a.metadata.date))
   )
 
-  if (!dev) posts = posts.filter(post => new Date(post.metadata.date) < new Date())
+  if (!dev) posts = posts.filter(post => new Date(post.metadata.date) <= new Date())
 
   if (filterTag)
     return { posts: posts.filter(post => post.metadata.tags.map(slugging).includes(filterTag)) }
 
-  if (pageNumber === 0) return { posts }
+  if (pageNumber === 0 || pageSize === 0) return { posts }
 
   const more = posts.length - pageNumber * pageSize > 0
   return {

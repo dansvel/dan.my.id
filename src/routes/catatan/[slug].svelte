@@ -26,9 +26,9 @@
 <div class="typography">
   <h1>{@html parseMarkdownLine(content.metadata.title)}</h1>
   <p class="metadata">
-    <time>{localDate.format(new Date(content.metadata.date))}</time>
+    <time>{localDate.format(new Date(content.metadata.date))}</time>&nbsp;
     {#each content.metadata.tags as tag}
-      <a href="/catatan/label/{slugging(tag)}" class="button">{tag}</a>
+      <a href="/catatan/label/{slugging(tag)}" class="button">{tag}</a>&nbsp;
     {/each}
   </p>
   <svelte:component this={content.default} />
@@ -52,18 +52,6 @@
 <Webmention slug="catatan/{content.slug}" />
 
 <style lang="postcss">
-  p {
-    @apply truncate;
-    &.metadata {
-      time {
-        @apply mr-5;
-      }
-      a {
-        @apply mr-3;
-      }
-    }
-  }
-
   nav {
     @apply flex flex-col mt-16 space-y-4;
     a {

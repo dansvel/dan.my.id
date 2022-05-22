@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
+    "postbuild": "webmention build/feed.xml --limit 1 --send",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
     "prepare": "svelte-kit sync",
@@ -40,5 +41,8 @@
     "vite-plugin-windicss": "^1.8.4",
     "windicss": "^3.5.4"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@remy/webmention": "^1.4.5"
+  }
 }

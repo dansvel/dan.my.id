@@ -10,7 +10,7 @@
 
 <script>
   import { default as content, metadata } from '../content/index.md'
-  import PostList from '$lib/components/PostList.svelte'
+  import PostList from '$lib/components/PostListN.svelte'
   import Pagination from '$lib/components/Pagination.svelte'
   import SeoHead from '$lib/components/SeoHead.svelte'
   import site from '$lib/config.yaml'
@@ -28,4 +28,12 @@
 </article>
 
 <PostList {posts} />
+<!--<div class="typography">-->
+<!--<ul>-->
+<!--{#each posts as post}-->
+<!--  <li>{post.metadata.title}</li>-->
+<!--{/each}-->
+<!--</ul>-->
+<!--</div>-->
+
 <Pagination {more} pageNumber="1" path="catatan" />

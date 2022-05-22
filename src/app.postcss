@@ -141,7 +141,7 @@ html {
 
       ul,
       ol {
-        @apply p-6;
+        @apply pl-6;
         li {
           @apply p-0;
         }
@@ -149,6 +149,10 @@ html {
 
       ul {
         @apply list-disc;
+      }
+
+      hr {
+        @apply border-b-2;
       }
     }
 
@@ -158,7 +162,7 @@ html {
     }
 
     a.button {
-      @apply no-underline ring-1 px-2 hover:ring-3 ring-indigo-700 dark:ring-indigo-300;
+      @apply no-underline ring-1 px-2 hover:ring-3 ring-indigo-700 dark:ring-indigo-300 inline-block my-1;
     }
   }
 }

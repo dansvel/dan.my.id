@@ -25,7 +25,7 @@
   // import Pagination from '$lib/Pagination.svelte'
   // import TagsCloud from '$lib/TagsCloud.svelte'
 
-  import PostList from '$lib/components/PostList.svelte'
+  import PostList from '$lib/components/PostListN.svelte'
   import Pagination from '$lib/components/Pagination.svelte'
 
   export let pageNumber

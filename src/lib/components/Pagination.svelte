@@ -6,7 +6,7 @@
 </script>
 
 <nav>
-  {#if pageNumber - 1 > 1}
+  {#if pageNumber - 1 > 0}
     <a sveltekit:prefetch href="/catatan/{pageNumber - 1}" class="button"> Lebih baru </a>
   {/if}
 
