@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fa0f7fe-a60d-4f38-991b-5d03d3e15133" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/Webmention.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/Webmention.svelte" afterDir="false" />
-    </list>
+    <list default="true" id="0fa0f7fe-a60d-4f38-991b-5d03d3e15133" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -121,7 +118,7 @@
       <workItem from="1653014212518" duration="4223000" />
       <workItem from="1653124112400" duration="901000" />
       <workItem from="1653134269576" duration="17928000" />
-      <workItem from="1653202423159" duration="3934000" />
+      <workItem from="1653202423159" duration="4646000" />
     </task>
     <servers />
   </component>

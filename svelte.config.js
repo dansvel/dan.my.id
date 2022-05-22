@@ -12,7 +12,6 @@ const config = {
   kit: {
     adapter: adapter(),
     browser: {
-      // hydrate: false,
       router: false,
     },
     prerender: {
