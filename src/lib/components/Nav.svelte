@@ -1,7 +1,6 @@
 <script>
   import config from '$lib/config.yaml'
   const { title, textLogo, navItems, socialLinks } = config
-
 </script>
 
 <header>

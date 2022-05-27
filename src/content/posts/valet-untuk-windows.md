@@ -32,7 +32,7 @@ Namun tidak hanya untuk Laravel. Valet juga mendukung macam-macam proyek PHP sep
 
 Sebelum kita mulai, kamu perlu memastikan [**PHP** terbaru](http://windows.php.net/download) dan [**Composer**](https://getcomposer.org/) telah terpasang di Windows milikmu. Jika belum, kamu dapat memasangnya dengan cara yang kamu tahu atau kamu anggap nyaman.
 
-Atau kamu dapat mengikuti cara paling ~~malas~~ mudah yang aku berikan, pasang [menggunakan **Scoop**](/catatan/1-scoop-cinta-untuk-baris-perintah) dengan menjalankan satu baris perintah berikut pada PowerShell:
+Atau kamu dapat mengikuti cara paling ~~malas~~ mudah yang aku berikan, pasang [menggunakan **Scoop**](/catatan/scoop-cinta-untuk-baris-perintah) dengan menjalankan satu baris perintah berikut pada PowerShell:
 
 ```powershell
 scoop install php composer

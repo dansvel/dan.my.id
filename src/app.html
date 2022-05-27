@@ -7,11 +7,16 @@
       crossorigin="anonymous"
     ></script>
     <meta charset="utf-8" />
-    <link rel="icon" href="%svelte.assets%/logo.svg" />
+    <link rel="icon" href="%sveltekit.assets%/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" title="Dark" href="%svelte.assets%/dist/atom-one-dark.css" disabled />
-    <link rel="stylesheet" title="Light" href="%svelte.assets%/dist/atom-one-light.css" disabled />
+    <link rel="stylesheet" title="Dark" href="%sveltekit.assets%/dist/atom-one-dark.css" disabled />
+    <link
+      rel="stylesheet"
+      title="Light"
+      href="%sveltekit.assets%/dist/atom-one-light.css"
+      disabled
+    />
     <script>
       if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.querySelector('link[title=Dark]').removeAttribute('disabled')
@@ -20,7 +25,7 @@
       }
     </script>
 
-    %svelte.head%
+    %sveltekit.head%
 
     <link rel="webmention" href="https://webmention.io/dan.my.id/webmention" />
     <link rel="pingback" href="https://webmention.io/dan.my.id/xmlrpc" />
@@ -28,6 +33,6 @@
     <link href="https://twitter.com/dansvel" rel="me" />
   </head>
   <body>
-    <div>%svelte.body%</div>
+    <div>%sveltekit.body%</div>
   </body>
 </html>

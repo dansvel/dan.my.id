@@ -195,7 +195,7 @@ Untuk bagian Svelte, kamu dapat membuat view berekstensi `.svelte` di dalam dire
 </Layout>
 ```
 
-Terakhir tinggal di-build saja. Karena kita telah menggunakan [Valet di Windows](/catatan/2-valet-untuk-windows), maka yang perlu dilakukan hanya
+Terakhir tinggal di-build saja. Karena kita telah menggunakan [Valet di Windows](/catatan/valet-untuk-windows), maka yang perlu dilakukan hanya
 
 ```powershell
 npm install && npm run dev

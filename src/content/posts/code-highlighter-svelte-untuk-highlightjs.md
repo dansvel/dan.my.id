@@ -18,7 +18,7 @@ const highlighted = hljs.highlight('svelte', source).value
 
 ## Bagaimana aku melakukannya
 
-Seperti yang telah [dibahas sebelumnya](/catatan/5-beginilah-bagaimana-aku-membuat-blog-dengan-sveltekit), aku menggunakan [`vite-plugin-markdown`](https://www.npmjs.com/package/@dansvel/vite-plugin-markdown) untuk menangani berkas `.md`. Mari bahas bagaimana aku mengaturnya di dalam SvelteKit.
+Seperti yang telah [dibahas sebelumnya](/catatan/beginilah-bagaimana-aku-membuat-blog-dengan-sveltekit), aku menggunakan [`vite-plugin-markdown`](https://www.npmjs.com/package/@dansvel/vite-plugin-markdown) untuk menangani berkas `.md`. Mari bahas bagaimana aku mengaturnya di dalam SvelteKit.
 
 ## Instalasi
 

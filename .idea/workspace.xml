@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa0f7fe-a60d-4f38-991b-5d03d3e15133" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.postcss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.postcss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/Nav.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/Nav.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/Webmention.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/Webmention.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/svelte.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/svelte.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +121,7 @@
       <workItem from="1653124112400" duration="901000" />
       <workItem from="1653134269576" duration="17928000" />
       <workItem from="1653202423159" duration="4646000" />
-      <workItem from="1653242445803" duration="335000" />
+      <workItem from="1653242445803" duration="752000" />
     </task>
     <servers />
   </component>
