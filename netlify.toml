@@ -1,6 +1,6 @@
 [build]
   command = "pnpm build || ( npm install pnpm && pnpm build )"
-  publish = "build-output/"
+  publish = "build/"
 
 [[plugins]]
   package = "netlify-plugin-submit-sitemap"
