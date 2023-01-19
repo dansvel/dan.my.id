@@ -1,0 +1,133 @@
+@import '@fontsource/source-sans-3';
+@import '@fontsource/source-serif-4';
+@import '@fontsource/source-code-pro';
+
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply text-xl overflow-y-scroll;
+
+  ::-webkit-scrollbar {
+    @apply w-3 h-3;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-base-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-base-200;
+  }
+
+  body {
+    @apply font-sans leading-normal break-words;
+  }
+
+  .typography {
+    @apply prose prose-lg leading-normal max-w-none prose-a:link-primary;
+
+    h1 {
+      @apply font-bold leading-normal;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply leading-normal;
+      a.anchor {
+        @apply ml-3 text-base-content invisible font-bold;
+      }
+      &:hover {
+        a.anchor {
+          @apply hover:text-primary-focus no-underline visible;
+        }
+      }
+    }
+
+    code {
+      font-weight: inherit;
+      @apply px-1 py-0 font-mono rounded-none;
+      @apply bg-base-200 dark:bg-neutral;
+      @apply whitespace-pre-wrap break-words;
+    }
+    pre {
+      @apply bg-base-200 dark:bg-neutral text-base-content;
+      @apply p-0 -mx-4;
+      @apply relative overflow-x-auto rounded-none md:rounded ring-2 ring-base-200 dark:ring-neutral;
+
+      &::before {
+        content: attr(data-title);
+        @apply px-4 py-2 flex font-bold bg-base-200 dark:bg-neutral;
+      }
+
+      code {
+        @apply p-4 font-mono whitespace-pre;
+        @apply bg-base-200 dark:bg-neutral-focus;
+        * {
+          @apply font-mono;
+        }
+      }
+    }
+
+    blockquote {
+      @apply -mx-4 p-3 font-normal not-italic;
+      @apply border-solid border-l-8 border-base-300 dark:border-neutral;
+      @apply bg-base-200 dark:bg-neutral-focus text-base-content;
+      quotes: none;
+
+      * {
+        @apply first:mt-0 last:mb-0;
+      }
+    }
+
+    figure {
+      @apply mx-auto max-w-max border border-dashed p-2;
+
+      img {
+        @apply w-max max-w-full;
+      }
+
+      figcaption {
+        @apply text-center mt-0 text-base-300;
+      }
+    }
+
+    ul,
+    ol {
+      @apply pl-6;
+      li {
+        @apply p-0;
+      }
+    }
+
+    ul {
+      @apply list-disc;
+    }
+
+    hr {
+      @apply border-2;
+    }
+  }
+
+  .btn {
+    @apply bg-base-200 dark:bg-neutral-focus;
+    @apply border-base-300 dark:border-neutral;
+    @apply text-base-content;
+    &:hover {
+      @apply bg-base-300 dark:bg-neutral;
+      border-color: inherit;
+    }
+
+    &.btn-ghost {
+      @apply bg-base-100 border-base-100;
+      &:hover {
+        @apply bg-base-300 dark:bg-neutral;
+      }
+    }
+  }
+}

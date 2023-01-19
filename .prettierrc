@@ -1,0 +1,19 @@
+{
+  "overrides": [
+    {
+      "files": "*.svelte",
+      "options": {
+        "parser": "svelte"
+      }
+    }
+  ],
+  "printWidth": 100,
+  "plugins": ["prettier-plugin-svelte"],
+  "pluginSearchDirs": ["."],
+  "semi": false,
+  "singleQuote": true,
+  "svelteIndentScriptAndStyle": true,
+  "svelteSortOrder": "options-scripts-markup-styles",
+  "svelteStrictMode": false,
+  "tabWidth": 2
+}
