@@ -10,6 +10,6 @@ Seperti halnya aku yang terinspirasi dari yang dilakukan orang lain, barangkali 
 
 > Diurutkan dari terbaru hingga terlawas
 
-## [Hana](https://hana.rip/)
+## [Hana](https://hana.js.org/)
 
 Aplikasi transliterasi aksara Jawa yang mengubah teks huruf abjad menjadi teks aksara Jawa.

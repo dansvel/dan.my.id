@@ -32,7 +32,7 @@ Karena tujuannya hanya itu, jadi aku terlalu malas mendesain aplikasinya, lalu h
 
 <Youtube id="dl-vxkR81S8"/>
 
-Langsung saja coba aplikasinya di dengan mengunjungi situs https://hana.rip/
+Langsung saja coba aplikasinya di dengan mengunjungi situs https://hana.js.org/
 
 Dan jangan lupa untuk memberi masukkan jika ada kesalahan hasil atau ide bagaimana harusnya aplikasi supaya nyaman digunakan.
 

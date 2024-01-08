@@ -134,4 +134,4 @@ Jadi awalnya itu akan mengambil cache lalu memberikannya, baru kemudian meminta 
 
 Hasilnya kira-kira seperti ini
 
-![Install PWA](https://hana.rip/dist/img/memasang-di-pc-2.png)
+![Install PWA](https://hana.js.org/dist/img/memasang-di-pc-2.png)

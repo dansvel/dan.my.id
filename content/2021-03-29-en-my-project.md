@@ -10,6 +10,6 @@ Much like being inspired by what others do, perhaps some of my whims can turn in
 
 > Sorted from newest to oldest
 
-## [Hana](https://hana.rip/)
+## [Hana](https://hana.js.org/)
 
 A Javanese script transliteration application that transforms text from alphabetic letters to Javanese script.
