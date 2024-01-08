@@ -30,7 +30,7 @@ Black ant, calves; a metaphor of the black ant signifies weakness, while the cal
 
 What was once considered impossible has become a reality. It was irrational in the past, but now it exists and is happening.
 
-### <span class="javanesescript>꧋ꦏꦼ​ꦧꦺꦴ​ꦧꦸꦁ​ꦏꦁ​ꦚ​ꦧꦿꦁ​ꦧꦼ​ꦔ​ꦮꦤ꧀</span>
+### <span class="javanese-script>꧋ꦏꦼ​ꦧꦺꦴ​ꦧꦸꦁ​ꦏꦁ​ꦚ​ꦧꦿꦁ​ꦧꦼ​ꦔ​ꦮꦤ꧀</span>
 
 ### Kebo bung kang nyabrang bengawan (9a)
 
@@ -38,7 +38,7 @@ Jarwanipun Kebo ingkang sungunipun kados bung, punika kasebat banthéng utawi in
 
 Bud buffalo cross the river; _Kebo bung_, a buffalo with horns resembling a bud, called a _banteng_ or _Andaka_ in the Kawi language, crossing the river. It implies working very hard, yet not proportional.
 
-### <span class="javanesescript>꧋ꦏꦺ​ꦪꦺꦴꦁ​ꦏꦁ​ꦗ​ꦫꦏ꧀ꦱꦸ​ꦔꦸ​ꦠꦺ</span>
+### <span class="javanese-script>꧋ꦏꦺ​ꦪꦺꦴꦁ​ꦏꦁ​ꦗ​ꦫꦏ꧀ꦱꦸ​ꦔꦸ​ꦠꦺ</span>
 
 ### Kéyong kang jarak sunguté (8e)
 
@@ -46,7 +46,7 @@ Jarwanipun kathah laré alit utawi para nom-noman ingkang kagungan kawruh mumpun
 
 Snail with long antennae; signifies many children or adolescents with profound knowledge nowadays.
 
-### <span class="javanesescript>꧋ꦠꦶ​ꦩꦸꦤ꧀ꦮꦸ​ꦏꦸ​ꦫꦺꦴꦤ꧀ꦮꦺꦴ​ꦭꦸ</span>
+### <span class="javanese-script>꧋ꦠꦶ​ꦩꦸꦤ꧀ꦮꦸ​ꦏꦸ​ꦫꦺꦴꦤ꧀ꦮꦺꦴ​ꦭꦸ</span>
 
 ### Timun wuku ron wolu (7u),
 
@@ -54,7 +54,7 @@ Jarwanipun timun wuku punika timun damel lalapan, ron wolu utawi godhong wolu. B
 
 Timun wuku, cucumber for salad; eight ron or eight leaves. There are eight treasures of the world, very useful or beneficial, mentioned in the Astha Brata: Surya (Sun), Candra (Moon), Kartika (Star), Himanda (Mountain), Earth, Agni (Fire), Tirta (Water), and Bayu (Wind). The eight powers are symbolized by the salad cucumber.
 
-### <span class="javanesescript>꧋ꦱꦸ​ꦫ​ꦧ​ꦪ​ꦒꦺ​ꦒꦺꦂ​ꦏꦼ​ꦥ​ꦠꦶ​</span>
+### <span class="javanese-script>꧋ꦱꦸ​ꦫ​ꦧ​ꦪ​ꦒꦺ​ꦒꦺꦂ​ꦏꦼ​ꦥ​ꦠꦶ​</span>
 
 ### Sura baya gégér kepati (9i)
 
@@ -62,11 +62,11 @@ Jarwanipun surabaya punika sayekti sanés kutha Surabaya, ananging sanepa ingkan
 
 The shark and crocodile are making a commotion until death; Sura baya, it is said, refers not to Surabaya city but as a metaphor for courage within norms or bravery in danger. Despite controversies, true knights don't deviate from norms but bravely face any danger. Thus, they bravely eradicate threats.
 
-### <span class="javanesescript>꧋ꦲ​ꦤ​ꦮꦺꦴꦁ​ꦔꦺꦴ​ꦪꦏ꧀ꦩ​ꦕꦤ꧀</span>
+### <span class="javanese-script>꧋ꦲ​ꦤ​ꦮꦺꦴꦁ​ꦔꦺꦴ​ꦪꦏ꧀ꦩ​ꦕꦤ꧀</span>
 
 ### Ana wong ngoyak macan (7a)
 
-### <span class="javanesescript>꧋ꦢꦺꦤ꧀ꦮ​ꦣ​ꦲꦶ​ꦧꦸꦩ꧀ꦧꦸꦁ​</span>
+### <span class="javanese-script>꧋ꦢꦺꦤ꧀ꦮ​ꦣ​ꦲꦶ​ꦧꦸꦩ꧀ꦧꦸꦁ​</span>
 
 ### Dén wadhahi bumbung (6u)
 
@@ -74,7 +74,7 @@ Macan pralambang galak, sipat angkara, galak, kejem, menangé dhéwé, lsp. Bumb
 
 Someone is chasing a tiger; Tiger, a fierce symbol with characteristics of anger, aggression, fierceness, cruelty, self-victory, etc. Bumbung represents a well-preserved storage place made of bamboo. The traits of evil, cruelty, ruthlessness, ferocity, self-victory, similar to wild animals possessed by humans, must be stored well. It must be controlled so as not to swell, causing unrest.
 
-### <span class="javanesescript>꧋ꦲ​ꦭꦸꦤ꧀ꧏꦑꦂ​ꦠ​ꦱꦸ​ꦫ​꧈ ꦒ​ꦗꦃ​ꦩꦺ​ꦠ</span>
+### <span class="javanese-script>꧋ꦲ​ꦭꦸꦤ꧀ꧏꦑꦂ​ꦠ​ꦱꦸ​ꦫ​꧈ ꦒ​ꦗꦃ​ꦩꦺ​ꦠ</span>
 
 ### Alun-alun Kartasura, gajah méta (12a)
 
@@ -82,7 +82,7 @@ Jarwanipun bilih rikala rumiyin belih Alun-Alun Kraton Kartasura punika wiyar sa
 
 Kartasura square, raging elephant; Alun-Alun Kartasura was significantly larger than the present city squares (such as Alun-Alun Keraton Jogja or Alun-Alun Solo). In that square, there was a raging elephant, a symbol of wrathful anger destroying everything.
 
-### <span class="javanesescript>꧋ꦕꦶ​ꦤꦚ꧀ꦕꦁ​ꦮꦶꦠ꧀ꦱꦶ​ꦢ​ꦒꦸ​ꦫꦶ</span>
+### <span class="javanese-script>꧋ꦕꦶ​ꦤꦚ꧀ꦕꦁ​ꦮꦶꦠ꧀ꦱꦶ​ꦢ​ꦒꦸ​ꦫꦶ</span>
 
 ### Cinancang wit sida guri (8i)
 
@@ -90,7 +90,7 @@ Artosipun cinancang suket.
 
 The rampaging elephant is tied to grass.
 
-### <span class="javanesescript>꧋ꦥ​ꦠꦶ​ꦤꦺ​ꦠꦶ​ꦤꦺꦴ​ꦛꦺꦴꦭ꧀ꦲ​ꦪꦩ꧀</span>
+### <span class="javanese-script>꧋ꦥ​ꦠꦶ​ꦤꦺ​ꦠꦶ​ꦤꦺꦴ​ꦛꦺꦴꦭ꧀ꦲ​ꦪꦩ꧀</span>
 
 ### Patiné tinothol ayam (8a)
 
