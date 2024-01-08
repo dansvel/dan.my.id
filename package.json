@@ -20,7 +20,7 @@
 		"@fontsource/source-sans-3": "^5.0.18",
 		"@fontsource/source-serif-4": "^5.0.16",
 		"@importable/yaml": "^0.1.1",
-		"@sveltejs/adapter-auto": "^3.0.0",
+		"@sveltejs/adapter-static": "^3.0.0",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
 		"@tailwindcss/typography": "^0.5.10",
