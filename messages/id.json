@@ -1,0 +1,23 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"currentLanguageTag": "Tag bahasa saat ini adalah \"{languageTag}\".",
+	"greeting": "Selamat datang {name}! Kamu memiliki {count} pesan.",
+	"change_language_to": "Ganti bahasa ke {languageTag}",
+
+	"judulBlog": "Blog milik Dan",
+	"deskripsiBlog": "Setengah Manusia dan <em>casual coder</em>",
+
+	"menuGantiBahasa": "Change to English",
+	"menuProyek": "Proyek",
+	"linkProyek": "id-proyekku",
+	"menuTentang": "Tentang",
+	"linkTentang": "id-apa-ini",
+
+	"navSebelum": "Sebelumnya",
+	"navSelanjutnya": "Selanjutnya",
+
+	"terjemahkan": "Read English translation",
+	"takAdaTerjemahan": "No Indonesian translation available",
+
+	"diperbarui": "Diperbarui pada"
+}

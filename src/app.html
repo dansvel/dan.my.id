@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="%lang%">
+	<head>
+		<meta charset="utf-8" />
+		<!--		<link rel="icon" href="%sveltekit.assets%/favicon.png" />-->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" title="Dark" href="%sveltekit.assets%/dist/atom-one-dark.css" disabled />
+		<link
+			rel="stylesheet"
+			title="Light"
+			href="%sveltekit.assets%/dist/atom-one-light.css"
+			disabled
+		/>
+		<script>
+			if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				document.querySelector('link[title=Dark]').removeAttribute('disabled')
+				document.querySelector('html').dataset.theme = 'dracula'
+			} else {
+				document.querySelector('link[title=Light]').removeAttribute('disabled')
+				document.querySelector('html').dataset.theme = 'light'
+			}
+		</script>
+
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>
