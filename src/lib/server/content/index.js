@@ -1,5 +1,4 @@
-import { readFile, readdir } from 'node:fs/promises'
-import { getPosts } from '$content'
+import { readdir } from 'node:fs/promises'
 
 const FILENAME_REGEX = String.raw`^(\d{4}-\d{2}-\d{2})-(id|en)-(.+)\.md$`
 
@@ -23,8 +22,6 @@ export const get_posts = async (lang = 'id') => {
 		posts.push({ ...post.metadata, date, slug, content: post.default.render().html })
 	}
 	return posts
-	// console.log(lang)
-	// return lang
 }
 
 /**
@@ -48,17 +45,3 @@ function get_date_and_slug(filename) {
 	const [, date, , slug] = match
 	return { date, slug }
 }
-
-// export const getPage = async (lang, page ) => {
-// 	const files = await readdir('content/pages')
-// 	for (const filename of files.reverse()) {
-// 		if (!new RegExp(FILENAME_REGEX.replace('id|en', lang)).test(filename)) continue
-// 		const {date, slug } =get_date_and_slug(filename)
-// 		if (page !== slug) continue
-//
-// 		/** @type {{metadata: {title: string, description: string}, default: Function}} */
-// 		const post = await import(`../../../../content/pages/${filename.slice(0, -3)}.md`)
-//
-// 		return { ...post.metadata, date, slug, content: post.default.render().html }
-// 	}
-// }

@@ -1,4 +1,4 @@
-import { getPost, get_posts } from '$lib/server/content/index.js'
+import { getPost, get_posts } from '$lib/server/content'
 import { languageTag } from '$paraglide/runtime.js'
 import { error } from '@sveltejs/kit'
 // import { error } from '@sveltejs/kit'

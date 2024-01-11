@@ -1,5 +1,4 @@
-import { get_posts } from '$lib/server/content/index'
-import { pick } from '@fastkit/accept-language'
+import { get_posts } from '$lib/server/content'
 
 /** @type {import('./$types').PageLoad} */
 export async function load({ params }) {
