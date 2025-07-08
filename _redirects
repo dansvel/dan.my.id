@@ -1,3 +1,4 @@
+dan-my-id.pages.dev  https://dan.my.id/:splat  301!
 *.dan-my-id.pages.dev/*  https://dan.my.id/:splat  301!
 http://*.dan-my-id.pages.dev/*  https://dan.my.id/:splat  301!
 /* /404.html 301
