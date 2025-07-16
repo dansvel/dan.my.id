@@ -2,7 +2,7 @@
 title: Komentar blog statis dengan Webmention
 edited: 2021-03-30
 description: Menanggapi dan berkomentar sekaligus promosi di media sosial, kenapa tidak?
-categorytranslation: null
+translation: null
 tags: [Webmention, Sistem komentar]
 ---
 
