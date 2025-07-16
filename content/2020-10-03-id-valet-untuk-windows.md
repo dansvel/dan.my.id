@@ -1,6 +1,6 @@
 ---
 title: Valet untuk windows
-created: 2020-10-03
+edited: 2020-10-03
 description: Lingkungan pengembang PHP dari Laravel awalnya hanya tersedia untuk MacOS. Seseorang telah melakukannya sejak lawas, kini kamu dapat memasangnya pada Windows kesayanganmu.
 translation: null
 tags: [PHP, Laravel, Valet]
